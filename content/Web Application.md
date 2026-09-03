@@ -484,13 +484,13 @@ The is called Descendant Combinator.
 
 ### CSS Comments
 
-```
+```css
 /* This is a comment */
 ```
 
 ### Colours
 
-```
+```css
 p {
     color: blue;
     background-color: red;
@@ -499,17 +499,17 @@ p {
 
 You can also use rgb or hex code to represent colour:
 
-```
+```css
 color: rgb(12, 34, 255);
 ```
 
-```
+```css
 color: [#ee82ee](#ee82ee); /* *[*#RRGGBB*](#RRGGBB)* */
 ```
 
 ### Backgrounds
 
-```
+```css
 div {
     background-color: red;
     opacity: 0.3;
@@ -523,7 +523,7 @@ image
 
 #### Borders
 
-```
+```css
 div {
     border-style: solid;
     border-width: 5px;
@@ -533,7 +533,7 @@ div {
 
 ##### Border Sides:
 
-```
+```css
 div {
     border-top-style: dotted;
     border-right-style: dashed;
@@ -554,13 +554,13 @@ div {
 
 ##### Border Shorthand:
 
-```
+```css
 div {
     border: 5px solid red;
 }
 ```
 
-```
+```css
 div {
     border-top: 5px dotted red;
     border-right: 2px dashed blue;
@@ -571,7 +571,7 @@ div {
 
 #### Margin
 
-```
+```css
 div {
     /
 *        Top Margin: 25px*
@@ -583,7 +583,7 @@ div {
 }
 ```
 
-```
+```css
 div {
     /
 *        Top and Bottom Margins: 25px*
@@ -593,7 +593,7 @@ div {
 }
 ```
 
-```
+```css
 div {
     /
 *        All four margins are 25px*
@@ -602,7 +602,7 @@ div {
 }
 ```
 
-```
+```css
 div {
     margin-top: 25px;
     margin-right: 50px;
@@ -615,7 +615,7 @@ div {
 
 You can set the margin property to auto to horizontally center the element within its container.
 
-```
+```css
 div {
     margin: auto;
 }
@@ -623,7 +623,7 @@ div {
 
 #### Padding
 
-```
+```css
 div {
     /* Same syntax as margin */
     padding: 25px 50px 75px 100px;
@@ -639,7 +639,7 @@ div {
 
 #### Height and Width
 
-```
+```css
 div {
     height: 250px;
     width: 500px;
@@ -648,7 +648,7 @@ div {
 
 You can also represent height and width with percentages (relative to its containing block):
 
-```
+```css
 div {
     height: 75%;
     width: 50%;
@@ -670,7 +670,7 @@ The text-align property is used to set the horizontal alignment of a text.
 - justify → stretches the lines so that each line has equal width
     
 
-```
+```css
 p {
     text-align: left;
     text-align: right;
@@ -681,7 +681,7 @@ p {
 
 #### Text Decorations
 
-```
+```css
 p {
     text-decoration: none;
     text-decoration: underline;
@@ -694,7 +694,7 @@ p {
 
 The font-family property is used to set the font family of the text.
 
-```
+```css
 p {
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -704,7 +704,7 @@ The program considers Arial first. If it is not found, then it considers Helveti
 
 #### Font Style
 
-```
+```css
 p {
     font-style: normal;
     font-style: italic;
@@ -714,7 +714,7 @@ p {
 
 #### Font Weight
 
-```
+```css
 p {
     font-weight: normal;
     font-weight: bold;
@@ -725,7 +725,7 @@ p {
 
 You can also use 100-900 (lightest to boldest) to tweak the boldness:
 
-```
+```css
 p {
     font-weight: 600;
 }
@@ -733,7 +733,7 @@ p {
 
 #### Font Size:
 
-```
+```css
 p {
     font-size: 67px;
 }
@@ -743,7 +743,7 @@ p {
 
 ## Template Code:
 
-```
+```python
 import flask
 
 app = flask.Flask(**name**)
@@ -756,7 +756,7 @@ if **name** == "**main**":
 
 ## Simple Routes:
 
-```
+```python
 import flask
 
 app = flask.Flask(**name**)
@@ -775,7 +775,7 @@ if **name** == "**main**":
 
 ## More Complex Routes:
 
-```
+```python
 import flask
 
 app = flask.Flask(**name**)
@@ -810,7 +810,7 @@ def multiple():
 
 We can find the URL of a page using url_for().
 
-```
+```python
 import flask
 from flask import url\_for
 
@@ -850,7 +850,7 @@ You must provide arguments for URLs with variable routes.
 
 #### Take this line for example:
 
-```
+```python
 url2 = url\_for('string\_variable', s='example')
 ```
 
@@ -874,7 +874,7 @@ You must include this line before using redirect():
 
 ### Redirecting to an external site:
 
-```
+```python
 import flask
 from flask import redirect
 
@@ -890,7 +890,7 @@ if **name** == "**main**":
 
 ### Redirecting to another route:
 
-```
+```python
 import flask
 from flask import redirect, url\_for
 
