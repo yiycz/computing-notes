@@ -1,374 +1,262 @@
-Web applications
+# Web applications
 
-Difference between native and web applications
+## Difference between native and web applications
 
-Native apps
+### Native apps
 
-Definition:
+#### Definition:
 
-An executable program coded in the machine language of the hardware platform it is running in.
+- An executable program coded in the machine language of the hardware platform it is running in.
+    
 
-Benefits:
+#### Benefits:
 
-Optimum access to device hardware and features.
+##### Optimum access to device hardware and features.
 
-Can be designed to have settings that allow an optimal level of access to device hardware and features.
+- Can be designed to have settings that allow an optimal level of access to device hardware and features.
+    
+- Use full range of device capabilities such as GPS
+    
+- Highly specialised and feature-rich applications
+    
 
-Use full range of device capabilities such as GPS
+##### Potential for high performance and high responsiveness.
 
-Highly specialised and feature-rich applications
+- Optimised for specific platform
+    
+- Utilising low-level APIs and hardware acceleration.
+    
+- Can deliver smoother animations, faster load times, and a more fluid user experience.
+    
 
-Potential for high performance and high responsiveness.
+##### Enhanced user experience.
 
-Optimised for specific platform
+- Can be designed to provide a rich and immersive user experience,
+    
+- By leveraging platform-specific UI components, design patterns, and navigation gestures.
+    
+- Resulting in a seamless and familiar interface for users.
+    
+- This level of customization increases user engagement and satisfaction.
+    
 
-Utilising low-level APIs and hardware acceleration.
+##### Offline capabilities
 
-Can deliver smoother animations, faster load times, and a more fluid user experience.
+- Can function offline,
+    
+- Allowing users to access certain features and content without an Internet connection.
+    
+- Store data locally, native apps can continue to operate and provide functionality in offline scenarios.
+    
 
-Enhanced user experience.
+#### Shortcomings:
 
-Can be designed to provide a rich and immersive user experience,
+##### App store approval:
 
-By leveraging platform-specific UI components, design patterns, and navigation gestures.
+- Need to go through the app store approval process
+    
+- Adhering to guidelines and policies specific to each platform.
+    
+- Can introduce additional time and potential challenges
+    
 
-Resulting in a seamless and familiar interface for users.
+##### Longer development time and costs
 
-This level of customization increases user engagement and satisfaction.
+###### Time:
 
-Offline capabilities
+- Require separate code for each platform.
+    
+- Platform-specific programming languages and development platforms must be used.
+    
 
-Can function offline,
+###### Costs:
 
-Allowing users to access certain features and content without an Internet connection.
+- Maintenance efforts, updates and bug fixes must be performed separately for each platform.
+    
 
-Store data locally, native apps can continue to operate and provide functionality in offline scenarios.
+##### Limited distribution and discoverability outside the app store.
 
-Shortcomings:
+- App store distribution may limit app discovery and require adherence to specific distribution rules.
+    
+- Challenging for users to find apps outside of the app store, limiting the visibility of the app.
+    
 
-App store approval:
+##### Fragmentation and compatibility challengers.
 
-Need to go through the app store approval process
+- The mobile computing landscape is fragmented, with multiple OS versions, device models, and screen sizes.
+    
+- Native apps must be optimised and tested across a wide range of devices, OS versions, and resolutions, which can increase development and testing efforts.
+    
 
-Adhering to guidelines and policies specific to each platform.
+### Web apps
 
-Can introduce additional time and potential challenges
+#### Definition:
 
-Longer development time and costs
+- An application in which all or some parts of the software are downloaded from the Web every time it runs.
+    
 
-Time:
+#### Types:
 
-Require separate code for each platform.
+##### Browser-Based:
 
-Platform-specific programming languages and development platforms must be used.
+- A browser-based web app is an application built with web technologies (typically HTML, CSS, and JavaScript) that users access through a web browser over the internet or a local network, without requiring installation from an app store.
+    
 
-Costs:
+##### Client-Based:
 
-Maintenance efforts, updates and bug fixes must be performed separately for each platform.
+- A client-based application is software installed on a user's device that executes locally, without a browser, and may communicate with remote servers or services to access data, synchronize information, or perform network-based functions (similar to the “client / server” architecture
+    
 
-Limited distribution and discoverability outside the app store.
+##### Native mobile apps
 
-App store distribution may limit app discovery and require adherence to specific distribution rules.
+- ?
+    
 
-Challenging for users to find apps outside of the app store, limiting the visibility of the app.
+#### Benefits:
 
-Fragmentation and compatibility challengers.
+##### Cross-Platform Compatibility:
 
-The mobile computing landscape is fragmented, with multiple OS versions, device models, and screen sizes.
+- Platform-agnostic, can be run on any devices like desktops, laptops, tablets, and smartphones.
+    
+- Users can access the same web app across different platforms, ensuring a consistent experience and broad reach.
+    
+
+##### No requirements for installation:
 
-Native apps must be optimised and tested across a wide range of devices, OS versions, and resolutions, which can increase development and testing efforts.
-
-Web apps
-
-Definition:
-
-An application in which all or some parts of the software are downloaded from the Web every time it runs.
-
-Types:
-
-Browser-Based:
-
-A browser-based web app is an application built with web technologies (typically HTML, CSS, and JavaScript) that users access through a web browser over the internet or a local network, without requiring installation from an app store.
-
-Client-Based:
-
-A client-based application is software installed on a user's device that executes locally, without a browser, and may communicate with remote servers or services to access data, synchronize information, or perform network-based functions (similar to the “client / server” architecture
-
-Native mobile apps
-
-?
-
-Benefits:
-
-Cross-Platform Compatibility:
-
-Platform-agnostic, can be run on any devices like desktops, laptops, tablets, and smartphones.
-
-Users can access the same web app across different platforms, ensuring a consistent experience and broad reach.
-
-No requirements for installation:
-
-Eliminate the need for installation or downloads.
-
-Access them directly by entering the app’s URL in a web browser.
-
-Reduce barriers and frictions, faster onboarding process.
-
-Update and app maintenance.
-
-Allow for centralised updates and maintenance.
-
-Developers can deploy changes on the server, making them available to all uses.
-
-Client web software updates may happen each time the web page is visited.
-
-Updates can be applied seamlessly without requiring users to manually update the app, ensuring everyone has access to the latest version
-
-Cost-effective development
-
-Cost-effective as web technologies are widely accessible,
-
-Developers can use a single codebase to target multiple platforms.
-
-Reduce development time and resources needed for platform-specific development.
-
-Greater discoverability
-
-Discoverable via search engines.
-
-Optimising the app’s website and content for search engines, web apps can benefit from organic discoverability.
-
-Potentially attracting a broader user base.
-
-Shortcomings:
-
-Internet Connectivity Dependency
-
-Require an Internet connection to function.
-
-Limited or no connectivity can hinder the app’s usability.
-
-Progressive web apps aim to mitigate this limitation by enabling certain features and content for work offline.
-
-Limited device feature access
-
-Web apps have limited access to device features.
-
-Although modern web APIs provide access to certain hardware capabilities,
-
-The range and depth of access may be limited.
-
-Impact certain user cases that rely greatly on specific device features.
-
-Performance constraints.
-
-Rely on web browsers → variations in rendering speeds and performance optimisations.
-
-However, this limitation is mitigated by the improved JS engines.
-
-Security considerations
-
-Web apps are susceptible to web-based vulnerabilities like XSS and CSRF.
-
-Proper security measures, such as input validation, output encoding must be implemented to protect against these threats.
-
-Difference between web and native applications
-
-
-
-
-
-
-
-
-
-Web applications
-
-Native applications
-
-Performance
-
-Rely on web browsers, which introduces additional layers performance constraints
-
-direct access to device resources, hardware accelerations and platform optimisation → Superior performance 
-
-
-
-Machine code → allow for a more efficient execution and utilisation of the devices’ capabilities
-
-User experience
-
-Achieve Responsiveness and adaptability
-
-
-
-Lack the consistency provided by native apps.
-
-Tailored and consistent user experience, adhering to the design principles and guidelines of the platform.
-
-
-
-Leverage platform-specific UI components and navigation patterns → native and intuitive experience.
-
-Development and maintenance
-
-Using a single codebase to target multiple platforms (no need for platform-specific efforts) → shorter development timeliness and lower costs
-
-Require platform specific experience → use multiple codebases
-
-
-
-Maintenance efforts, updates and bug fixes must be performed separately for each platform.
-
-Accessibility
-
-A single codebase facilitates accessibility from any device with a compatible web browser → eliminating the need to switch between platforms or download different versions of the app
-
-Users have to switch between different platforms to gain access to the sample applications → fragmentation and potentially limited user base.
-
-Offline Functionality
-
-Require an active internet connection to function
-
-Inherent offline capability → Allowing users to access certain features and content without an Internet connection.
-
-State and apply usability principles in the design of web applications.
-
-Quality of a web application:
-
-Learnability: how easy is it for users to learn to navigate the system to perform basic tasks at the first encounter
-
-Efficiency: how fast can users perform tasks after knowing the system.
-
-Memorability: How easy is it for users to recall the functionality of the system without relearning after a long time
-
-Errors: How does the system recover its users from the errors they made
-
-Satisfaction: How easy it is for use.
-
-Nielsen’s 10 principles:
-
-
-
-
-
-
-
-Principle
-
-Meaning
-
-Example
-
-Visibility of system status:
-
-Always keep users informed about what is going on, via appropriate feedback with reasonable time.
-
-Upload a file into google drive, the color change shows that the progress and the message above shows time left to complete the task
-
-Match between system and the real world.
-
-The system should speak the users’ language, with words, phrases and concepts familiar to the user, rather than system-oriented terms
-
-An online shopping app uses familiar terms such as "Add to Cart," "Checkout," and "Order History" instead of technical jargon. This matches the way people shop in the real world, making the app easier to understand and use.
-
-User control and freedom
-
-Leave unwanted state without having to go through a extend dialogue, support undo and redo, when users chooses system functions by mistakes
-
-Attachments in Gmail can be easily removed.
-
-Consistency and standards
-
-Users should have to wonder whether different words, situations or actions mean the same thing.
-
-An online shopping app uses the same shopping cart icon and checkout process on every page. This consistency helps users know what to expect and makes the app easier to use without having to relearn different layouts or actions.
-
-Error prevention
-
-A careful design which prevents a problem from occurring in the first place.
-
-Auto-correction function in Google Docs
-
-Recognition rather than recall
-
-Minimize the user’s memory load by making objects, actions and options visible. The users should not have to remember information from one part of the dialogue to another.
-
-Past search history for users to retrieve in browsers.
-
-Flexibility and efficiency of use
-
-The system should support both inexperienced and experienced users by providing multiple ways to accomplish tasks, allowing users to become more efficient as they gain experience.
-
-Online shopping website:
-
-
-
-A first-time shopper can browse product categories and use filters to find an item. A returning shopper can reorder a previous purchase and use saved payment details to check out in just a few clicks.
-
-Aesthetic and minimalist design
-
-Dialogues should not contain information which is irrelevant or rarely needed. 
-
-
-
-(Every extra unit of information in a dialogue competes with the relevant units of information and diminishes their relative visibility.)
-
-University and government websites are quite minimalistic.
-
-Help users recognise, diagnose and recover from errors
-
-Error messages should be expressed in plain language, precisely indicate the problem and constructively suggest a solution
-
-Google User login-in page:
-
-If entered wrongly, the system will prompt you to re-enter your credentials again.
-
-Help and documentation
-
-Provide help and documentation which lists concrete steps to be carried out.
-
-An online shopping app provides a Help Center with FAQs and step-by-step guides on placing orders, tracking deliveries, and processing returns. If users encounter a problem, they can quickly find instructions or contact customer support for assistance.
-
-CSS
-
-CSS Selectors
-
-
-
-
-
-
-
-Selector
-
-Example
-
-Example Description
-
-element
-
-p
-
-Selects all
+- Eliminate the need for installation or downloads.
+    
+- Access them directly by entering the app’s URL in a web browser.
+    
+- Reduce barriers and frictions, faster onboarding process.
+    
+
+##### Update and app maintenance.
+
+- Allow for centralised updates and maintenance.
+    
+- Developers can deploy changes on the server, making them available to all uses.
+    
+- Client web software updates may happen each time the web page is visited.
+    
+- Updates can be applied seamlessly without requiring users to manually update the app, ensuring everyone has access to the latest version
+    
+
+##### Cost-effective development
+
+- Cost-effective as web technologies are widely accessible,
+    
+- Developers can use a single codebase to target multiple platforms.
+    
+- Reduce development time and resources needed for platform-specific development.
+    
+
+##### Greater discoverability
+
+- Discoverable via search engines.
+    
+- Optimising the app’s website and content for search engines, web apps can benefit from organic discoverability.
+    
+- Potentially attracting a broader user base.
+    
+
+#### Shortcomings:
+
+##### Internet Connectivity Dependency
+
+- Require an Internet connection to function.
+    
+- Limited or no connectivity can hinder the app’s usability.
+    
+- Progressive web apps aim to mitigate this limitation by enabling certain features and content for work offline.
+    
+
+##### Limited device feature access
+
+- Web apps have limited access to device features.
+    
+- Although modern web APIs provide access to certain hardware capabilities,
+    
+- The range and depth of access may be limited.
+    
+- Impact certain user cases that rely greatly on specific device features.
+    
+
+##### Performance constraints.
+
+- Rely on web browsers → variations in rendering speeds and performance optimisations.
+    
+- However, this limitation is mitigated by the improved JS engines.
+    
+
+##### Security considerations
+
+- Web apps are susceptible to web-based vulnerabilities like XSS and CSRF.
+    
+- Proper security measures, such as input validation, output encoding must be implemented to protect against these threats.
+    
+
+### Difference between web and native applications
+
+||||
+|---|---|---|
+||Web applications|Native applications|
+|Performance|Rely on web browsers, which introduces additional layers performance constraints|direct access to device resources, hardware accelerations and platform optimisation → Superior performance   <br>  <br>  <br>  <br>Machine code → allow for a more efficient execution and utilisation of the devices’ capabilities|
+|User experience|Achieve Responsiveness and adaptability  <br>  <br>  <br>  <br>Lack the consistency provided by native apps.|Tailored and consistent user experience, adhering to the design principles and guidelines of the platform.  <br>  <br>  <br>  <br>Leverage platform-specific UI components and navigation patterns → native and intuitive experience.|
+|Development and maintenance|Using a single codebase to target multiple platforms (no need for platform-specific efforts) → shorter development timeliness and lower costs|Require platform specific experience → use multiple codebases  <br>  <br>  <br>  <br>Maintenance efforts, updates and bug fixes must be performed separately for each platform.|
+|Accessibility|A single codebase facilitates accessibility from any device with a compatible web browser → eliminating the need to switch between platforms or download different versions of the app|Users have to switch between different platforms to gain access to the sample applications → fragmentation and potentially limited user base.|
+|Offline Functionality|Require an active internet connection to function|Inherent offline capability → Allowing users to access certain features and content without an Internet connection.|
+
+## State and apply usability principles in the design of web applications.
+
+### Quality of a web application:
+
+- Learnability: how easy is it for users to learn to navigate the system to perform basic tasks at the first encounter
+    
+- Efficiency: how fast can users perform tasks after knowing the system.
+    
+- Memorability: How easy is it for users to recall the functionality of the system without relearning after a long time
+    
+- Errors: How does the system recover its users from the errors they made
+    
+- Satisfaction: How easy it is for use.
+    
+
+### Nielsen’s 10 principles:
+
+||||
+|---|---|---|
+|Principle|Meaning|Example|
+|Visibility of system status:|Always keep users informed about what is going on, via appropriate feedback with reasonable time.|Upload a file into google drive, the color change shows that the progress and the message above shows time left to complete the task|
+|Match between system and the real world.|The system should speak the users’ language, with words, phrases and concepts familiar to the user, rather than system-oriented terms|An online shopping app uses familiar terms such as "Add to Cart," "Checkout," and "Order History" instead of technical jargon. This matches the way people shop in the real world, making the app easier to understand and use.|
+|User control and freedom|Leave unwanted state without having to go through a extend dialogue, support undo and redo, when users chooses system functions by mistakes|Attachments in Gmail can be easily removed.|
+|Consistency and standards|Users should have to wonder whether different words, situations or actions mean the same thing.|An online shopping app uses the same shopping cart icon and checkout process on every page. This consistency helps users know what to expect and makes the app easier to use without having to relearn different layouts or actions.|
+|Error prevention|A careful design which prevents a problem from occurring in the first place.|Auto-correction function in Google Docs|
+|Recognition rather than recall|Minimize the user’s memory load by making objects, actions and options visible. The users should not have to remember information from one part of the dialogue to another.|Past search history for users to retrieve in browsers.|
+|Flexibility and efficiency of use|The system should support both inexperienced and experienced users by providing multiple ways to accomplish tasks, allowing users to become more efficient as they gain experience.|Online shopping website:  <br>  <br>  <br>  <br>A first-time shopper can browse product categories and use filters to find an item. A returning shopper can reorder a previous purchase and use saved payment details to check out in just a few clicks.|
+|Aesthetic and minimalist design|Dialogues should not contain information which is irrelevant or rarely needed.   <br>  <br>  <br>  <br>(Every extra unit of information in a dialogue competes with the relevant units of information and diminishes their relative visibility.)|University and government websites are quite minimalistic.|
+|Help users recognise, diagnose and recover from errors|Error messages should be expressed in plain language, precisely indicate the problem and constructively suggest a solution|Google User login-in page:  <br>  <br>If entered wrongly, the system will prompt you to re-enter your credentials again.|
+|Help and documentation|Provide help and documentation which lists concrete steps to be carried out.|An online shopping app provides a Help Center with FAQs and step-by-step guides on placing orders, tracking deliveries, and processing returns. If users encounter a problem, they can quickly find instructions or contact customer support for assistance.|
+
+---
+
+# CSS
+
+### CSS Selectors
+
+||||
+|---|---|---|
+|Selector|Example|Example Description|
+|element|p|Selects all|
 
 elements
 
-element, element, …
-
-div, p
-
-Selects all
-
-elements and
+|element, element, …|div, p|Selects all|elements and|
+|---|---|---|---|
 
 elements
 
-element element …
-
-div p
-
-Selects all
+|element element …|div p|Selects all|
+|---|---|---|
 
 elements that are descendants (child, grandchild, …) of all
 
@@ -376,61 +264,61 @@ elements
 
 The is called Descendant Combinator.
 
-#id
+|[#id](#id)|[#firstname](#firstname)|Selects the element with id=”firstname”|
+|---|---|---|
+|.class|.intro|Selects all elements with class=”intro”|
+|*|*|Selects all elements|
 
-#firstname
+### CSS Comments
 
-Selects the element with id=”firstname”
-
-.class
-
-.intro
-
-Selects all elements with class=”intro”
-
-*
-
-*
-
-Selects all elements
-
-CSS Comments
-
+```
 /* This is a comment */
+```
 
-Colours
+### Colours
 
+```
 p {
     color: blue;
     background-color: red;
 }
+```
 
 You can also use rgb or hex code to represent colour:
 
+```
 color: rgb(12, 34, 255);
+```
 
+```
 color: [#ee82ee](#ee82ee); /* *[*#RRGGBB*](#RRGGBB)* */
+```
 
-Backgrounds
+### Backgrounds
 
+```
 div {
     background-color: red;
     opacity: 0.3;
     background-image: url("");
 }
+```
 
-Margin v.s. Border v.s. Padding
+### Margin v.s. Border v.s. Padding
 
-Borders
+#### Borders
 
+```
 div {
     border-style: solid;
     border-width: 5px;
     border-color: red;
 }
+```
 
-Border Sides:
+##### Border Sides:
 
+```
 div {
     border-top-style: dotted;
     border-right-style: dashed;
@@ -447,22 +335,28 @@ div {
     border-bottom-color: red;
     border-left-color: blue;
 }
+```
 
-Border Shorthand:
+##### Border Shorthand:
 
+```
 div {
     border: 5px solid red;
 }
+```
 
+```
 div {
     border-top: 5px dotted red;
     border-right: 2px dashed blue;
     border-bottom: 5px dotted red;
     border-left: 2px dashed blue;
 }
+```
 
-Margin
+#### Margin
 
+```
 div {
     /*        Top Margin: 25px*
 *        Right Margin: 50px*
@@ -471,37 +365,47 @@ div {
 *    */
     margin: 25px 50px 75px 100px;
 }
+```
 
+```
 div {
     /*        Top and Bottom Margins: 25px*
 *        Left and Right Margin: 50px*
 *    */
     margin: 25px 50px;
 }
+```
 
+```
 div {
     /*        All four margins are 25px*
 *    */
     margin: 25px;
 }
+```
 
+```
 div {
     margin-top: 25px;
     margin-right: 50px;
     margin-bottom: 75px;
     margin-left: 100px;
 }
+```
 
-Margin ‘auto’ keyword
+##### Margin ‘auto’ keyword
 
 You can set the margin property to auto to horizontally center the element within its container.
 
+```
 div {
     margin: auto;
 }
+```
 
-Padding
+#### Padding
 
+```
 div {
     /* Same syntax as margin */
     padding: 25px 50px 75px 100px;
@@ -513,94 +417,115 @@ div {
     padding-bottom: 75px;
     padding-left: 100px;
 }
+```
 
-Height and Width
+#### Height and Width
 
+```
 div {
     height: 250px;
     width: 500px;
 }
+```
 
 You can also represent height and width with percentages (relative to its containing block):
 
+```
 div {
     height: 75%;
     width: 50%;
 }
+```
 
-Text Alignment
+#### Text Alignment
 
 The text-align property is used to set the horizontal alignment of a text.
 
-Possible Values:
+##### Possible Values:
 
-left → aligns text to the left
+- left → aligns text to the left
+    
+- right → aligns text to the right
+    
+- center → aligns text to the center
+    
+- justify → stretches the lines so that each line has equal width
+    
 
-right → aligns text to the right
-
-center → aligns text to the center
-
-justify → stretches the lines so that each line has equal width
-
+```
 p {
     text-align: left;
     text-align: right;
     text-align: center;
     text-align: justify;
 }
+```
 
-Text Decorations
+#### Text Decorations
 
+```
 p {
     text-decoration: none;
     text-decoration: underline;
     text-decoration: overline;
     text-decoration: line-through;
 }
+```
 
-Font Family
+#### Font Family
 
 The font-family property is used to set the font family of the text.
 
+```
 p {
     font-family: Arial, Helvetica, sans-serif;
 }
+```
 
 The program considers Arial first. If it is not found, then it considers Helvetica, and so on.
 
-Font Style
+#### Font Style
 
+```
 p {
     font-style: normal;
     font-style: italic;
     font-style: oblique;
 }
+```
 
-Font Weight
+#### Font Weight
 
+```
 p {
     font-weight: normal;
     font-weight: bold;
     font-weight: bolder;
     font-weight: lighter;
 }
+```
 
 You can also use 100-900 (lightest to boldest) to tweak the boldness:
 
+```
 p {
     font-weight: 600;
 }
+```
 
-Font Size:
+#### Font Size:
 
+```
 p {
     font-size: 67px;
 }
+```
 
-Flask
+# Flask
 
-Template Code:
+## Template Code:
 
+```
 import flask
 
 app = flask.Flask(__name__)
@@ -609,9 +534,11 @@ app = flask.Flask(__name__)
 
 if __name__ == "__main__":
     app.run()
+```
 
-Simple Routes:
+## Simple Routes:
 
+```
 import flask
 
 app = flask.Flask(__name__)
@@ -626,9 +553,11 @@ def css():
 
 if __name__ == "__main__":
     app.run()
+```
 
-More Complex Routes:
+## More Complex Routes:
 
+```
 import flask
 
 app = flask.Flask(__name__)
@@ -657,11 +586,13 @@ def post_only():
 
 if __name__ == "__main__":
     app.run()
+```
 
-Flask URL lookup
+## Flask URL lookup
 
 We can find the URL of a page using url_for().
 
+```
 import flask
 from flask import url_for
 
@@ -693,31 +624,39 @@ def integer_variable(i):
 
 if __name__ == "__main__":
     app.run()
+```
 
-Comment 1:
+### Comment 1:
 
 You must provide arguments for URLs with variable routes.
 
-Take this line for example:
+#### Take this line for example:
 
+```
 url2 = url_for('string_variable', s='example')
+```
 
 Here, the argument for variable route s='example'.
 
-Comment 2:
+### Comment 2:
 
 You must include this line before using url_for():
 
+```
 from flask import url_for
+```
 
-Flask Redirect
+## Flask Redirect
 
 You must include this line before using redirect():
 
+```
 from flask import redirect
+```
 
-Redirecting to an external site:
+### Redirecting to an external site:
 
+```
 import flask
 from flask import redirect
 
@@ -729,9 +668,11 @@ def index():
 
 if __name__ == "__main__":
     app.run()
+```
 
-Redirecting to another route:
+### Redirecting to another route:
 
+```
 import flask
 from flask import redirect, url_for
 
@@ -747,17 +688,19 @@ def index():
 
 if __name__ == '__main__':
     app.run()
+```
 
-Templates
+## Templates
 
 Coding out the HTML in the python isn’t very ideal. We should instead link the python code to an existing HTML code (which must be stored in the templates folder).
 
 The python code is outside the templates folder, and all the HTML source files are located in templates.
 
-Example:
+### Example:
 
-p13_html_response_with_templates.py
+`p13_html_response_with_templates.py`
 
+```
 import flask
 from flask import render_template
 
@@ -773,41 +716,51 @@ def greet(name):
 
 if __name__ == "__main__":
     app.run()
+```
 
-home.html greet.html
+`home.html` `greet.html`
 
+```
 # Welcome to my home page!
 
 My favourite website is [example.com](https://www.example.com/).
 
 You can greet Alex [here](<{{ url_for('greet', name='Alex')}}>)
+```
 
+```
 # Hello, {{visitor}}
+```
 
-Jinja2
+## Jinja2
 
 In most cases, data processing and computation is done in Python code. The outputs from this computation are then passed to Jinja2 as numbers, strings, lists and other plain data objects. This data is then used to fill in a template to produce the final HTML.
 
-Safe Filter
+### Safe Filter
 
 To prevent the security issue of injecting HTML, we can treat input as plain text instead of it being HTML by using the safe filter:
 
-greet.html (modified)
+`greet.html (modified)`
 
+```
 # Hello, {{visitor|safe}}
+```
 
-Length filter
+### Length filter
 
 For simple length checks, we can use the length filter that gives the same result as len() but uses a different syntax.
 
-greet.html (modified)
+`greet.html (modified)`
 
+```
 # Hello, {{visitor|length}}
+```
 
-If Statements
+### If Statements
 
-Syntax:
+#### Syntax:
 
+```
 {% if %}
     
 {% elif %}
@@ -815,11 +768,13 @@ Syntax:
 {% else %}
     
 {% endif %}
+```
 
-Example:
+#### Example:
 
-p16_results_using_if.py
+`p16_results_using_if.py`
 
+```
 import flask
 from flask import render_template
 
@@ -831,9 +786,11 @@ def home():
 
 if __name__ == '__main__':
     app.run()
+```
 
-results.html
+`results.html`
 
+```
 # Results
 
         {% if greet %}
@@ -855,19 +812,23 @@ You passed.
 You failed.
 
         {% endif %}
+```
 
-For-in statement
+### For-in statement
 
-Syntax:
+#### Syntax:
 
+```
 {% for data in arr %}
     
 {% endfor %}
+```
 
-Example:
+#### Example:
 
-p17_table_using_for.py
+`p17_table_using_for.py`
 
+```
 import flask
 from flask import render_template
 
@@ -880,9 +841,11 @@ def home():
 
 if __name__ == "__main__":
     app.run()
+```
 
-table.html
+`table.html`
 
+```
 # Table of Results
 
             {% for subject in results %}
@@ -893,19 +856,23 @@ table.html
 | ----------------- | -------------------- |
 | {{subject}}       | {{results[subject]}} |
 |                   |                      |
+```
 
-For i in range():
+### For i in range():
 
-Syntax:
+#### Syntax:
 
+```
 {% for i in range(arr|length) %}
     
 {% endfor %}
+```
 
-Example:
+#### Example:
 
-p17b_table_using_for_in_range.py
+`p17b_table_using_for_in_range.py`
 
+```
 import flask
 from flask import render_template
 
@@ -918,9 +885,11 @@ def home():
 
 if __name__ == "__main__":
     app.run()
+```
 
-table2.html
+`table2.html`
 
+```
 # Table of Results
 
             {% for i in range(results|length) %}
@@ -930,17 +899,19 @@ table2.html
 | Student No.Score |                |
 | ---------------- | -------------- |
 | Student {{i+1}}  | {{results[i]}} |
+```
 
-Static Files
+## Static Files
 
 This is for images and CSS/Stylesheets.
 
 Flask lets us create a subfolder named static (in the same location as the templates subfolder) to store static resources like images and CSS files. Flask then sets up a view named ‘static’ that (by default) routes any path starting with /static/ to the contents of this subfolder.
 
-Example:
+### Example:
 
-p18_static_style_sheet.py
+`p18_static_style_sheet.py`
 
+```
 import flask
 from flask import render_template
 
@@ -952,9 +923,11 @@ def home():
 
 if __name__ == "__main__":
     app.run()
+```
 
-styles.css
+`styles.css`
 
+```
 body {
     background: yellow;
 }
@@ -963,19 +936,21 @@ h1 {
     border-bottom: 1px solid red;
     color: red;
 }
+```
 
-Processing Form Data
+## Processing Form Data
 
 When a HTML form is submitted, the browser collects all the input as key-value pairs and encodes it into a single string. This string is then sent to the server using a HTTP request. Depending on how the HTML form is configured, either a GET request or POST request is made.
 
 Parsing key-value pairs encoded in query strings can be tedious and error-prone. Thankfully, if a query string is present, Flask does this parsing for us and lets us access it as a dictionary from a request object that can be imported from the flask module.
 
-GET Form
+### GET Form
 
 Note: Remember to do from flask import request
 
-p19_analysis_with_get_simplified.py
+`p19_analysis_with_get_simplified.py`
 
+```
 import flask
 from flask import render_template, request
 
@@ -997,18 +972,21 @@ def process_with_get():
 
 if __name__ == "__main__":
     app.run()
+```
 
 Here, request.args is a dictionary (of key-value pairs) which contains all the input from the HTML form.
 
-analysis_results_simplified.html
+`analysis_results_simplified.html`
 
+```
 You entered s: {{ s }}
 
 This string has {{ num_words }} words.
+```
 
-POST Form
+### POST Form
 
-Same as GET, but the form data is stored in request.form  instead of request.args.
+Same as GET, but the form data is stored in request.form instead of request.args.
 
 Note: In the
 
@@ -1018,10 +996,11 @@ Note 2: You must check the request method using request.method == 'GET'.
 
 Note 3: Under @app.route(), methods=['GET', 'POST'] must be added in order to accept both GET and POST methods.
 
-Example:
+#### Example:
 
-p20_analysis_with_post_simplified.py
+`p20_analysis_with_post_simplified.py`
 
+```
 import flask
 from flask import render_template, request
 
@@ -1043,17 +1022,21 @@ def index():
 
 if __name__ == '__main__':
     app.run()
+```
 
-analysis_results_simplified.html
+`analysis_results_simplified.html`
 
+```
 You entered s: {{ s }}
 
 This string has {{ num_words }} words.
+```
 
-Handling File and Image Uploads
+## Handling File and Image Uploads
 
-p21_file_uploads.py
+`p21_file_uploads.py`
 
+```
 import flask, os, sqlite3
 from flask import render_template, request
 from flask import send_from_directory
@@ -1105,25 +1088,33 @@ def get_file(filename):
 
 if __name__ == '__main__':
     app.run()
+```
 
-form_with_file_upload.html
+`form_with_file_upload.html`
 
+```
 Photo:
 
 [View photos](<{{ url_for('view') }}>)
+```
 
-view_file_uploads.py
+`view_file_uploads.py`
 
+```
 {% for photo in photos %}
             [{{ photo }}](<{{ url_for('get_file', filename=photo) }}>)
         {% endfor %}
+```
 
+```
 [Home](<{{ url_for('home') }}>)
+```
 
-Socket Programming
+# Socket Programming
 
-Basic Server:
+## Basic Server:
 
+```
 import socket
 
 my_socket = socket.socket() #1.Server starts first (passive socket)
@@ -1140,9 +1131,11 @@ new_socket.sendall(b'Hello from server\n') #7.send a byte string use ”b”
 
 new_socket.close() #9.Active socket has to be closed first
 my_socket.close()
+```
 
-Basic Client:
+## Basic Client:
 
+```
 import socket
 
 my_socket = socket.socket() #4.create a client
@@ -1155,15 +1148,17 @@ my_socket.connect((address, port)) #5.connect to the server, port randomly assig
 print(my_socket.recv(1024)) #8.receiving the message, 1024 is the max size
 
 my_socket.close()
+```
 
-Note:
+## Note:
 
 For user inputs, you have to use encode() and decode() as the socket only transmits bits, not strings/integers.
 
 my_socket = socket.socket() Server starts first
 
-Chat Server:
+## Chat Server:
 
+```
 import socket
 
 listen_socket = socket.socket()
@@ -1194,9 +1189,11 @@ while True:
 
 chat_socket.close()
 listen_socket.close()
+```
 
-Chat Client:
+## Chat Client:
 
+```
 import socket
 
 my_socket = socket.socket()
@@ -1224,3 +1221,4 @@ while True:
         break
 
 my_socket.close()
+```
