@@ -90,9 +90,7 @@
 
 ```
 
-(b) What code should <insert_code_here> be so that the binary digits are in the
-
-correct order? [1]
+**(b) What code should <insert_code_here> be so that the binary digits are in the correct order? [1]**
 
 > [!Answer]
 >
@@ -103,9 +101,7 @@ correct order? [1]
 >
 > Prepending ensures most significant digit is on the left.
 
-(c) Rewrite the ConvertToBinary function as a recursive version that returns the
-
-binary string. [4]
+**(c) Rewrite the ConvertToBinary function as a recursive version that returns the binary string. [4]**
 
 > [!Answer]
 >
@@ -147,9 +143,7 @@ binary string. [4]
 >
 > * 3BEE5A9
 
-(ii) ASCII values.
-
-('0' has an ASCII value of 48 and '9' has an ASCII value of 57.) [2]
+**(ii) ASCII values. ('0' has an ASCII value of 48 and '9' has an ASCII value of 57.) [2]**
 
 > [!Answer]
 > Map each **ASCII** decimal character to **ASCII** value
@@ -172,18 +166,14 @@ binary string. [4]
 >
 > * 56 **bits**
 
-**(c) The programmer decides to store phone numbers in an array as integers instead of strings for binary search.**
-
-Suggest two reasons for this. [2]
+**(c) The programmer decides to store phone numbers in an array as integers instead of strings for binary search. Suggest two reasons for this. [2]**
 
 > [!Answer]
 > Integers are quicker to compare; comparing an 8-char string requires up to 8 comparisons
 >
 > * Takes up less space in memory
 
-**(d) The programmer’s supervisor suggests a binary search tree instead of a sorted array for managing phone numbers instead.**
-
-Suggest two reasons for the supervisor’s advice. [3]
+**(d) The programmer’s supervisor suggests a binary search tree instead of a sorted array for managing phone numbers instead. Suggest two reasons for the supervisor’s advice. [3]**
 
 > [!Answer]
 > BST has lower **time complexity** for adding items
@@ -194,7 +184,7 @@ Suggest two reasons for the supervisor’s advice. [3]
 
 **A function Search(data, target, start, end) takes in data an array of phone numbers, target a phone number to be searched, and two integers start and end representing the start and end indexes respectively. Search implements a recursive binary search and return s the index of the matching phone number, or -1 if the phone number is not found. Contacts is an array that has the following phone numbers: [61625074, 90923657, 93197564, 93289273, 99108357, 99283918, 99561273]**
 
-(e) Complete the following table, expanding it as necessary to show each successive recursive call. [3]
+**(e) Complete the following table, expanding it as necessary to show each successive recursive call. [3]**
 
 Function call Return value
 Search(Contacts, 62842281, 0, 6)
@@ -222,9 +212,7 @@ Search(Contacts, 62842281, 0, 6)
 >
 > * function correctly returns -1 or an index
 
-**(g) Besides 62842281, suggest 3 other suitable test values for target for the above**
-
-array. [3]
+**(g) Besides 62842281, suggest 3 other suitable test values for target for the above array. [3]**
 
 > [!Answer]
 > Extreme case: 0, 99999999, etc
@@ -239,9 +227,7 @@ array. [3]
 
 **A programmer is writing a program to manage and search for records. The records include phone numbers, which comprise 8 decimal digits.**
 
-Convert the phone number 62842281 to:
-
-Hexadecimal representation[2]
+**Convert the phone number 62842281 to: Hexadecimal representation [2]**
 
 > [!Answer]
 >
@@ -400,9 +386,7 @@ Explain one benefit of using a multi-bit binary number to represent the watering
 
 **6 A computer uses the ASCII character set.**
 
-(a) State with reason the number of characters that can be represented by the ASCII
-
-character set. [2]
+**(a) State with reason the number of characters that can be represented by the ASCII character set. [2]**
 
 > [!Answer]
 > State the number of characters that can be represented by the **ASCII** character set.
@@ -459,7 +443,7 @@ character set. [2]
 > [!Answer]
 > **Data integrity** refers to the accuracy, consistency and reliability of data throughout its entire lifecycle (creation, storage, transmission).
 
-**Sonars Service Centre handles repairs of their proprietary Sonars audio products. When customers bring equipment for repair, technicians would need to enter the product serial number into the system. Each serial number consists of 10 digits, where the last digit is a check digit calculated using this algorithm:In the first pass, multiply each of the first 9 digits of the serial number by weights: 9, 8, 7, 6, 5, 4, 3, 2, 1 respectively (e.g. position 1 gets weight 9). Sum these products to obtain subtotal.In the second pass, using the same 9 digits of the serial number, multiply each digit by the sum of its own value and its position number (e.g. if the first digit is 5, we get a product of 5 x (5 + 1) = 30 for that digit). Sum these products to obtain another subtotal.Add the two subtotals from the two passes to obtain a combined total.Divide the combined total by 13 to obtain the remainder. Subtract the remainder from 13 to derive the check digit.**
+**Sonars Service Centre handles repairs of their proprietary Sonars audio products. When customers bring equipment for repair, technicians would need to enter the product serial number into the system. Each serial number consists of 10 digits, where the last digit is a check digit calculated using this algorithm:In the first pass, multiply each of the first 9 digits of the serial number by weights: 9, 8, 7, 6, 5, 4, 3, 2, 1 respectively (e.g. position 1 gets weight 9). Sum these products to obtain subtotal. In the second pass, using the same 9 digits of the serial number, multiply each digit by the sum of its own value and its position number (e.g. if the first digit is 5, we get a product of 5 x (5 + 1) = 30 for that digit). Sum these products to obtain another subtotal. Add the two subtotals from the two passes to obtain a combined total. Divide the combined total by 13 to obtain the remainder. Subtract the remainder from 13 to derive the check digit.**
 
 (b) (i) It is given that 284736197X is a valid serial number, where X represents the check digit. Calculate the value of X, showing your workings. [3]
 
@@ -486,7 +470,7 @@ character set. [2]
 > Double entry: requiring user to enter the same serial number twice in separate input fields. The system compares both entries to ensure they are identical before accepting the data.
 > Visual confirmation: displaying a message box showing the entered number and prompting the user to confirm that it matches the serial number on the physical device.
 
-**When a Sonars amplifier system arrives for diagnosis, the technician checks for these symptoms:whether the power LED is OFFwhether the audio output is abnormalwhether the amplifier is overheatingThe following describes the actions the technician would take:If the power LED is off, check the power supply and fuse only regardless of other symptoms. If the power LED is on and the audio output is abnormal (but the amplifier is not overheating), test the input connections. If the amplifier is overheating, clean the ventilation system and fans. If the audio is abnormal and the amplifier is overheating, also check the output transistors, as they may be faulty. If none of the 3 symptoms are present, perform exterior cleaning.It is desired to draw a decision table for the above information.**
+**When a Sonars amplifier system arrives for diagnosis, the technician checks for these symptoms:whether the power LED is OFFwhether the audio output is abnormalwhether the amplifier is overheatingThe following describes the actions the technician would take:If the power LED is off, check the power supply and fuse only regardless of other symptoms. If the power LED is on and the audio output is abnormal (but the amplifier is not overheating), test the input connections. If the amplifier is overheating, clean the ventilation system and fans. If the audio is abnormal and the amplifier is overheating, also check the output transistors, as they may be faulty. If none of the 3 symptoms are present, perform exterior cleaning. It is desired to draw a decision table for the above information.**
 
 (c) (i) Explain what a decision table is. [2]
 
@@ -609,9 +593,7 @@ message
 >
 > ```
 
-(c) State two ways the password change interface can be improved using suitable application
-
-design principles. [2]
+**(c) State two ways the password change interface can be improved using suitable application design principles. [2]**
 
 > [!Answer]
 > Help users recognise, diagnose, and recover from errors: the reason for invalid password should be displayed below the appropriate textbox / add "Forget password" functionality
@@ -649,7 +631,7 @@ a) Define data validation and data verification in the context of data entry. [2
 > twice to reduce typing errors).
 > 2
 
-b) Suggest one validation check that could be applied to the field Date of Birth. [1]
+**b) Suggest one validation check that could be applied to the field Date of Birth. [1]**
 
 > [!Answer]
 > Check that the date entered is a valid calendar date and not a future date. 1
@@ -667,7 +649,7 @@ c) Explain the purpose of asking the user to enter the email twice. [2]
 
 **A customer attempts to enter their Full Name using non-English characters and the system rejects it as it only supports ASCII characters.**
 
-d) Suggest what the company should do to allow names from different languages to be accepted. [1]
+**d) Suggest what the company should do to allow names from different languages to be accepted. [1]**
 
 > [!Answer]
 > Use **Unicode** (e.g., UTF-8) encoding instead of **ASCII** so the system suppor
@@ -676,7 +658,7 @@ d) Suggest what the company should do to allow names from different languages to
 
 **Under the Personal Data Protection Act (PDPA), the company has legal obligations when collecting customer personal data through this form.**
 
-e) State two responsibilities the company must fulfil to comply with PDPA. [2]
+**e) State two responsibilities the company must fulfil to comply with PDPA. [2]**
 
 > [!Answer]
 > Obtain the user’s consent and state the purpose of collecting their personal
@@ -701,13 +683,13 @@ State the purpose of verification.[1]
 > [!Answer]
 > ensure that data entered is what the user intended to enter*Reject “check”
 
-**The image below shows the password change dialog box for a web application. The flowchart below shows the process for changing a user’s password. Display promptIs current password correct?Is new password different?Password changedInput current password and new passwordDisplay error messageDisplay error messageDisplay promptIs current password correct?Is new password different?Password changedInput current password and new passwordDisplay error messageDisplay error message**
+**The image below shows the password change dialog box for a web application. The flowchart below shows the process for changing a user’s password. Display promptIs current password correct? Is new password different? Password changedInput current password and new passwordDisplay error messageDisplay error messageDisplay promptIs current password correct? Is new password different? Password changedInput current password and new passwordDisplay error messageDisplay error message**
 **Yes**
 **Yes**
 **No**
 **No**
 
-Redraw the flowchart to include, for the new password: one suitable validation technique one suitable verification technique[6]
+**Redraw the flowchart to include, for the new password: one suitable validation technique one suitable verification technique [6]**
 
 > [!Answer]
 >
@@ -750,7 +732,7 @@ State two ways the password change interface can be improved using suitable usab
 
 ##### 2025 DHS Prelim P1 Q4)
 
-4 Name and explain three different types of errors that could occur in a computer program. Given an example of each type of error with Python programming language. [3]
+**4 Name and explain three different types of errors that could occur in a computer program. Given an example of each type of error with Python programming language. [3]**
 
 > [!Answer]
 > **Syntax**
@@ -905,12 +887,12 @@ Suggest two possible steps the company should have taken to use the additional d
 
 ```
 
-(a)State the output when the input values m = 21, n = 28 are given to the algorithm.[1]
+(a) State the output when the input values m = 21, n = 28 are given to the algorithm. [1]
 
 > [!Answer]
 > 21
 
-(b)Identify the line where there is a logic error and give the correct pseudo-code to find the gcd.[2]
+(b) Identify the line where there is a logic error and give the correct pseudo-code to find the gcd. [2]
 
 > [!Answer]
 > 06: IF m MOD i = 0 AND n MOD i = 0
@@ -934,12 +916,12 @@ Suggest two possible steps the company should have taken to use the additional d
 
 ```
 
-(c)State the features of the function gcd that make it recursive.[3]
+(c) State the features of the function gcd that make it recursive. [3]
 
 > [!Answer]
 > The function has a **base case** (line 02) and for other cases, it calls itself with smaller values (lines 06 and 08). The function would thus keep calling itself until the **base case** is reached.
 
-(d)Draw a trace diagram for the input values m = 21, n = 28.[3]
+(d) Draw a trace diagram for the input values m = 21, n = 28. [3]
 
 > [!Answer]
 >
@@ -948,12 +930,12 @@ Suggest two possible steps the company should have taken to use the additional d
 >
 > ```
 
-(e)Explain what will happen to the recursion and execution of the recursive function gcd when m is positive and n is negative.[2]
+(e) Explain what will happen to the recursion and execution of the recursive function gcd when m is positive and n is negative. [2]
 
 > [!Answer]
 > Since m > n, when the function calls itself, m will be replaced by m – n, which is larger than m and is still positive. As a result m will keep getting larger with each function call. Hence, the function will end up calling itself infinitely many times (until the computer runs out of memory or the program terminates it)
 
-(f)Rewrite the function gcd in pseudo-code to carry out Euclid’s algorithm without using recursion.[3]
+(f) Rewrite the function gcd in pseudo-code to carry out Euclid’s algorithm without using recursion. [3]
 
 > [!Answer]
 >
@@ -1003,9 +985,7 @@ ENDFUNCTION
 > [!Answer]
 > The function is intended to calculate x raised to the power of the value a.
 
-**(c) Upon testing, the author realises that there is a logic error in the code.**
-
-Identify this error and state how the existing code should be corrected. [2]
+**(c) Upon testing, the author realises that there is a logic error in the code. Identify this error and state how the existing code should be corrected. [2]**
 
 > [!Answer]
 > When a = 0, the function wrongly returns x instead of 1.
@@ -1072,7 +1052,7 @@ def foo(n, m):
 
 **foo(0,2)**
 
-Use the above example to create a trace tree diagram for the recursive function call foo(4,2) . [3]
+**Use the above example to create a trace tree diagram for the recursive function call foo(4,2) . [3]**
 
 > [!Answer]
 > foo(4,2)  # return 2 + (-6) = -4
@@ -1136,13 +1116,14 @@ b) Write in pseudocode the iterative version of foo(n, m). [3]
 
 **2A private school has two kinds of students, full-time students and part-time students. It uses object-oriented programming (OOP) to store data about the students. For both kinds of students, their name and date of birth are stored. For full-time students, their address and telephone number are stored. For part-time students, the list of classes they are taking is stored. Full-time students pay an annual school fee which is a constant amount. The school fee for part-time students is calculated based on the number of classes they are taking.**
 
-(a)Draw a class diagram that shows the following in the school as described above: The superclass; Any subclasses; Inheritance; Attributes; Appropriate methods.[6]
+**(a) Draw a class diagram that shows the following in the school as described above: The superclass; Any subclasses; Inheritance; Attributes; Appropriate methods. [6]**
 
 > [!Answer]
 > Students- Name (string)- DOB (string)+ Constructor(Name, DOB)+ get_name()+ get_dob()+ get_school_fee()Full-timePart-time- Address (string)- Phone_no (string)- Classes (list of strings)+ get_address()+ get_phone_no()+ get_school_fee()+ Constructor+ get_classes()+ get_school_fee()
 >
 > ```mermaid
 > classDiagram
+> direction TB
 > class Students {
 >   -Name : string
 >   -DOB : string
@@ -1151,14 +1132,14 @@ b) Write in pseudocode the iterative version of foo(n, m). [3]
 >   +get_dob()
 >   +get_school_fee()
 > }
-> class "Full-time" as FullTime {
+> class FullTime["Full-time"] {
 >   -Address : string
 >   -Phone_no : string
 >   +get_address()
 >   +get_phone_no()
 >   +get_school_fee()
 > }
-> class "Part-time" as PartTime {
+> class PartTime["Part-time"] {
 >   -Classes : list of strings
 >   +Constructor
 >   +get_classes()
@@ -1168,24 +1149,24 @@ b) Write in pseudocode the iterative version of foo(n, m). [3]
 > Students <|-- PartTime
 > ```
 
-(b)Give an example of inheritance in the class diagram in part (a).[1]
+(b) Give an example of inheritance in the class diagram in part (a). [1]
 
 > [!Answer]
 > Full-time and part-time classes inherit attributes (Name and DOB) and methods (accessor for Name and DOB) from Students parent class
 
-(c)Explain where and how polymorphism is useful in this context.[2]
+(c) Explain where and how polymorphism is useful in this context. [2]
 
 > [!Answer]
 > The calculation of school fees is different for full-time and part-time students, but the get_school_fee() method can be used for both. This streamlines code that uses the school fee for other purposes.
 
 **The school needs to back up and archive data regularly.**
 
-(d)(i)Explain why there is a need to back up data.[2]
+(d)(i) Explain why there is a need to back up data. [2]
 
 > [!Answer]
 > Data should be backed up as it is updated so that a copy of the data exists in case the main database is damaged or deleted by accident or due to malicious action. The data can then be recovered from the **backup** copy.
 
-(ii)Explain why there is a need to archive data.[2]
+(ii) Explain why there is a need to archive data. [2]
 
 > [!Answer]
 > Data that is no longer needed on a day-to-day basis (e.g. students who have already graduated) should be archived. It can still be looked up if necessary, but the data does not clog up space in the current database.
@@ -1194,7 +1175,7 @@ b) Write in pseudocode the iterative version of foo(n, m). [3]
 
 ##### 2025 ASRJC Prelim P1 Q3)
 
-**3 Harley Thorman Corporation is developing an inventory management system for its electronic products using Object-Oriented Programming (OOP).The main types of electronic devices that the corporation sells are display devices, audio devices and computing devices.Display devices include televisions, computer monitors and screen projectors. Audio devices include speaker systems and headphones. Computing devices include desktops, laptops and tablets.**
+**3 Harley Thorman Corporation is developing an inventory management system for its electronic products using Object-Oriented Programming (OOP). The main types of electronic devices that the corporation sells are display devices, audio devices and computing devices. Display devices include televisions, computer monitors and screen projectors. Audio devices include speaker systems and headphones. Computing devices include desktops, laptops and tablets.**
 
 (a) Draw a class diagram for this system showing classes and their inheritance relationships. Do not include any attributes or methods in the diagram. [3]
 
@@ -1203,14 +1184,15 @@ b) Write in pseudocode the iterative version of foo(n, m). [3]
 >
 > ```mermaid
 > classDiagram
+> direction TB
 > class ElectronicDevice
 > class DisplayDevice
 > class AudioDevice
 > class ComputingDevice
-> class TV
-> class Monitor
-> class Projector
-> class "Speaker System" as SpeakerSystem
+> class Television
+> class ComputerMonitor["Computer Monitor"]
+> class ScreenProjector["Screen Projector"]
+> class SpeakerSystem["Speaker System"]
 > class Headphones
 > class Desktop
 > class Laptop
@@ -1218,15 +1200,14 @@ b) Write in pseudocode the iterative version of foo(n, m). [3]
 > ElectronicDevice <|-- DisplayDevice
 > ElectronicDevice <|-- AudioDevice
 > ElectronicDevice <|-- ComputingDevice
-> DisplayDevice <|-- TV
-> DisplayDevice <|-- Monitor
-> DisplayDevice <|-- Projector
+> DisplayDevice <|-- Television
+> DisplayDevice <|-- ComputerMonitor
+> DisplayDevice <|-- ScreenProjector
 > AudioDevice <|-- SpeakerSystem
 > AudioDevice <|-- Headphones
 > ComputingDevice <|-- Desktop
 > ComputingDevice <|-- Laptop
 > ComputingDevice <|-- Tablet
->
 > ```
 
 (b) Explain why inheritance is an important feature in OOP. [1]
@@ -1234,7 +1215,10 @@ b) Write in pseudocode the iterative version of foo(n, m). [3]
 > [!Answer]
 > **Inheritance** enables developers to reuse code efficiently, as common attributes and methods can be defined in a parent class, and all subclasses would inherit these functionalities. It eliminates the need to duplicate code across multiple classes. Updates made to the parent class automatically propagate to all subclasses. Therefore, it makes the codebase more maintainable and consistent.
 
-(c) Suggest which class each of the following attributes should be placed in, explaining your choice:CPU modelproduct serial number. [3]
+(c) Suggest which class each of the following attributes should be placed in, explaining your choice:
+
+* **CPU model**
+* **product serial number. [3]**
 
 > [!Answer]
 > CPU model should be placed in the ComputingDevice class, as typically only computing devices (desktops, laptops, tablets) would include CPU model information in the specifications.
@@ -1398,6 +1382,7 @@ Draw a class diagram that shows the following for the situation described above.
 >
 > ```mermaid
 > classDiagram
+> direction TB
 > class Employee {
 >   -EmployeeID : STRING
 >   -Name : STRING
@@ -1437,9 +1422,8 @@ Draw a class diagram that shows the following for the situation described above.
 >   +GetHoursThisWeek()
 >   +SetHourlyRate()
 > }
-> SalaryEmployee --|> Employee
-> ApprenticeshipEmployee --|> Employee
->
+> Employee <|-- SalaryEmployee
+> Employee <|-- ApprenticeshipEmployee
 > ```
 
 **(d) A SalaryEmployee is paid a fixed monthly payment.**
@@ -1588,7 +1572,7 @@ PublicHolidayBonus ← 0.03
 > [!Answer]
 > Allows objects or methods to exhibit different behaviors under different classes.  (1)
 
-(ii) What changes in design needs to be made i f the objects of class ApprenticeshipEmployee also use CalculateSalary() to calculate the weekly salary. [1]
+**(ii) What changes in design needs to be made i f the objects of class ApprenticeshipEmployee also use CalculateSalary() to calculate the weekly salary. [1]**
 
 > [!Answer]
 > What changes in design needs to be made if the objects of class
@@ -1604,9 +1588,7 @@ PublicHolidayBonus ← 0.03
 > components, improved collaboration,  increased scalability,  faster development cycles,
 > and better fault isolation.         (2)
 
-**(g) The software design may need to change from time to time by a team of programmers.**
-
-Explain how the team tracks the changes with a system. [2]
+**(g) The software design may need to change from time to time by a team of programmers. Explain how the team tracks the changes with a system. [2]**
 
 > [!Answer]
 > **Version control** is a system that tracks changes to files, typically code in software development,
@@ -1672,6 +1654,7 @@ Explain how the team tracks the changes with a system. [2]
 >
 > ```mermaid
 > classDiagram
+> direction TB
 > class Vehicle {
 >   -VRN
 >   -distance
@@ -1706,7 +1689,6 @@ Explain how the team tracks the changes with a system. [2]
 > }
 > Vehicle <|-- Car
 > Vehicle <|-- Van
->
 > ```
 
 (b) Explain how encapsulation helps to prevent inadvertent data modification. [2]
@@ -1742,7 +1724,7 @@ Explain how the team tracks the changes with a system. [2]
 >
 > * Available: BOOLEAN / INTEGER
 
-(e) State whether the above table is in Third Normal Form (3NF). Explain your answer. [4]
+**(e) State whether the above table is in Third Normal Form (3NF). Explain your answer. [4]**
 
 > [!Answer]
 > Not in **3NF**
@@ -1774,7 +1756,7 @@ Explain how the team tracks the changes with a system. [2]
 >
 > ```
 
-(g) Write an SQL query to retrieve from the above tables the VRNs of hybrid cars and their latest date of hire. [6]
+**(g) Write an SQL query to retrieve from the above tables the VRNs of hybrid cars and their latest date of hire. [6]**
 
 > [!Answer]
 >
@@ -1807,7 +1789,7 @@ Explain how the team tracks the changes with a system. [2]
 
 **3A software company is writing a program for a vehicle hire business. Both cars and vans are available for hire. For all vehicles, the data that will be stored include: Vehicle Registration Number (VRN) Total distance travelled (km) Date hired Date of return Cost per day Availability for hire For cars, the additional data stored include: Fuel type (petrol, diesel, electric, hybrid) For vans, the additional data stored include: Maximum load (kg) The odometer in the vehicle displays the total distance the vehicle has travelled since manufacture. When a vehicle is hired: total distance travelled is set to the odometer's value date hired is set to the current date date of return is set to the date the vehicle is expected to be returned availability for hire is set to FALSE. When a vehicle is returned: hire cost is returned as the cost per day multiplied by the number of days the vehicle was hired total distance travelled is set to the odometer value date of return is set to the current date availability for hire is set to TRUE. Object-oriented programming will be used to model this situation.**
 
-(a)Draw a class diagram that shows the following for the situation described above. the superclass any subclasses inheritance properties appropriate methods.[8]
+**(a) Draw a class diagram that shows the following for the situation described above. the superclass any subclasses inheritance properties appropriate methods. [8]**
 
 > [!Answer]
 > Vehicle
@@ -1829,6 +1811,7 @@ Explain how the team tracks the changes with a system. [2]
 >
 > ```mermaid
 > classDiagram
+> direction TB
 > class Vehicle {
 >   -VRN
 >   -distance
@@ -1863,48 +1846,43 @@ Explain how the team tracks the changes with a system. [2]
 > }
 > Vehicle <|-- Car
 > Vehicle <|-- Van
->
 > ```
 
-(b)Explain how encapsulation helps to prevent inadvertent data modification using examples from this situation.[2]
+(b) Explain how encapsulation helps to prevent inadvertent data modification using examples from this situation. [2]
 
 > [!Answer]
 > Private attributes cannot be directly accessed or modified outside of the class, only through public methods, to prevent the object falling into an inconsistent statee.g. hire_vehicle() method ensures the total distance, date hired, return date, and availability are updated in a consistent way
 
-(c)Explain how inheritance promotes code reuse using examples from this situation.[2]
+(c) Explain how inheritance promotes code reuse using examples from this situation. [2]
 
 > [!Answer]
 > **Inheritance** allows subclasses to access public methods of the superclassCar and Van can access the public getter methods of Vehicle e.g. getVRN(), and do not need to duplicate the same code.
 
 **The programmer uses a database to store vehicle hire data. Each row in the table represents a vehicle hire record. A vehicle must be hired for a minimum of one day. Vehicle hire data is stored in the following table: VRN TotalDistance DateHired DateReturned CostPerDay Availability FuelType MaxLoad**
 
-(d)(i)Identify the primary key for the above table.[1]
+(d)(i) Identify the primary key for the above table. [1]
 
 > [!Answer]
 > (VRN, DateHired)Note: many students did not recognize the composite key
 
-(ii)Identify suitable SQL data types for the following columns:
-
-1.DateHired[1]
-
-2.Availability [1]
+**(ii) Identify suitable SQL data types for the following columns: 1. DateHired [1] 2. Availability [1]**
 
 > [!Answer]
 > DateHired: TEXT / DATE / STRINGAvailability: BOOLEAN / INTEGER
 
-(e)Explain why the above table is not in Third Normal Form (3NF).[3]
+(e) Explain why the above table is not in Third Normal Form (3NF). [3]
 
 > [!Answer]
 > **3NF** requires 2NFNon-key attributes CostPerDay, FuelType, MaxLoad depend only on VRN, which is part of the **primary key**,and not on the entire **primary key** (partial dependence)
 
 **A database consultant rewrites the above table into the following table descriptions: Vehicle (VRN, Type, TotalDistance, CostPerDay, Availability) Hire (VRN, DateHired, DateReturned) Car (VRN, FuelType) Van (VRN, MaxLoad) The vehicle type is stored as either 'Car' or 'Van'.**
 
-(f)Identify the foreign key(s) of the tables Hire, Car and Van.[1]
+(f) Identify the foreign key(s) of the tables Hire, Car and Van. [1]
 
 > [!Answer]
 > VRN
 
-(g)Draw an entity-relationship (ER) diagram showing the four tables and the relationships between them.[4]
+(g) Draw an entity-relationship (ER) diagram showing the four tables and the relationships between them. [4]
 
 > [!Answer]
 >
@@ -1916,7 +1894,7 @@ Explain how the team tracks the changes with a system. [2]
 >
 > ```
 
-(h)Write an SQL query to retrieve from the above tables the VRNs of hybrid cars and their latest date of hire.[6]
+(h) Write an SQL query to retrieve from the above tables the VRNs of hybrid cars and their latest date of hire. [6]
 
 > [!Answer]
 >
@@ -1931,7 +1909,7 @@ Explain how the team tracks the changes with a system. [2]
 
 **The data management system used in a wildlife reserve to keep track of the tagged animals is designed using Object-Oriented Programming (OOP) to construct the Animal object.**
 
-Explain the purposes of encapsulation[1]
+**Explain the purposes of encapsulation [1]**
 
 > [!Answer]
 >
@@ -1971,43 +1949,29 @@ Using OOP principles, draw a class diagram for the Animal object used in the dat
 >
 > ```mermaid
 > classDiagram
+> direction TB
 > class Animal {
->   -species
 >   -UID
+>   -species
 >   -gender
 >   -weight
 >   -age
->   +get_species()
->   +get_UID()
->   +get_gender()
->   +get_weight()
->   +get_age()
->   +set_species()
->   +set_UID()
->   +set_gender()
->   +set_weight()
->   +set_age()
->   +get_info()
+>   +getInfo()
+>   +computeHealthIndex()
 > }
 > class Bird {
 >   -wingspan
->   +get_wingspan()
->   +set_wingspan()
 > }
 > class MarineAnimal {
 >   -habitat
->   +get_habitat()
->   +set_habitat()
 > }
 > class Mammal {
->   -bodytemp
->   +get_bodytemp()
->   +set_bodytemp()
+>   -bodyTemperature
+>   +checkTemperature()
 > }
-> Bird --|> Animal
-> MarineAnimal --|> Animal
-> Mammal --|> Animal
->
+> Animal <|-- Bird
+> Animal <|-- MarineAnimal
+> Animal <|-- Mammal
 > ```
 
 **A binary search tree (BST) holds the UIDs of the animals in the array animalBST. Each element of the array contains three values. leftPtr and rightPtr are integers and UID is a string. The root of the BST is stored in an integer variable, rootPtr. The unused elements of the array are in a free space list that starts from freePtr. The UIDs of the animals are guaranteed to be unique. The contents of the array animalBST is shown below. –1 represents the null pointer.**
@@ -2059,9 +2023,7 @@ State one advantage and one disadvantage of implementing it with a static data s
 >
 > * Disadvantage) Fixed size makes the structure inflexible — once full, no new nodes can be added, which limits scalability.This can lead to wasted memory or insertion failures.
 
-Write the UID outputs when performing the following traversals on animalBST:
-
-in-order traversal[1]
+**Write the UID outputs when performing the following traversals on animalBST: in-order traversal [1]**
 
 > [!Answer]
 > drongo-609, kingfisher-342, macaque-103, mousedeer-215, snakehead-321, squirrel-457, sunbird-087, sunbird-457No slips allowed. Allow BOD if new entries are not included.
@@ -2197,6 +2159,7 @@ post-order traversal[1]
 >
 > ```mermaid
 > classDiagram
+> direction TB
 > class Robot {
 >   -robotID : String
 >   -status : String
@@ -2230,10 +2193,9 @@ post-order traversal[1]
 >   +get_shelvesRestocked() : Int
 >   +set_shelvesRestocked(Int)
 > }
-> TransportRobot --|> Robot
-> SortingRobot --|> Robot
-> RestockRobot --|> Robot
->
+> Robot <|-- TransportRobot
+> Robot <|-- SortingRobot
+> Robot <|-- RestockRobot
 > ```
 
 **(b)**
@@ -2268,11 +2230,7 @@ post-order traversal[1]
 > implementations in different subclasses. Each **subclass** defines its own version of
 > PerformTask(), which behaves differently depending on the robot type.
 
-**(c) The system includes validation for the number of kilograms carried per trip by a transport robot.**
-
-Provide examples of test data for the input variable kgCarried.
-
-[4]
+**(c) The system includes validation for the number of kilograms carried per trip by a transport robot. Provide examples of test data for the input variable kgCarried. [4]**
 
 > [!Answer]
 > Type of
@@ -2305,6 +2263,7 @@ a) By examining the attributes and methods of these classes, draw the UML class 
 >
 > ```mermaid
 > classDiagram
+> direction TB
 > class PowerUnit {
 >   -type : str
 >   -power_rating : int
@@ -2335,15 +2294,9 @@ a) By examining the attributes and methods of these classes, draw the UML class 
 >   +getters_setters_of_all_additional_attributes()
 >   +connect_home_network()
 > }
-> note for PowerUnit "power rating
-> getters/setters of all attributes"
-> note for Appliance "getters/setters of all attributes"
-> note for WashingMachine "getters/setters of all additional attributes"
-> note for Refrigerator "getters/setters of all additional attributes"
-> WashingMachine --|> Appliance
-> Refrigerator --|> Appliance
 > Appliance --> PowerUnit : power_unit
->
+> Appliance <|-- WashingMachine
+> Appliance <|-- Refrigerator
 > ```
 
 b) Explain what polymorphism is. Circle the polymorphed functions. [2]
@@ -2353,7 +2306,7 @@ b) Explain what polymorphism is. Circle the polymorphed functions. [2]
 > name but provide different implementations.
 > Circle connect_home_network() in the sub classes
 
-c) Explain what data encapsulation is. Give an example using the example given. [2]
+**c) Explain what data encapsulation is. Give an example using the example given. [2]**
 
 > [!Answer]
 > **Encapsulation** is the practice of restricting direct access to an object’s
@@ -2378,7 +2331,7 @@ c) Explain what data encapsulation is. Give an example using the example given. 
 
 **4. In a real-time online car racing game, once a player completes a round, the time taken is sent to the server for ranking purposes.**
 
-a) Explain why the finishing time records received by the server may not always arrive in strictly increasing order. [1]
+**a) Explain why the finishing time records received by the server may not always arrive in strictly increasing order. [1]**
 
 > [!Answer]
 > Network delays, jitter or different **packet** routes may cause later times to arrive
@@ -2387,14 +2340,14 @@ a) Explain why the finishing time records received by the server may not always 
 
 **The server needs to maintain these records in a data structure where search operations based on finishing time are performed very frequently.**
 
-b) State the advantage of using a sorted array over a sorted linked list in this context. Support your answer with reference to time complexity. [2]
+**b) State the advantage of using a sorted array over a sorted linked list in this context. Support your answer with reference to time complexity. [2]**
 
 > [!Answer]
 > Array supports **binary search** $O(\log n)$
 > **linked list** search is sequential $O(n)$.
 > 2
 
-c) State one disadvantage of using a sorted array over a sorted linked list in this context. [1]
+**c) State one disadvantage of using a sorted array over a sorted linked list in this context. [1]**
 
 > [!Answer]
 > Insertion into the middle of a sorted array is $O(n)$ (shifting required), but in a
@@ -2406,9 +2359,7 @@ c) State one disadvantage of using a sorted array over a sorted linked list in t
 
 **In this racing game, the finishing times are generally increasing as players**
 
-complete their rounds one after another.
-
-d) Explain why this makes a sorted array particularly efficient for insertion in this context. [2]
+**complete their rounds one after another. d) Explain why this makes a sorted array particularly efficient for insertion in this context. [2]**
 
 > [!Answer]
 > Since finishing times usually arrive in increasing order, new records are
@@ -2422,7 +2373,7 @@ d) Explain why this makes a sorted array particularly efficient for insertion in
 
 **It was later discovered that some finishing time records are being altered during transmission, either accidentally or maliciously. The server must be able to detect such tampering and ensure that each record truly originates from the legitimate player.**
 
-e) Suggest a method the server can use to verify the authenticity and integrity of each message. [1]
+**e) Suggest a method the server can use to verify the authenticity and integrity of each message. [1]**
 
 > [!Answer]
 > Use a **digital signature** for each message. 1
@@ -2459,23 +2410,7 @@ Copy the following array onto the answer sheet.
 
 [3]
 
-[4]
-
-[5]
-
-[6]
-
-[7]
-
-[8]
-
-[9]
-
-[10]
-
-(i)Add the records into the array as they are inserted in the following order. ('Jacky', 22) ('Sam', 18) ('Joel', 20) ('Bob', 21)
-
-('Justin', 19)[5]
+**[4] [5] [6] [7] [8] [9] [10] (i) Add the records into the array as they are inserted in the following order. ('Jacky', 22) ('Sam', 18) ('Joel', 20) ('Bob', 21) ('Justin', 19) [5]**
 
 > [!Answer]
 >
@@ -2491,7 +2426,7 @@ Copy the following array onto the answer sheet.
 >
 > * ('Justin', 19)[8][9]
 
-(ii)Describe how to look up Bob’s age in the hash table.[4]
+(ii) Describe how to look up Bob’s age in the hash table. [4]
 
 > [!Answer]
 >
@@ -2499,17 +2434,17 @@ Copy the following array onto the answer sheet.
 
 **Suppose instead that the same records are to be stored in a binary search tree (BST), in order of age. The records are inserted into the BST in the same order as in part (i).**
 
-(iii)Draw the resulting BST.[3]
+(iii) Draw the resulting BST. [3]
 
 > [!Answer]
 > ('Jacky', 22)('Sam', 18)('Joel', 20)('Bob', 21)('Justin', 19)('Jacky', 22)('Sam', 18)('Joel', 20)('Bob', 21)('Justin', 19)
 
-(iv)List the names in a post-order traversal of the BST.[2]
+(iv) List the names in a post-order traversal of the BST. [2]
 
 > [!Answer]
 > Justin, Bob, Joel, Sam, Jacky
 
-(v)Explain how you would use the BST to determine who is the second oldest person.[3]
+(v) Explain how you would use the BST to determine who is the second oldest person. [3]
 
 > [!Answer]
 > Since the root has no right child, the oldest person is the root. The second oldest person is the oldest person in the left subtree. Starting from the left child of the root, keep going right until you reach a node with no right child (Bob). This is the second oldest person in the entire tree.(If the root has a right child there are two cases. Firstly, keep going right. The oldest person is the rightmost node. If this node does not have a left child, then the second oldest person is the parent of the rightmost node. If this node has a left child, then start from the left child and keep going right until you reach a node with no right child.)
@@ -2534,7 +2469,7 @@ Copy the following array onto the answer sheet.
 * **Binary Search Tree (Self-balancing)**
 * **Stack**
 
-(a) For each operation above, select the most suitable data structure from the list provided (Unordered List, Hash Table, BST, Stack), and justify your choice using Big-O notation. [4]
+**(a) For each operation above, select the most suitable data structure from the list provided (Unordered List, Hash Table, BST, Stack), and justify your choice using Big-O notation. [4]**
 
 > [!Answer]
 >
@@ -2552,7 +2487,7 @@ Copy the following array onto the answer sheet.
 > the system will also need to support CheckOrderExists, which makes **Hash Table**
 > more suitable
 
-(b) Explain why using a linked list to implement CheckOrderExists(orderID) would be inefficient at scale. [2]
+**(b) Explain why using a linked list to implement CheckOrderExists(orderID) would be inefficient at scale. [2]**
 
 > [!Answer]
 > A **linked list** does not support direct access to elements by key.
@@ -2560,9 +2495,7 @@ Copy the following array onto the answer sheet.
 > resulting in $O(n)$ **time complexity**. This becomes inefficient as the number of orders
 > grows.
 
-**(c) The company is considering using a hash table to manage all active orders.**
-
-Explain why using a hash table is not ideal, and propose a suitable data structure. [3]
+**(c) The company is considering using a hash table to manage all active orders. Explain why using a hash table is not ideal, and propose a suitable data structure. [3]**
 
 > [!Answer]
 > The company wants to display all active orders sorted by orderID or order time on a
@@ -2579,13 +2512,7 @@ Explain why using a hash table is not ideal, and propose a suitable data structu
 > This reduces efficiency compared to using a data structure that maintains order, such
 > as a **binary search tree** or a **priority queue**.
 
-**(d) During a Black Friday sale, the sales volume typically increases dramatically. Certain popular items may have limited stock, so it is important for the system to support a feature that allows merchants to fulfil orders in chronological order.**
-
-You are tasked with selecting the most appropriate data structure to support this operation.
-
-You may choose from the list of data structures provided above, or propose an alternative.
-
-Justify your choice clearly. [2]
+**(d) During a Black Friday sale, the sales volume typically increases dramatically. Certain popular items may have limited stock, so it is important for the system to support a feature that allows merchants to fulfil orders in chronological order. You are tasked with selecting the most appropriate data structure to support this operation. You may choose from the list of data structures provided above, or propose an alternative. Justify your choice clearly. [2]**
 
 > [!Answer]
 > Use a **queue** to manage orders. A **queue** naturally supports first-come, first-served
@@ -2603,7 +2530,7 @@ Justify your choice clearly. [2]
 
 **5. Hash tables are often described as providing constant-time $O(1)$, search performance.**
 
-a) State three different reasons why in practical, a hash table cannot always maintain $O(1)$ search time. [3]
+**a) State three different reasons why in practical, a hash table cannot always maintain $O(1)$ search time. [3]**
 
 > [!Answer]
 >
@@ -2633,13 +2560,7 @@ b) Explain what is meant by collision resolution. [1]
 > hash value. (Cannot be just specific to linear probe)
 > 1
 
-c) For each of the following situations, state whether open addressing or closed addressing is the preferred collision resolution strategy.
-
-i. When the load factor may be greater than 1.
-
-ii. When memory is very limited and space efficiency is important.
-
-[1]
+**c) For each of the following situations, state whether open addressing or closed addressing is the preferred collision resolution strategy. i. When the load factor may be greater than 1. ii. When memory is very limited and space efficiency is important. [1]**
 
 > [!Answer]
 > i) Closed addressing
@@ -2657,12 +2578,12 @@ ii. When memory is very limited and space efficiency is important.
 | ------ | ----------------- | ---------- | ----------- | ----------- | - | -- | - | - |
 | Prefix | Registrationgroup | Registrant | Publication | Check digit |   |    |   |   |
 
-(a)Describe a purpose of the check digit in an ISBN.[2]
+(a) Describe a purpose of the check digit in an ISBN. [2]
 
 > [!Answer]
 > Detect common input errors such as transcription error and transposition error which helps to maintain data accuracy in book identification systems
 
-(b)Suggest another suitable validation technique for ISBN.[1]
+(b) Suggest another suitable validation technique for ISBN. [1]
 
 > [!Answer]
 >
@@ -2672,12 +2593,12 @@ ii. When memory is very limited and space efficiency is important.
 
 **A school library system needs to store and search for information about books using their unique ISBNs. New books are added into the library inventory and damaged or older books are condemned from time to time. The developers propose the use of a hash table to store and retrieve the book records.**
 
-(c)Explain how the library system would use a hash function and a hash table to store and search for books by their ISBNs.[3]
+(c) Explain how the library system would use a hash function and a hash table to store and search for books by their ISBNs. [3]
 
 > [!Answer]
 > Each ISBN will be processed by the same hash function to generate an index/key, which corresponds to the position in the **hash table** where the book record will be stored. When searching for a book using its ISBN, it uses the same hash function to generate the index/key to locate the record directly.
 
-(d)Give three features of an effective hashing algorithm.[3]
+(d) Give three features of an effective hashing algorithm. [3]
 
 > [!Answer]
 >
@@ -2691,7 +2612,7 @@ ii. When memory is very limited and space efficiency is important.
 >
 > * 4. Quick computation of the hash address.
 
-(e)Explain the meaning of a collision in this context.[2]
+(e) Explain the meaning of a collision in this context. [2]
 
 > [!Answer]
 >
@@ -2699,7 +2620,7 @@ ii. When memory is very limited and space efficiency is important.
 >
 > * When searching for a book record, and another book record is found, it does not mean that the search item is not in the table. A collision resolution algorithm is used to continue searching for the item at other locations before a conclusion is made.
 
-(f)Describe one method that can be used to handle the consequence of a collision.[2]
+(f) Describe one method that can be used to handle the consequence of a collision. [2]
 
 > [!Answer]
 >
@@ -2709,7 +2630,7 @@ ii. When memory is very limited and space efficiency is important.
 
 **Students on an internship with the library ask their developer mentors why the book records, ordered by their ISBNs, were not stored in a linked list instead.**
 
-(g)Describe one disadvantage of storing and searching the records ordered by ISBNs using a linked list.[2]
+(g) Describe one disadvantage of storing and searching the records ordered by ISBNs using a linked list. [2]
 
 > [!Answer]
 > Locating a book will require traversing through the **linked list** starting from the head of the **linked list**, which is slow process of $O(n)$ time complexityThis affects not just the searching process, but also the insertion and deletion process to maintain the order of the records by ISBN
@@ -2748,9 +2669,7 @@ ENDPROCEDURE
 > **Worst-case** **time complexity**: $O(n^2)$
 > For large datasets, the number of operations required for insertion sort grows quadratically with input size.
 
-**(c) Insertion sort is effective for small arrays due to its simplicity and low overhead. However, for larger arrays, more efficient algorithms such as merge sort are preferred.**
-
-Describe how merge sort works and state its time complexity.[3]
+**(c) Insertion sort is effective for small arrays due to its simplicity and low overhead. However, for larger arrays, more efficient algorithms such as merge sort are preferred. Describe how merge sort works and state its time complexity. [3]**
 
 > [!Answer]
 > **Merge sort** is a divide-and-conquer algorithm that sorts an array by recursively breaking it down and then combining them in sorted order.
@@ -2789,7 +2708,7 @@ Describe how merge sort works and state its time complexity.[3]
 
 ```
 
-(a)Write the correct pseudo-code for (A), (B), (C) in the algorithm above.[3]
+(a) Write the correct pseudo-code for (A), (B), (C) in the algorithm above. [3]
 
 > [!Answer]
 >
@@ -2799,7 +2718,7 @@ Describe how merge sort works and state its time complexity.[3]
 >
 > * (C): Temp
 
-(b)State two ways in which the time complexity of the algorithm above can be improved.[3]
+(b) State two ways in which the time complexity of the algorithm above can be improved. [3]
 
 > [!Answer]
 >
@@ -2807,7 +2726,7 @@ Describe how merge sort works and state its time complexity.[3]
 >
 > * Second way:Introduce flag variable between lines 5 and 6 that changes value if a swap in lines 8-10 happened. If the entire loop for j in line 6 runs without a swap then the list is already sorted. We can then break the loop for i and end the function there.
 
-(c)State the worst-case time-complexity of bubble sort.[1]
+(c) State the worst-case time-complexity of bubble sort. [1]
 
 > [!Answer]
 > $O(n^2)$
@@ -2847,7 +2766,7 @@ Describe how merge sort works and state its time complexity.[3]
 
 ```
 
-(d)Write the correct pseudo-code for (D), (E), (F) in the algorithm above.[3]
+(d) Write the correct pseudo-code for (D), (E), (F) in the algorithm above. [3]
 
 > [!Answer]
 >
@@ -2855,9 +2774,7 @@ Describe how merge sort works and state its time complexity.[3]
 >
 > * (F): i <= N1 (alternatively, j > N2)
 
-(e)Write a function to perform merge sort, using the helper function above, in pseudo-code.
-
-[4]
+**(e) Write a function to perform merge sort, using the helper function above, in pseudo-code. [4]**
 
 > [!Answer]
 >
@@ -2872,9 +2789,7 @@ Describe how merge sort works and state its time complexity.[3]
 
 **5 Merge Sort and Insertion Sort are two distinct sorting algorithms with different performance characteristics, particularly evident when analyzed using Big-O notation.**
 
-With selected dataset sizes (29, 210, 211, 213, 214, 215) comparing these two sorts in terms
-
-of worst-case time complexity for large datasets. [6]
+**With selected dataset sizes (29, 210, 211, 213, 214, 215) comparing these two sorts in terms of worst-case time complexity for large datasets. [6]**
 
 > [!Answer]
 > For Merge sort, $O(N\log_2 N)$ in all cases (best, average, and worst).  This is because Merge Sort
@@ -2892,27 +2807,25 @@ of worst-case time complexity for large datasets. [6]
 
 **2A program implements a Merge Sort algorithm to order values into ascending order. The contents of an array are shown: 12 10 5 1 24 9 6**
 
-(a)Explain how the Merge Sort algorithm sorts the data in the array into ascending order.
-
-[3]
+**(a) Explain how the Merge Sort algorithm sorts the data in the array into ascending order. [3]**
 
 > [!Answer]
 > (a)Explain how a **Merge Sort** algorithm will sort the data in the array into ascending order.
 > Divide the array into 2 smaller subarrays, repeat this step on each of the smaller subarrays  until each subarray has only one element Merge the subarrays back together in the correct (sorted) order. llustrate using the array given
 
-(b)Using Big-O notation, state the worst-case time complexity of Merge Sort.[1]
+(b) Using Big-O notation, state the worst-case time complexity of Merge Sort. [1]
 
 > [!Answer]
 > $O(n\log n)$
 
 **(c)The Merge Sort algorithm uses recursion.**
 
-(i)State three features of a successful recursive function.[3]
+(i) State three features of a successful recursive function. [3]
 
 > [!Answer]
 > A recursive algorithm must call itself, recursively.Has a **base case** or terminating condition where the function stops calling itselfA recursive algorithm must change its state and move toward the **base case**
 
-(ii)State the purpose of the given pseudocode function:
+(ii) State the purpose of the given pseudocode function:
 
 ```text
 FUNCTION iterative (string1)
@@ -2937,7 +2850,7 @@ FUNCTION
 > [!Answer]
 > This function checks whether string1 is a palindrome.
 
-(iii)Rewrite the pseudocode function in (c)(ii) using recursion.[3]
+(iii) Rewrite the pseudocode function in (c)(ii) using recursion. [3]
 
 > [!Answer]
 >
@@ -2978,11 +2891,7 @@ FUNCTION
 
 **The pointer LastItem stores the position of the last error in the array. Pointer will set to -1 initially.**
 
-(i) The function, AddItemToStack, takes the next error, the array, and pointer as parameters.
-
-If the stack is full, the function returns FALSE; otherwise, it adds the error to the stack, changes the pointer’s value and returns TRUE.
-
-Copy and complete the following pseudocode for the function AddItemToStack. [4]
+**(i) The function, AddItemToStack, takes the next error, the array, and pointer as parameters. If the stack is full, the function returns FALSE; otherwise, it adds the error to the stack, changes the pointer’s value and returns TRUE. Copy and complete the following pseudocode for the function AddItemToStack. [4]**
 
 ```text
 FUNCTION AddItemToStack(BYREF ErrorArray : ARRAY[0 : 99] OF Error,
@@ -3012,9 +2921,7 @@ ENDFUNCTION
 >
 > ```
 
-(ii) Explain the reasons why ErrorArray and LastItem are passed by reference, but
-
-Error1 is passed by value. [3]
+**(ii) Explain the reasons why ErrorArray and LastItem are passed by reference, but Error1 is passed by value. [3]**
 
 6
 
@@ -3034,7 +2941,7 @@ Error1 is passed by value. [3]
 >
 > called from
 
-(iii) The function RemoveItem takes the next error from the stack and returns it. If there are no errors in the stack, it returns the global object NullError. Copy and complete the pseudocode algorithm RemoveItem. [3]
+**(iii) The function RemoveItem takes the next error from the stack and returns it. If there are no errors in the stack, it returns the global object NullError. Copy and complete the pseudocode algorithm RemoveItem. [3]**
 
 ```text
 FUNCTION RemoveItem(BYREF ErrorArray : ARRAY[0 : 99] OF Error,
@@ -3142,9 +3049,7 @@ ENDPROCEDURE
 
 **Identifiers ErrorListHead, FreeSpaceListHead are used as the linked list head and free space list head respectively.**
 
-(i) Copy the following diagram and complete the linked list with ErrorListHead and FreeSpaceListHead and other relevant variables. The first five nodes were inserted with the following errors:
-
-304-XX, 208-XY, 301-AB, 411-PX, 709-ZA [5]
+**(i) Copy the following diagram and complete the linked list with ErrorListHead and FreeSpaceListHead and other relevant variables. The first five nodes were inserted with the following errors: 304-XX, 208-XY, 301-AB, 411-PX, 709-ZA [5]**
 
 index
 ErrorArray
@@ -3188,9 +3093,7 @@ ErrorArray
 >
 > * 8  -1 (1)
 
-(ii) Show the changes with another diagram of the linked list after an error removed
-
-from the stack. [4]
+**(ii) Show the changes with another diagram of the linked list after an error removed from the stack. [4]**
 
 > [!Answer]
 > Show the changes with another diagram of the **linked list** after an error removed from the
@@ -3267,13 +3170,7 @@ Tokens = [4, 5, 6, '*', '+', 2, '-'].
 
 ```
 
-Token Action Stack Contents
-
-4 Push 4 [4]
-
-5 Push 5 [5, 4]
-
-[4]
+**Token Action Stack Contents 4 Push 4 [4] 5 Push 5 [5, 4] [4]**
 
 > [!Answer]
 >
@@ -3301,7 +3198,7 @@ Token Action Stack Contents
 >
 > answer 32.
 
-(b) Explain why it is important to POP operand A before operand B, as shown in lines 8 and 9. [1]
+**(b) Explain why it is important to POP operand A before operand B, as shown in lines 8 and 9. [1]**
 
 > [!Answer]
 > Operands must be popped in reverse order: first A, then B, so the operation is
@@ -3309,9 +3206,7 @@ Token Action Stack Contents
 > If reversed, A op B would yield incorrect results, especially for non-commutative
 > operations like subtraction and division.
 
-**(c) Add code to the pseudocode so that it can also handle exponentiation (^).**
-
-Indicate between which lines this code should be inserted. [3]
+**(c) Add code to the pseudocode so that it can also handle exponentiation (^). Indicate between which lines this code should be inserted. [3]**
 
 > [!Answer]
 > Modified lines (only change needed is adding another ELSE IF block):
@@ -3330,7 +3225,7 @@ Indicate between which lines this code should be inserted. [3]
 >
 > * Correct push statement showing B ^ A.
 
-(d) Identify one possible runtime error that could occur in the code above. Describe how it may happen, and explain necessary changes to the code to prevent it. [4]
+**(d) Identify one possible runtime error that could occur in the code above. Describe how it may happen, and explain necessary changes to the code to prevent it. [4]**
 
 > [!Answer]
 > A **stack** underflow error may occur when the function attempts to POP from an
@@ -3400,9 +3295,7 @@ Explain one advantage and one disadvantage of using a circular queue instead of 
 >
 > * For example, when adding a new print job, the program needs to check if (rear + 1) mod size equals front to determine if the **queue** is full, rather than simply checking if rear has reached the end of the array as in a linear **queue**. This increased complexity makes the code more difficult to maintain and debug if issues arise with the print job system.
 
-Draw a diagram showing the state of a circular queue after the following operations, showing the positions of front and rear pointers: Enqueue jobs: 101, 102, 103, 104 Dequeue two jobs
-
-Enqueue jobs: 105, 106 [3]
+**Draw a diagram showing the state of a circular queue after the following operations, showing the positions of front and rear pointers: Enqueue jobs: 101, 102, 103, 104 Dequeue two jobs Enqueue jobs: 105, 106 [3]**
 
 > [!Answer]
 > Correct array representation and element placementCorrect front pointer position (index 2)Correct rear pointer position (index 0)[106] [ ] [103] [104] [105]                ^Front (at index 2)[106] [ ] [103] [104] [105]   ^Rear (at index 0)
@@ -3462,7 +3355,7 @@ State one difference between a linear queue and a circular queue.[2]
 
 **The circular queue is implemented as a static array of size 5.**
 
-Draw a diagram showing the state of a circular queue after the following operations, showing the positions of front and rear pointers: Enqueue jobs: 101, 102, 103, 104 Dequeue two jobs. Enqueue jobs: 105, 106 [3]
+**Draw a diagram showing the state of a circular queue after the following operations, showing the positions of front and rear pointers: Enqueue jobs: 101, 102, 103, 104 Dequeue two jobs Enqueue jobs: 105, 106 [3]**
 
 > [!Answer]
 >
@@ -3565,11 +3458,7 @@ As the senior developer, state and explain two reasons why Merge Sort is a more 
 
 **You are given two sorted singly-linked lists, and a third empty list. The first linked list, pointed to by root1, contains the nodes with values 2, 6, 8, and 9, in that order, with the next pointer of each node connected to the following node, and the last node pointing to None to indicate the end of the list. root1 → [2] → [6] → [8] → [9] → None The second linked list, pointed to by root2, contains the nodes with values 3, 5, and 7, in that order. root2 → [3] → [5] → [7] → None The third linked list, pointed to by root3, is empty, as illustrated below: root3 → None You are required to merge the two sorted linked lists in-place into the empty linked list pointed to by root3 such that the values of its nodes are arranged in ascending order. You are to merge the lists in-place and should not create any new nodes.**
 
-Describe clearly, step-by-step, the process of adding the very first node to the empty linked list pointed to by root3.
-.
-You may assume that the following methods are available for each node: get_data(): to obtain the value stored in a node, and
-
-get_next(): to obtain the next node being pointed to.[4]
+**Describe clearly, step-by-step, the process of adding the very first node to the empty linked list pointed to by root3. . You may assume that the following methods are available for each node: get_data(): to obtain the value stored in a node, and get_next(): to obtain the next node being pointed to. [4]**
 
 > [!Answer]
 >
@@ -3699,7 +3588,7 @@ c) Identify the exact line where dynamic memory allocation occurs. [1]
 
 **A BST with root as the root of the tree is as follows.**
 
-d) Draw a trace table to trace the current, stack and the OUTPUT when foo(root) is called. [4]
+**d) Draw a trace table to trace the current, stack and the OUTPUT when foo(root) is called. [4]**
 
 4
 3
@@ -3732,9 +3621,7 @@ d) Draw a trace table to trace the current, stack and the OUTPUT when foo(root) 
 > 11   9
 > 12 None
 
-**e) The following numbers are inserted in the above BST in the same order as shown below: 20, 15, 6, 25**
-
-Draw the BST after these numbers are inserted. [2]
+**e) The following numbers are inserted in the above BST in the same order as shown below: 20, 15, 6, 25 Draw the BST after these numbers are inserted. [2]**
 
 > [!Answer]
 >
@@ -3763,9 +3650,7 @@ f) State the pre-order and post-order of the BST. [2]
 
 **4 You are given the following sequence of words (which represent different generative AI platforms): perplexity, claude, gemini, deepseek, chatgpt, copilot, qwen, ernie**
 
-**(a) These words are inserted one by one into an empty binary search tree (BST) in the given order, with nodes arranged based on lexicographical (alphabetical) order.**
-
-Draw the complete BST after insertion. [2]
+**(a) These words are inserted one by one into an empty binary search tree (BST) in the given order, with nodes arranged based on lexicographical (alphabetical) order. Draw the complete BST after insertion. [2]**
 
 (b) List the nodes visited in pre-order and post-order traversals. [2]
 
@@ -3779,9 +3664,7 @@ Draw the complete BST after insertion. [2]
 > [!Answer]
 > **in-order** traversal of a BST produces nodes in sorted alphabetical order.
 
-**(d) If we replace the word ‘perplexity’ with ‘grok’ in the insertion sequence while maintaining the same order of insertions, will the resulting BST structure be different?**
-
-Explain your reasoning without reconstructing the BST. [2]
+**(d) If we replace the word ‘perplexity’ with ‘grok’ in the insertion sequence while maintaining the same order of insertions, will the resulting BST structure be different? Explain your reasoning without reconstructing the BST. [2]**
 
 > [!Answer]
 > No, the BST structure will not be different. Replacing ‘perplexity’ with ‘grok’ maintains the same relative lexicographical ordering with respect to other words. All words on the left subtree of ‘perplexity’ are still lexicographically smaller than ‘grok’, and all words on the right subtree are larger than ‘grok’. Therefore, no changes in the final tree structure will result.
@@ -3839,9 +3722,7 @@ Explain your reasoning without reconstructing the BST. [2]
 
 **3 A company, ImageMaps, wishes to develop an application that scans a user ’s device for photographs, detect the associated location, and display the images on a map using the associated locations.**
 
-(a) State the actions ImageMaps must take to secure critical business data against catastrophic
-
-hardware failure. [4]
+**(a) State the actions ImageMaps must take to secure critical business data against catastrophic hardware failure. [4]**
 
 > [!Answer]
 > 3.0	Applications, Data Security
@@ -3860,16 +3741,14 @@ hardware failure. [4]
 > Catastrophic failure resulting in data loss can mean loss of business continuity (business is unable to operate), loss of revenue, loss of customer / stakeholder trust, etc
 > Failure to protect critical data, especially financial records or customer **personal data**, may be a violation of data protection laws and other legal requirements
 
-**(c) ImageMaps needs to store a large quantity of data that will not be frequently accessed.**
-
-State how they can reduce costs while doing so. [2]
+**(c) ImageMaps needs to store a large quantity of data that will not be frequently accessed. State how they can reduce costs while doing so. [2]**
 
 > [!Answer]
 > Data not frequently accessed can be archived
 >
 > * by moving it to cheaper storage
 
-(d) State two actions the company must take regarding the collection and use of personal user data to comply with prevailing personal data protection laws. [4]
+**(d) State two actions the company must take regarding the collection and use of personal user data to comply with prevailing personal data protection laws. [4]**
 
 > [!Answer]
 > Notification: ImageMaps must inform customers of the purposes of data use (e.g. through a privacy policy)
@@ -3878,7 +3757,7 @@ State how they can reduce costs while doing so. [2]
 > Access and Correction: ImageMaps must allow customers to see their stored **personal data**, and correct it if necessary (e.g. through a web portal)
 > (other appropriate obligations relating to collection and use, with appropriate action specified)
 
-(e) State whether a native or web application is more suitable for ImageMaps’s application. Explain your answer. [3]
+**(e) State whether a native or web application is more suitable for ImageMaps’s application. Explain your answer. [3]**
 
 > [!Answer]
 > Native application
@@ -3893,7 +3772,7 @@ State how they can reduce costs while doing so. [2]
 
 **5A company, ImageMaps, wishes to develop an application that scans a user's device for photographs, detect the associated location, and display the images on a map using the associated locations.**
 
-(a)State two actions the company must take regarding the collection and use of personal user data to comply with prevailing personal data protection laws.[4]
+(a) State two actions the company must take regarding the collection and use of personal user data to comply with prevailing personal data protection laws. [4]
 
 > [!Answer]
 >
@@ -3905,27 +3784,21 @@ State how they can reduce costs while doing so. [2]
 >
 > * Access and Correction: ImageMaps must allow customers to see their stored **personal data**, and correct it if necessary.(other appropriate obligations relating to collection and use, with appropriate action specified)
 
-**(b)ImageMaps needs to store a large quantity of data that will not be frequently accessed.**
-
-State how they can reduce costs while doing so.[2]
+**(b) ImageMaps needs to store a large quantity of data that will not be frequently accessed. State how they can reduce costs while doing so. [2]**
 
 > [!Answer]
 > Data not frequently accessed can be archived by moving it to cheaper storage
 
-(c)State whether a native or web application is more suitable for ImageMaps’s application.
-
-Explain your answer.[3]
+**(c) State whether a native or web application is more suitable for ImageMaps’s application. Explain your answer. [3]**
 
 > [!Answer]
 > Native applicationThe application needs to access device storage to scan for photographs Web apps do not have the same capabilities as native apps, such as the capability to access device storage
 
-**(d)When data is transmitted between a user’s device and ImageMaps’ server, it is divided into packets that travel through the network.**
+**(d) When data is transmitted between a user’s device and ImageMaps’ server, it is divided into packets that travel through the network. Describe how networking protocols address the following problems:**
 
-Describe how networking protocols address the following problems:
+(i) Data packets may arrive out of order and require reassembly [2]
 
-(i)Data packets may arrive out of order and require reassembly[2]
-
-(ii)Data packets may be corrupted in transit.[2]
+(ii) Data packets may be corrupted in transit. [2]
 
 > [!Answer]
 > (d)When data is transmitted between user’s device and ImageMaps’ server, it is divided into **packets** that travel through the network. Describe how networking protocols address the following problems:
@@ -3983,9 +3856,7 @@ State two actions the company must take regarding the collection and use of pers
 >
 > * Access and Correction: ImageMaps must allow customers to see their stored **personal data**, and correct it if necessary. (other appropriate obligations relating to collection and use, with appropriate action specified)
 
-State whether a native or web application is more suitable for ImageMaps’s application.
-
-Explain your answer.[3]
+**State whether a native or web application is more suitable for ImageMaps’s application. Explain your answer. [3]**
 
 > [!Answer]
 >
@@ -4009,9 +3880,9 @@ Explain your answer.[3]
 
 ##### 2025 ASRJC Prelim P1 Q7)
 
-**7 A university has several departments. Each department has multiple lecturers, and each lecturer belongs to exactly one department. A record of courses taught by each lecturer has been set up using a relational database. Each course is only taught by one lecturer.Students can enrol in multiple courses. They may also re-enrol in the same course in another semester, particularly when they need to repeat the course due to unsatisfactory performance.The following tables hold the data.STUDENT (StudentID, StudentName, StudentEmail, StudentPhone)DEPARTMENT (DeptID, DeptName, DeptAddress)COURSE (CourseID, CourseName, LecturerID, MaxCapacity)LECTURER (LecturerID, LecturerName, DeptID)ENROLMENT (StudentID, CourseID, EnrolmentDate, Grade, Status)**
+**7 A university has several departments. Each department has multiple lecturers, and each lecturer belongs to exactly one department. A record of courses taught by each lecturer has been set up using a relational database. Each course is only taught by one lecturer. Students can enrol in multiple courses. They may also re-enrol in the same course in another semester, particularly when they need to repeat the course due to unsatisfactory performance. The following tables hold the data. STUDENT (StudentID, StudentName, StudentEmail, StudentPhone)DEPARTMENT (DeptID, DeptName, DeptAddress)COURSE (CourseID, CourseName, LecturerID, MaxCapacity)LECTURER (LecturerID, LecturerName, DeptID)ENROLMENT (StudentID, CourseID, EnrolmentDate, Grade, Status)**
 
-(a) Copy the above table definitions, notating all primary keys and foreign keys.[4]
+(a) Copy the above table definitions, notating all primary keys and foreign keys. [4]
 
 (b) Draw an Entity-Relationship (E-R) diagram to represent the database design. [3]
 
@@ -4027,9 +3898,7 @@ Explain your answer.[3]
 >
 > ```
 
-**(c) There is an address field in this database.**
-
-Explain why storing the address as a single field is not good database design. [1]
+**(c) There is an address field in this database. Explain why storing the address as a single field is not good database design. [1]**
 
 > [!Answer]
 > It violates the principle of atomicity required in **1NF**. Address contains multiple separate components (e.g. block number, street, etc.) that should be stored in individual fields to allow for efficient searching and manipulation.
@@ -4097,8 +3966,9 @@ Explain why storing the address as a single field is not good database design. [
 
 **(a) JPCAR wants to use a relational database to store and manage the data for the system.**
 
-(i) A database requires several tables to store the data. Draw an entity-relationship (ER) diagram to show the tables in third normal form (3NF) and the relationship(s) between them. [2]
+**(i) A database requires several tables to store the data. Draw an entity-relationship (ER) diagram to show the tables in third normal form (3NF) and the relationship(s) between them. [2]**
 
+4
 
 > [!Answer]
 > USER RENTAL CAR
@@ -4112,10 +3982,7 @@ Explain why storing the address as a single field is not good database design. [
 >
 > ```
 
-(ii) A table description can be expressed as:
-`TableName (Attribute1, Attribute2, Attribute3, …)`
-The primary key is indicated by underlining one or more attributes. Foreign keys are indicated by using an asterisk (*).
-Write table descriptions for the tables identified in part (a)(i), using the information given. [4]
+**(ii) A table description can be expressed as: TableName (Attribute1, Attribute2, Attribute3, …) The primary key is indicated by underlining one or more attributes. Foreign keys are indicated by using an asterisk (*). Write table descriptions for the tables identified in part (a)(i), using the information given. [4]**
 
 > [!Answer]
 > User(userID, name, email, phoneNo)
@@ -4128,7 +3995,7 @@ Write table descriptions for the tables identified in part (a)(i), using the inf
 
 **(b) Using tables created, write SQL statements for the following queries:**
 
-(i) display all the available cars parked at the location “Desker Road”. [2]
+**(i) display all the available cars parked at the location “Desker Road”. [2]**
 
 > [!Answer]
 >
@@ -4140,7 +4007,7 @@ Write table descriptions for the tables identified in part (a)(i), using the inf
 >
 > ```
 
-(ii) display every userID, and the total number of car rentals the user has made. [2]
+**(ii) display every userID, and the total number of car rentals the user has made. [2]**
 
 > [!Answer]
 >
@@ -4152,7 +4019,7 @@ Write table descriptions for the tables identified in part (a)(i), using the inf
 >
 > ```
 
-(iii) display the top three users who spent the highest total cost on car rentals, sorted from highest to lowest. [2]
+**(iii) display the top three users who spent the highest total cost on car rentals, sorted from highest to lowest. [2]**
 
 > [!Answer]
 >
@@ -4167,7 +4034,7 @@ Write table descriptions for the tables identified in part (a)(i), using the inf
 >
 > ```
 
-(c) Explain how double-booking conflicts on a particular car between two or more users can be prevented. [2]
+**(c) Explain how double-booking conflicts on a particular car between two or more users can be prevented. [2]**
 
 > [!Answer]
 > Either one:
@@ -4195,7 +4062,7 @@ Write table descriptions for the tables identified in part (a)(i), using the inf
 >     car will be rejected until the rental is completed and the status is reset to
 >     'Available'.
 
-(d) Explain two key differences between a backup file and an archive file. [2]
+**(d) Explain two key differences between a backup file and an archive file. [2]**
 
 > [!Answer]
 > **Backup** file: Created to provide a recent copy of data that can be restored quickly in
@@ -4225,7 +4092,7 @@ Write table descriptions for the tables identified in part (a)(i), using the inf
 **"lastUpdate": "2025-07-15T13:45:00Z"**
 **}**
 
-(i) Write a MongoDB query to find all bicycles with battery < 20% [2]
+**(i) Write a MongoDB query to find all bicycles with battery < 20% [2]**
 
 > [!Answer]
 >
@@ -4236,7 +4103,7 @@ Write table descriptions for the tables identified in part (a)(i), using the inf
 >
 > ```
 
-(ii) Explain one advantage of using NoSQL over SQL for storing GPS tracking data. [2]
+**(ii) Explain one advantage of using NoSQL over SQL for storing GPS tracking data. [2]**
 
 > [!Answer]
 > **NoSQL**’s flexibility and scalability with unstructured / semi-structured data. GPS
@@ -4247,8 +4114,9 @@ Write table descriptions for the tables identified in part (a)(i), using the inf
 > retrieving location updates in real time, and supports horizontal scaling across
 > multiple servers for high throughput.
 
-(iii) Describe one scenario where the relational database design is still preferable for JPCAR. [2]
+**(iii) Describe one scenario where the relational database design is still preferable for JPCAR. [2]**
 
+5
 
 > [!Answer]
 > A relational database ensures this through referential integrity and transactions,
@@ -4279,27 +4147,23 @@ Write table descriptions for the tables identified in part (a)(i), using the inf
 
 [6]
 
-**(b) The company has decided to introduce a Driver class to store details of the driver’s name, license number, and years of experience.**
-
-Describe how you would update the class diagram to include this new class.
-
-[3]
+**(b) The company has decided to introduce a Driver class to store details of the driver’s name, license number, and years of experience. Describe how you would update the class diagram to include this new class. [3]**
 
 **It is common for the properties of a class to be private.**
 
-(c) Explain what encapsulation means in OOP. [2]
+**(c) Explain what encapsulation means in OOP. [2]**
 
-(d) Describe how it could be applied to this situation. [2]
+**(d) Describe how it could be applied to this situation. [2]**
 
 6
 
 **3 A college is launching an online e-Assessment portal. Teachers record the marks in spreadsheets and upload them to the portal. The spreadsheets must be verified for both authenticity and integrity. Additionally, the portal must be protected from the public Internet.**
 
-(a) Explain how a digital signature works in this situation. [5]
+**(a) Explain how a digital signature works in this situation. [5]**
 
-(b) State one key difference between encrypting a file and digitally signing a file. [1]
+**(b) State one key difference between encrypting a file and digitally signing a file. [1]**
 
-(c) Propose a firewall policy to protect the e-Assessment server that is reachable over HTTPS from the Internet but administered only from the IT office. [2]
+**(c) Propose a firewall policy to protect the e-Assessment server that is reachable over HTTPS from the Internet but administered only from the IT office. [2]**
 
 **4 A school maintains a Binary Search Tree (BST) of locker IDs to support quick allocation, deallocation and look-ups. Each node stores a unique integer key (the locker ID), and pointers left and right.**
 
@@ -4309,9 +4173,7 @@ Describe how you would update the class diagram to include this new class.
 
 (i) Draw the resulting BST.
 
-(ii) Write the in-order traversal output of your tree as a comma-separated list.
-
-[2]
+**(ii) Write the in-order traversal output of your tree as a comma-separated list. [2]**
 
 [1]
 
@@ -4319,31 +4181,21 @@ Describe how you would update the class diagram to include this new class.
 
 (b) Write a recursive pseudocode for InOrder(root) that displays the keys in ascending order.
 
-(c) Describe an iterative algorithm for BST_Search(root, k) that returns TRUE if found or FALSE if not found.
-
-[4]
+**(c) Describe an iterative algorithm for BST_Search(root, k) that returns TRUE if found or FALSE if not found. [4]**
 
 [5]
 
 **7**
 
-(d) State and justify the worst-case time complexity of searching in a BST using an iterative algorithm.
+**(d) State and justify the worst-case time complexity of searching in a BST using an iterative algorithm. [2]**
 
-[2]
-
-(e) Explain why you would store the ordered locker IDs in a BST rather than an ordered array.
-
-[2]
+**(e) Explain why you would store the ordered locker IDs in a BST rather than an ordered array. [2]**
 
 **The school’s allocation service buffers locker assignment requests in a fixed-capacity circular queue before processing them against the BST. The queue is implemented as an array that stores up to 50 integers.**
 
-(f) Write the pseudocode for DEQUEUE()which returns the integer stored at the front of queue or -1 if the queue is empty.
+**(f) Write the pseudocode for DEQUEUE()which returns the integer stored at the front of queue or -1 if the queue is empty. [6]**
 
-[6]
-
-(g) Explain one advantage of a circular queue over a linear queue in this situation.
-
-[2]
+**(g) Explain one advantage of a circular queue over a linear queue in this situation. [2]**
 
 8
 
@@ -4366,25 +4218,17 @@ Describe how you would update the class diagram to include this new class.
 
 **After several months in service, many units begin to reset and eventually refuse to start, showing “out of memory”.**
 
-(a) Explain how mistakes in the algorithm caused this recurring problem.
+**(a) Explain how mistakes in the algorithm caused this recurring problem. [2]**
 
-[2]
+**(b) Explain how the algorithm should be changed to prevent the problem from recurring. [2]**
 
-(b) Explain how the algorithm should be changed to prevent the problem from recurring.
-
-[2]
-
-(c) State one advantage and one disadvantage of using dynamic memory allocation (compared with static allocation) in embedded devices like this thermostat.
-
-[2]
+**(c) State one advantage and one disadvantage of using dynamic memory allocation (compared with static allocation) in embedded devices like this thermostat. [2]**
 
 9
 
 **6 A college hosts a web application on a web server at the domain portal.jpjc.edu.sg. Students access it from home and on campus.**
 
-(a) Explain how a client obtains the IP address for portal.jpjc.edu.sg using a Domain Name Server (DNS).
-
-[3]
+**(a) Explain how a client obtains the IP address for portal.jpjc.edu.sg using a Domain Name Server (DNS). [3]**
 
 **(b) Data transmitted across the Internet is divided into sequentially numbered packets.**
 
@@ -4392,35 +4236,23 @@ Describe how you would update the class diagram to include this new class.
 
 (ii) State two reasons why the packets are numbered.
 
-(iii)State two items, other than the packet number, that are stored in the packet header.
+**(iii) State two items, other than the packet number, that are stored in the packet header. [2]**
 
 [2]
 
 [2]
 
-[2]
+**(c) State the key difference between a static IP address and a dynamic IP address. [1]**
 
-(c) State the key difference between a static IP address and a dynamic IP address.
-
-[1]
-
-**(d) For the 300 student laptops connecting to the campus Wi-Fi, recommend either static or dynamic addressing and justify your choice.**
-
-[3]
+**(d) For the 300 student laptops connecting to the campus Wi-Fi, recommend either static or dynamic addressing and justify your choice. [3]**
 
 **7 A junior college is rolling out an online admissions portal that asks applicants for their full name, email, mobile, NRIC, CCA, medical condition (optional), emergency contact, bank account (for bursary), and uploads of a passport-style photo.**
 
-(a) Define the term “personal data” and give one example from this situation.
+**(a) Define the term “personal data” and give one example from this situation. [2]**
 
-[2]
+**(b) State a possible threat of losing the applicants’ data and suggest a method to prevent it. [2]**
 
-(b) State a possible threat of losing the applicants’ data and suggest a method to prevent it.
-
-[2]
-
-**(c) Recommend two Personal Data Protection Act (PDPA) controls the college should implement for the portal.**
-
-[2]
+**(c) Recommend two Personal Data Protection Act (PDPA) controls the college should implement for the portal. [2]**
 
 10
 
@@ -4451,9 +4283,7 @@ ENDPROCEDURE
 
 ```
 
-(a) Describe the base case.
-
-[2]
+**(a) Describe the base case. [2]**
 
 **(b) The call ListAll(Root) is performed on the following structure:**
 
@@ -4461,9 +4291,7 @@ ENDPROCEDURE
 
 (ii) Write the exact sequence of file names displayed by the procedure.
 
-(iii)State the number of times ListAll called itself.
-
-[2]
+**(iii) State the number of times ListAll called itself. [2]**
 
 [1]
 
@@ -4532,9 +4360,7 @@ FOLDER_E are in Root .
 * **FareAmount**
 * **PaymentStatus (e.g., paid, pending)**
 
-(a) Draw an entity -relationship (ER) diagram showing the four entities and the
-
-relationships between them. [3]
+**(a) Draw an entity -relationship (ER) diagram showing the four entities and the relationships between them. [3]**
 
 > [!Answer]
 > 1
@@ -4583,11 +4409,7 @@ relationships between them. [3]
 > Payment (PaymentID, RideID, PaymentMethod, FareAmount,
 > PaymentStatus)
 
-**(c) (i) The company wants to know which drivers earned the most.**
-
-Write an SQL query to calculate the total fare amount collected by each
-
-DriverID, and sort the results in descending order of total fare. [4]
+**(c) (i) The company wants to know which drivers earned the most. Write an SQL query to calculate the total fare amount collected by each DriverID, and sort the results in descending order of total fare. [4]**
 
 > [!Answer]
 >
@@ -4617,11 +4439,7 @@ RideID = 'R7645' to 'paid'. [2]
 >
 > ```
 
-**(d) The company is planning to collect customer reviews and use them to improve driver performance.**
-
-Justify three reasons why a NoSQL database might be more suitable than a relational database for storing customer reviews for the ride-hailing platform.
-
-[3]
+**(d) The company is planning to collect customer reviews and use them to improve driver performance. Justify three reasons why a NoSQL database might be more suitable than a relational database for storing customer reviews for the ride-hailing platform. [3]**
 
 > [!Answer]
 > Reasons why **NoSQL** is suitable for storing customer reviews:
@@ -4665,9 +4483,7 @@ Justify three reasons why a NoSQL database might be more suitable than a relatio
   **number, and real-time location when online.**
   **The system also stores in-app messages between drivers and passengers.**
 
-**(e) From the perspective of a passenger, explain two concerns you may have about**
-
-how your personal data is used or shared. [2]
+**(e) From the perspective of a passenger, explain two concerns you may have about how your personal data is used or shared. [2]**
 
 > [!Answer]
 > (Any 2 of the following, or any other reasonable answers):
@@ -4682,9 +4498,7 @@ how your personal data is used or shared. [2]
 >    Concern about how long the company keeps ride history and whether old data is
 >    securely deleted.
 
-**(f) From the perspective of a driver, explain two responsibilities you have under**
-
-PDPA when handling passenger data. [2]
+**(f) From the perspective of a driver, explain two responsibilities you have under PDPA when handling passenger data. [2]**
 
 > [!Answer]
 > (Any 2 of the following, or any other reasonable answers):
@@ -4701,11 +4515,7 @@ PDPA when handling passenger data. [2]
 >    If a driver’s device is lost or compromised, they must report it to the platform if
 >    passenger data is affected.
 
-**(g) To prevent misuse of passenger information, the company plans to work with a third-party fraud analysis firm.**
-
-What actions should the company take before sharing personal data with this
-
-vendor? [2]
+**(g) To prevent misuse of passenger information, the company plans to work with a third-party fraud analysis firm. What actions should the company take before sharing personal data with this vendor? [2]**
 
 > [!Answer]
 > Actions the company should take:
@@ -4737,21 +4547,17 @@ vendor? [2]
 | Banana       | Plastic     | 5 000     | Surya      | [surya@k.co](mailto:surya@k.co)   | New Studio  | 456 Jalan Kayu |
 | Guava        | Steel       | 4 000     | Surya      | [surya@k.co](mailto:surya@k.co)   | La Galleria | 123 King Road  |
 
-(a)Explain why the table is not in third normal form (3NF).[1]
+(a) Explain why the table is not in third normal form (3NF). [1]
 
 > [!Answer]
 > There exist transitive dependencies in the table (e.g. studio address depends on studio name which depends on artwork title)
 
-**(b)A table description can be expressed as:**
-**TableName(Attribute1, Attribute2, Attribute3, …)**
-**The primary key is indicated by underlining one or more attributes. Foreign keys are indicated by using a dashed underline.**
-
-Write table descriptions for all the required tables in the database so that they are in third normal form (3NF).[4]
+**(b) A table description can be expressed as: TableName(Attribute1, Attribute2, Attribute3, …) The primary key is indicated by underlining one or more attributes. Foreign keys are indicated by using a dashed underline. Write table descriptions for all the required tables in the database so that they are in third normal form (3NF). [4]**
 
 > [!Answer]
 > Artworks(Title, Medium, Price, ArtistName, StudioName)Artists(Name, Contact)Studios(Name, Address)
 
-(c)Draw the entity-relationship (ER) diagram of the above database.[3]
+(c) Draw the entity-relationship (ER) diagram of the above database. [3]
 
 > [!Answer]
 > ArtistArtworkStudioArtistArtworkStudio
@@ -4763,12 +4569,12 @@ Write table descriptions for all the required tables in the database so that the
 >
 > ```
 
-(d)Explain why it is recommended to maintain multiple tables in 3NF instead of storing all the data in one table as shown above.[2]
+(d) Explain why it is recommended to maintain multiple tables in 3NF instead of storing all the data in one table as shown above. [2]
 
 > [!Answer]
 > Remove redundancies in the data, so that when data is updated, only one entry needs to be changed. It also lowers the risk of errors and inconsistencies in the data.
 
-(e)Write an SQL query to output all the names of the artists who have at least one artwork displayed in La Galleria that costs at most $3500.[4]
+(e) Write an SQL query to output all the names of the artists who have at least one artwork displayed in La Galleria that costs at most $3500. [4]
 
 > [!Answer]
 >
@@ -4779,7 +4585,7 @@ Write table descriptions for all the required tables in the database so that the
 >
 > ```
 
-(f)State any two ways the privacy of the artists’ data should be provided for under the Personal Data Protection Act (PDPA).[2]
+(f) State any two ways the privacy of the artists’ data should be provided for under the Personal Data Protection Act (PDPA). [2]
 
 > [!Answer]
 > **Personal data** such as contact details should be stored with reasonable security.Use of artists’ data should be carried out with consent of the artists.**Personal data** should be deleted if no longer in use, e.g. artist is no longer working with the companyEtc.
@@ -4818,7 +4624,7 @@ Write table descriptions for all the required tables in the database so that the
 * **the student’s score achieved in the course**
 * **the semester**
 
-(a) Draw an entity-relationship (ER) diagram to show the tables in third normal form (3NF) and the relationship(s) between them. [3]
+**(a) Draw an entity-relationship (ER) diagram to show the tables in third normal form (3NF) and the relationship(s) between them. [3]**
 
 > [!Answer]
 > Enrolment Student
@@ -4833,7 +4639,7 @@ Write table descriptions for all the required tables in the database so that the
 >
 > ```
 
-(b) Write table definitions, indicating the primary key with underline and foreign key with *, for each of the tables you identified in (a). [4]
+**(b) Write table definitions, indicating the primary key with underline and foreign key with *, for each of the tables you identified in (a). [4]**
 
 Use the format: TableName(Attribute1, Attribute2, Attribute3*, etc.)
 
@@ -4845,9 +4651,7 @@ Use the format: TableName(Attribute1, Attribute2, Attribute3*, etc.)
 > Course(CourseID, CourseName, Department, Credits)
 > Enrolment(StudentID*, LecturerID*, CourseID*, Semester, Score)
 
-**(c) Three lecturers teach the course CS202 in Semester 2025Sem1. After moderation, they decided to add 5 marks to all the students taking the course that semester.**
-
-Write an SQL query to update the scores. [3]
+**(c) Three lecturers teach the course CS202 in Semester 2025Sem1. After moderation, they decided to add 5 marks to all the students taking the course that semester. Write an SQL query to update the scores. [3]**
 
 > [!Answer]
 > Three lecturers teach the course CS202 in Semester 2025Sem
@@ -4863,9 +4667,7 @@ Write an SQL query to update the scores. [3]
 > = "2025Sem1
 > Adding 5 marks to Score field – 1 mark
 
-**(d) A student requires at least 100 accumulated credits to graduate. At the end of each semester, the university will generate a report to calculate the total number of credits each student has completed ( you can assume that all students pass all of their courses).**
-
-Write an SQL query that will output all the students who have completed at least 100 credits. [4]
+**(d) A student requires at least 100 accumulated credits to graduate. At the end of each semester, the university will generate a report to calculate the total number of credits each student has completed ( you can assume that all students pass all of their courses). Write an SQL query that will output all the students who have completed at least 100 credits. [4]**
 
 > [!Answer]
 > A student requires at least 100 accumulated credits to graduate. At the end of each semester, the
@@ -4954,7 +4756,7 @@ Write an SQL query that will output all the students who have completed at least
 
 **Below shows a part of the spreadsheet.**
 
-a) Identify 1 possible social issue and 1 economic issue because of using the shared spreadsheet for booking management. [2]
+**a) Identify 1 possible social issue and 1 economic issue because of using the shared spreadsheet for booking management. [2]**
 
 > [!Answer]
 > Social issue – NRIC number is revealed; sensitive information may be
@@ -4966,9 +4768,7 @@ a) Identify 1 possible social issue and 1 economic issue because of using the sh
 >
 > 1
 
-**b) The spreadsheet is not in 1st Normal Form and thus is not suitable to use in a relational database.**
-
-Identify all issues in the spreadsheet which does not make it to 1st Normal Form. [2]
+**b) The spreadsheet is not in 1st Normal Form and thus is not suitable to use in a relational database. Identify all issues in the spreadsheet which does not make it to 1st Normal Form. [2]**
 
 > [!Answer]
 > i) repeated booking grouping for each court;
@@ -4979,7 +4779,9 @@ Identify all issues in the spreadsheet which does not make it to 1st Normal Form
 > 1
 > 1
 
-c) Is data redundancy present in the spreadsheet? Explain your answer. [2]
+**c) Is data redundancy present in the spreadsheet? Explain your answer. [2]**
+
+9
 
 > [!Answer]
 > **Data redundancy** is present. The NRIC information for a resident is repeated
@@ -5017,27 +4819,14 @@ resident_id name nric_last_4
 002 Koh Chee Keng 567H
 003 Sim Toh Long 234I
 … … …
-Booking
-booking_id payment
-2025001 Paid
-2025002 Unpaid
-2025003 Paid
-… …
-
-10
-
-d) Explain the 2 aims of normalization in relational database. [2]
+**Booking booking_id payment 2025001 Paid 2025002 Unpaid 2025003 Paid … … 10 d) Explain the 2 aims of normalization in relational database. [2]**
 
 > [!Answer]
 > **Normalisation** is to reduce redundancy and improve
 > readability/management of data
 > 2
 
-**e) The above database that is made up of the 3 tables above is not normalized to 3NF.**
-
-Identify which table is not normalized to 3NF. Explain your answer.
-
-[2]
+**e) The above database that is made up of the 3 tables above is not normalized to 3NF. Identify which table is not normalized to 3NF. Explain your answer. [2]**
 
 > [!Answer]
 > The database is not in 3rd **normal form** as resident_id will not be directly
@@ -5051,7 +4840,7 @@ Identify which table is not normalized to 3NF. Explain your answer.
 
 **The primary key is indicated by underlining one or more attributes. Foreign keys are indicated using a dashed underline.**
 
-Write table descriptions with normalised tables in the database. Provide suitable Primary Key and indicate the Foreign Key for each table. [9]
+**Write table descriptions with normalised tables in the database. Provide suitable Primary Key and indicate the Foreign Key for each table. [9]**
 
 > [!Answer]
 > Resident (resident_id, name, nric_last_4)
@@ -5061,7 +4850,7 @@ Write table descriptions with normalised tables in the database. Provide suitabl
 > 3
 > 4
 
-g) Draw out the entity-relationship (ER) diagram for the normalised tables in the database. [4]
+**g) Draw out the entity-relationship (ER) diagram for the normalised tables in the database. [4]**
 
 > [!Answer]
 > Resident >-- Booking --< Booking_Schedule 4
@@ -5084,9 +4873,7 @@ Identify a suitable primary key for the above table.[1]
 > [!Answer]
 > VRN AND DateHired
 
-Identify suitable SQL data types for the following columns:
-
-DateHired[1]
+**Identify suitable SQL data types for the following columns: DateHired [1]**
 
 > [!Answer]
 > DATE / TEXT
@@ -5096,7 +4883,7 @@ Available[1]
 > [!Answer]
 > BOOLEAN / INTEGER
 
-State whether the above table is in Third Normal Form (3NF). Explain your answer.[4]
+**State whether the above table is in Third Normal Form (3NF). Explain your answer. [4]**
 
 > [!Answer]
 >
@@ -5226,7 +5013,7 @@ Explain two key advantages of using a NoSQL database like MongoDB over a relatio
 
 **A database named gameverse has already been created. Inside it, a collection named games exists to store individual game documents. The fields for the documents in this collection are title, publisher, metacritic_score, and platforms which uses an array.**
 
-Write a command to insert a new document with the following details into the games collection: title: "Eclipse of Destiny" publisher: "Nexus Studios" metacritic_score: 87 platforms: ["PC", "PlayStation 5", "Xbox Series X"] [3]
+**Write a command to insert a new document with the following details into the games collection: title: "Eclipse of Destiny" publisher: "Nexus Studios" metacritic_score: 87 platforms: ["PC", "PlayStation 5", "Xbox Series X"] [3]**
 
 > [!Answer]
 >
@@ -5360,9 +5147,7 @@ Find all game titles that are available on the "PlayStation 5" platform. [3]
 >
 > * The world wide web is a collection of web pages
 
-**(b) Data packets are transmitted across a network from one computer to another computer.**
-
-Describe the structure of a data packet. [1]
+**(b) Data packets are transmitted across a network from one computer to another computer. Describe the structure of a data packet. [1]**
 
 > [!Answer]
 > All three from:      (1)
@@ -5375,7 +5160,7 @@ Describe the structure of a data packet. [1]
 >
 > * … the trailer
 
-(c) Explain what is meant by the term router and describe the function of a router in a computer network. [2]
+**(c) Explain what is meant by the term router and describe the function of a router in a computer network. [2]**
 
 > [!Answer]
 > network.
@@ -5386,7 +5171,7 @@ Describe the structure of a data packet. [1]
 > … and can direct data around network in (most) efficient way
 > … and act as a gateway connecting to a larger network.
 
-(d) Explain what is meant by circuit switching and packet switching in a computer network and give two advantages of packet switching over circuit switching. [4]
+**(d) Explain what is meant by circuit switching and packet switching in a computer network and give two advantages of packet switching over circuit switching. [4]**
 
 > [!Answer]
 > Explain what is meant by **circuit switching** and **packet switching** in a computer network and give
@@ -5488,10 +5273,7 @@ Phishing email
 > [!Answer]
 > $O(\log n)$
 
-**(c) A data structure is used to hold data packets that are being reassembled.**
-
-Describe one
-advantage and one disadvantage of each data structure for packet reassembly.
+**(c) A data structure is used to hold data packets that are being reassembled. Describe one advantage and one disadvantage of each data structure for packet reassembly.**
 
 (i) Statically allocated array [3]
 
@@ -5555,9 +5337,7 @@ advantage and one disadvantage of each data structure for packet reassembly.
 
 **7 A food delivery company operates a fleet of riders who rely on a mobile app to receive orders and navigate to customers. The app communicates with a central server located in the company’s data center. Riders connect to the internet using either public Wi-Fi or mobile networks as they move through different locations.**
 
-**(a) When a rider logs into the app, the device sends a request to http://api.foodtrack.sg.**
-
-Explain the role of the Domain Name System (DNS) in this process. [2]
+**(a) When a rider logs into the app, the device sends a request to http://api.foodtrack.sg. Explain the role of the Domain Name System (DNS) in this process. [2]**
 
 > [!Answer]
 > 7
@@ -5588,9 +5368,7 @@ Explain the role of the Domain Name System (DNS) in this process. [2]
 > for global delivery, but once the data reaches the destination network, the MAC
 > address is used for final delivery to the correct device.
 
-(c) Describe the structure of a data packet that may be transmitted between the rider’s device and the central server. Your answer should include three components commonly found in a packet, and
-
-explain clearly the purpose of each component. [6]
+**(c) Describe the structure of a data packet that may be transmitted between the rider’s device and the central server. Your answer should include three components commonly found in a packet, and explain clearly the purpose of each component. [6]**
 
 > [!Answer]
 > (Any three, correct component and brief explanation of purpose)
@@ -5623,7 +5401,7 @@ explain clearly the purpose of each component. [6]
 
 **The company is exploring ways to improve the system’s resilience and efficiency, especially in areas with weak or unstable internet connectivity. One proposal is to allow rider devices to share updates with each other using a Peer -to-Peer (P2P) model.**
 
-(d) Explain one advantage and one disadvantage of using a Peer-to-Peer model in this food delivery scenario. Your answer should be based on how the model helps or hinders delivery operations in real-world conditions. [4]
+**(d) Explain one advantage and one disadvantage of using a Peer-to-Peer model in this food delivery scenario. Your answer should be based on how the model helps or hinders delivery operations in real-world conditions. [4]**
 
 > [!Answer]
 > Advantage 1: Riders can share updates (e.g., delivery status, traffic alerts) directly
@@ -5650,9 +5428,7 @@ explain clearly the purpose of each component. [6]
 
 **A packet switching network breaks data into packets, which are sent independently across the network and reassembled at the destination.**
 
-Describe how networking protocols address the following problems:
-
-Data packets may arrive out of order and require reassembly[2]
+**Describe how networking protocols address the following problems: Data packets may arrive out of order and require reassembly [2]**
 
 > [!Answer]
 >
@@ -5676,9 +5452,7 @@ Data packets may be corrupted in transit.[2]
 >
 > * Each **packet** has a sequence number. The receiver checks the **packets**, and if any are corrupted in transit, they are retransmitted; this supports correct reassembly of the original message. #No need to differentiate between **TCP** and **UDP**.
 
-State and explain the time complexity of the following operations:
-
-Adding an item to a sorted array[2]
+**State and explain the time complexity of the following operations: Adding an item to a sorted array [2]**
 
 > [!Answer]
 >
@@ -5696,9 +5470,7 @@ Adding an item to a balanced binary search tree (BST).[2]
 
 **A data structure is used to hold data packets that are being reassembled.**
 
-Describe one advantage and one disadvantage of each of the following data structures for packet reassembly.
-
-Statically allocated array[2]
+**Describe one advantage and one disadvantage of each of the following data structures for packet reassembly. Statically allocated array [2]**
 
 > [!Answer]
 >
@@ -5777,9 +5549,7 @@ iii. The database server is running. Its IP address is reachable. However, clien
 >
 > 2
 
-iv. A user can connect to the local network but cannot reach external
-
-networks. [8]
+**iv. A user can connect to the local network but cannot reach external networks. [8]**
 
 > [!Answer]
 > **Internet** layer
@@ -5807,9 +5577,7 @@ b) State two differences between TCP and UDP. [2]
 **Company Z, a healthcare provider, has a central database storing patient**
 **records. One employee, John, receives an email with an attachment claiming to be an urgent invoice from a medical supplier. The attachment is actually malicious software that exploits outdated software on John’s computer. When John opens the file, the malware quickly spreads through the network and encrypts the company’s database, making patient records inaccessible.**
 
-c) Identify the human mistake that allowed the attacker to carry out the
-
-attack. [1]
+**c) Identify the human mistake that allowed the attacker to carry out the attack. [1]**
 
 > [!Answer]
 > opened a **phishing** email attachment without verifying its authenticity 1
@@ -5819,18 +5587,14 @@ d) Name the type of malware that encrypted the company’s database. [1]
 > [!Answer]
 > **ransomware** 1
 
-e) State one recovery measure that Company Z should implement to reduce
-
-the impact in the future. [1]
+**e) State one recovery measure that Company Z should implement to reduce the impact in the future. [1]**
 
 > [!Answer]
 > Recovery measure: Maintain regular backups of critical data so it can be
 > restored if encrypted.
 > 1
 
-f) State one preventive measure that Company Z should implement to
-
-prevent such incidents in the future. [1]
+**f) State one preventive measure that Company Z should implement to prevent such incidents in the future. [1]**
 
 > [!Answer]
 > Preventive measure: Keep systems patched and updated, and use
@@ -5851,19 +5615,17 @@ prevent such incidents in the future. [1]
 
 **6A commercial bank is strengthening its cybersecurity framework after experiencing multiple security breaches.**
 
-(a)(i)Explain how a Trojan horse differs from a worm in terms of propagation and payload delivery.[2]
+(a)(i) Explain how a Trojan horse differs from a worm in terms of propagation and payload delivery. [2]
 
 > [!Answer]
 > **Trojan**: Masquerades as legitimate software and tricks users to execute it, does not replicate itselfWorm: Self-replicating, spreads autonomously through networks
 
-(ii)Describe two characteristics that make ransomware particularly dangerous to financial institutions.[2]
+(ii) Describe two characteristics that make ransomware particularly dangerous to financial institutions. [2]
 
 > [!Answer]
 > Encrypts critical financial dataCauses operational disruption during attacksHigh ransom demands target valuable data(Any 2 points)
 
-**(b)The bank has deployed a firewall and Intrusion Prevention System (IPS).**
-
-Explain why implementing both a firewall and IPS provides better security than using either system alone. [2]
+**(b) The bank has deployed a firewall and Intrusion Prevention System (IPS). Explain why implementing both a firewall and IPS provides better security than using either system alone. [2]**
 
 > [!Answer]
 >
@@ -5873,9 +5635,7 @@ Explain why implementing both a firewall and IPS provides better security than u
 >
 > * Defense-in-depth approach(Any 2 points)
 
-**(c)The bank must choose between biometric authentication and security tokens for employee access to sensitive systems.**
-
-Evaluate which method would provide better security, giving two reasons for your choice.[3]
+**(c) The bank must choose between biometric authentication and security tokens for employee access to sensitive systems. Evaluate which method would provide better security, giving two reasons for your choice. [3]**
 
 > [!Answer]
 >
@@ -5883,14 +5643,12 @@ Evaluate which method would provide better security, giving two reasons for your
 >
 > * Security Tokens Preferred Because:1.Not affected by physical changes2.Easier to revoke/reissue3.No biometric data storage risks(Accept either position with valid reasoning)
 
-(d)Describe the complete process of generating and verifying a digital signature for an electronic funds transfer request. [4]
+(d) Describe the complete process of generating and verifying a digital signature for an electronic funds transfer request. [4]
 
 > [!Answer]
 > Hash document using a hashing algorithm to produce a hash digestEncrypt hash digest with sender's **private key** and send message with cipher to recipientRecipient decrypts cipher using sender's **public key** to obtain hash digest and verify the sender’s identityRecipient hashes document using the same hashing algorithm, compares it with the hash digest to ensure that the original document has not been tampered with.
 
-**(e)A bank employee wishes to email a contract document to a customer. To prevent tampering with the contract document, he attaches his digital certificate to the email alongside with the document.**
-
-Explain why this is insufficient to ensure the integrity of the document. [2]
+**(e) A bank employee wishes to email a contract document to a customer. To prevent tampering with the contract document, he attaches his digital certificate to the email alongside with the document. Explain why this is insufficient to ensure the integrity of the document. [2]**
 
 * End of Paper -
 
@@ -5907,29 +5665,29 @@ Explain why this is insufficient to ensure the integrity of the document. [2]
 
 **6A user on a website has to fill out a form to register for an account. The user needs to create a username and a password. The password needs to be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one digit, and one punctuation symbol.**
 
-(a)State the difference between data validation and data verification.[2]
+(a) State the difference between data validation and data verification. [2]
 
 > [!Answer]
 > **Data validation**: Ensuring that data fits a particular format suitable for the algorithmData verification: Ensuring that the data inputted / transmitted is the same as what was intended
 
-(b)In this context, describe how data validation can be carried out.[2]
+(b) In this context, describe how data validation can be carried out. [2]
 
 > [!Answer]
 > **Data validation** can be carried out via length check (8 characters) and format check (contains required characters)
 
-(c)In this context, describe how data verification can be carried out.[2]
+(c) In this context, describe how data verification can be carried out. [2]
 
 > [!Answer]
 > **Data verification** can be carried out by asking user to enter password twice, and comparing to make sure both entered password strings are identical
 
 **The data on the form is sent from the user’s computer to the website’s server over the internet. The password is sent via a public key cryptography system.**
 
-(d) Describe how public key cryptography prevents a third party from being able to see the password.[2]
+(d) Describe how public key cryptography prevents a third party from being able to see the password. [2]
 
 > [!Answer]
 > The data is encrypted using the server’s **public key**. It can only be decrypted and read using the server’s **private key**, which is unknown to a third party.
 
-(e)Describe how the three-way handshake in the TCP protocol ensures that the data is sent completely and accurately.[3]
+(e) Describe how the three-way handshake in the TCP protocol ensures that the data is sent completely and accurately. [3]
 
 > [!Answer]
 >
@@ -5939,7 +5697,7 @@ Explain why this is insufficient to ensure the integrity of the document. [2]
 
 **To prevent passwords from being leaked, the server’s database does not store users’ passwords in raw form, but in a hashed form instead.**
 
-(f)Explain how this prevents passwords from being leaked, and describe what happens when a user tries to log in with an incorrect password.[3]
+(f) Explain how this prevents passwords from being leaked, and describe what happens when a user tries to log in with an incorrect password. [3]
 
 > [!Answer]
 >
@@ -5947,21 +5705,19 @@ Explain why this is insufficient to ensure the integrity of the document. [2]
 >
 > * When a user logs in, the password entered by the user is hashed and this is compared to the hashed password stored under the user’s name in the database. If they do not match, then the user has logged in with an incorrect password and will be prompted to retry.
 
-(g)Describe another security feature the server can use to ensure security of the user passwords.[1]
+(g) Describe another security feature the server can use to ensure security of the user passwords. [1]
 
 > [!Answer]
 > The server can use 2-factor **authentication** to ensure that the user is who he claims to be.
 
 **When the server sends a message to the user, it uses a digital signature to authenticate the message.**
 
-(h)Describe how the digital signature is generated.[2]
+(h) Describe how the digital signature is generated. [2]
 
 > [!Answer]
 > The message is hashed and then encrypted with the sender’s (server’s) **private key** to generate the **digital signature**.
 
-**(i)Suppose the message is intercepted and edited by a malicious third party before it reaches the user.**
-
-Describe how the user can detect the fact that the message has been intercepted and edited.[3]
+**(i) Suppose the message is intercepted and edited by a malicious third party before it reaches the user. Describe how the user can detect the fact that the message has been intercepted and edited. [3]**
 
 > [!Answer]
 > The user hashes the message. The user also decrypts the **digital signature** using the sender’s **public key**. If the decrypted signature matches the hashed message, then the message is authentic. If they do not match, then the message has been edited.
@@ -5974,9 +5730,7 @@ Describe how the user can detect the fact that the message has been intercepted 
 
 ##### 2025 NYJC Prelim P1 Q4)
 
-4 (a) Describe how a digital certificate is involved in producing a digital signature for a document.
-
-[4]
+**4 (a) Describe how a digital certificate is involved in producing a digital signature for a document. [4]**
 
 > [!Answer]
 > 4.0	Network Security
