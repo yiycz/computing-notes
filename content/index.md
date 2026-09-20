@@ -32,3 +32,5 @@ This note is a summary of a-lvl computing syllabus.
 | 21 | [Computer Networks](https://yiycz.github.io/computing-notes/computer-network) |
 | 22 | [Network Security](https://yiycz.github.io/computing-notes/network-security) |
 | 23 | [Web Applications](https://yiycz.github.io/computing-notes/web-applications) |
+| 24 | [Common Computing Questions](https://yiycz.github.io/computing-notes/common-computing-questions) |
+
