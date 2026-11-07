@@ -219,5 +219,58 @@ tags:
 ---
 
 
+# shorter version
+# 1. Types of Applications
+
+| Type | Description |
+| ---- | ----------- |
+
+\| Native Applications | • Installed directly on device, specific to OS\
+• Can work without internet\
+• Designed to take advantage of specific hardware |\
+\| Web Applications | • Do not depend on OS\
+• Require internet to work |\
+\| Hybrid Applications | • Packaged in a native shell\
+• Runs on web browser, uses API to talk to hardware\
+• Elements of both native and web applications |\
+\| Progressive Web Applications (PWA) | • Accessible through a web browser and offline as a standalone\
+• Cannot use APIs\
+• Elements of native and web applications |
+
+# 2. Web vs Native Applications
+
+| Native Applications                      | Web Applications                                 |
+| ---------------------------------------- | ------------------------------------------------ |
+| Runs on the OS                           | Runs on the web browser                          |
+| Needs to be downloaded                   | Does not require downloads                       |
+| Access to system resources (GPS, Camera) | No Access                                        |
+| Can work offline                         | Needs Internet                                   |
+| Faster                                   | Slower (can be further slowed by internet speed) |
+| Store large amounts of data              | Less data                                        |
+| May require maintenance and update costs | Automatically updated                            |
+
+
+# 3. Usability Principles
+
+| Principle                                              | Description                                                    |
+| ------------------------------------------------------ | -------------------------------------------------------------- |
+| Visibility of system status                            | Keep users informed of system status for clear guidance.       |
+| Match between system and the real world                | Align interface with user expectations for intuitive use.      |
+| User control and freedom                               | Allow easy undo and exit.                                      |
+| Consistency and standards                              | Maintain uniformity for ease of learning.                      |
+| Error prevention                                       | Prevent mistakes through clear design and confirmation.        |
+| Recognition rather than recall                         | Display information visibly for efficient interaction.         |
+| Flexibility and efficiency of use                      | Cater to both novice and expert users for seamless experience. |
+| Aesthetic and minimalist design                        | Focus on essentials to avoid distractions.                     |
+| Help users recognise, diagnose and recover from errors | Provide clear, actionable error messages.                      |
+| Help and documentation                                 | Offer accessible, context-sensitive support.                   |
+
+
+
+
+
+
+
+
 
 
