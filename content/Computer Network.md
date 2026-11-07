@@ -514,7 +514,7 @@ Payload
 
 Packet Switching
 - A message from one computer to another is broken up into individual (numbered) packets and each packet is sent separately.
-- The route for each packet is not determined in advance. It is sent from one computer to another in the same network, which then decides to send it to another computer which may be nearer to the destination, and so on, until it reaches the destination. Packets thus travel by different routes.
+- The route for each packet is not determined in advance. Routers examine the destination IP address of each packet and use their routing tables to determine the next hop towards the destination. Packets thus travel by different routes.
 - The destination computer receives the packets and assembles them in the correct orde
 
 Circuit switching
