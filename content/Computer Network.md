@@ -200,41 +200,16 @@ A switch is a networking device that connects multiple devices (e.g. computers, 
 
 The switch works at the data link layer (2nd layer of the OSI Model or TCP/IP Model). As it only examines the ethernet frames. It doesn’t rewrite any MAC addresses and IP addresses written in ethernet frames provided to it.
 
-
->[!How does a switch work? (With Example)]
->
->**Step 1:** A device is connected to the switch. It has a MAC (Media Access Control) address that uniquely identifies it.
->
->Suppose a device with a MAC address of `AA:AA:AA:AA:AA` is connected to port A of the switch.
->
->**Step 2:** The device sends a frame to the switch. The switch looks at the source of the MAC address and maps the MAC address to the port. Over time, it builds a MAC address table (or a Content Addressable Memory (CAM) Table).
->
-> In this example, the switch will map port A with the MAC address of `AA:AA:AA:AA:AA` in its CAM table:
->
->#### CAM (Content Addressable Memory) Table
->
->| Port | MAC Address                     |
->| ---- | ------------------------------- |
->| `A`    | `AA:AA:AA:AA:AA` (recently added) |
->| `B`    | `BB:BB:BB:BB:BB`                  |
->| `C `   | `CC:CC:CC:CC:CC`                  |
->| `D`    | EMPTY                           |
->
->**Step 3:** The switch decides where to send the frame
->
->Suppose PC $A$ wants to send data to PC $C$.
->
->- Receives ethernet frame
->- Reads the destination MAC address
->- Looks it up on the CAM Table
->- Finds that PC $C$ is connected to port $3$
->- Sends the frame only out of port $3$
+HOW DOES A SWICTH WORK?
+- Examine: The switch examines the packet’s header to extract the destination MAC address.
+- Lookup: The switch looks up its MAC address table to determine which port is associated with the destination MAC address.
+- Forward/Filter: The switch forwards the packet to the corresponding port if the destination MAC address is in the table, or floods the packet to all ports (except the receiving port) if the address is not in the table.
     
 
 
 ## Router
 
-- A router is a networking device that routes data packets between computer networks. It also directs traffic, choosing the best route for information to travel across the network so that it’s transmitted as efficiently as possible.
+- A router is a device in a network that **holds information about the addresses of computers in the network or other networks**. It **directs data to the correct computer**, **routes data through the network efficiently**, and can **act as a gateway connecting to a larger network.**
 
 - The router operates at the network layer (3rd layer of the OSI Model or TCP/IP Model). This is because a router removes the MAC addresses of the ethernet frames received and examines the IP address of the packet, before adding on new MAC addresses and forwarding the new ethernet frame.
 
@@ -534,9 +509,16 @@ Payload
 
 ### Packet Switching v.s. Circuit Switching
 
-- Packet Switching **is a method of sending data across a digital network by breaking files into small blocks called packets, which travel independently and share network resources dynamically.**
+Packet Switching
+- A message from one computer to another is broken up into individual (numbered) packets and each packet is sent separately.
+- The route for each packet is not determined in advance. It is sent from one computer to another in the same network, which then decides to send it to another computer which may be nearer to the destination, and so on, until it reaches the destination. Packets thus travel by different routes.
+- The destination computer receives the packets and assembles them in the correct orde
 
-- Circuit Switching is **a method of communication that sets up a dedicated communication path (or circuit) between the sender and receiver before any data moves. The path remains reserved for the entire communication session.**
+Circuit switching
+- A path is set up between the sender and receiver.
+- All data follows the same path, in order.
+- The path cannot be used by any other data.
+- 
 
 | Feature           | Packet Switching                                   | Circuit Switching                                      |
 | ----------------- | -------------------------------------------------- | ------------------------------------------------------ |
