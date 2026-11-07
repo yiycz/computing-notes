@@ -56,16 +56,21 @@ Malware is malicious code that is designed to gain unauthorised access to, make 
 | **Script**                 | A small program that runs code by using the Windows scripting host on Windows operating systems.<br><br>It is written as a script in Visual Basic or Javascript and executes when the script runs. Scripts are often distributed by email and requires use to open them                                                                                                                              |
 | **Stealth**                | A stealth virus moves and attempts to conceal itself until it can propagate. After that, it drops its payload.                                                                                                                                                                                                                                                                                       |
 
-
+### The difference between a Trojan horse and a worm
+Trojan: Masquerades as legitimate software and tricks users to execute it, does not replicate itself
+Worm: Self-replicating, spreads autonomously through networks
 
 
 
 
 # Firewalls
 
-- A firewall acts as a filter that monitors access between an organisation’s internal network and the Internet at large, allowing some packets to pass and blocking others. 
-- A firewall allows a network administrator to control access between the outside world and resources within the administered network by managing the traffic flow to and from these resources.
+Firewall monitors and controls all incoming and outgoing network traffic based on a set of security rules to prevent unauthorized access from entering a private network.  
 
+### Limitations:
+Hackers can bypass firewall by inserting malicious attacks inside legitimate programs, for example, emails
+Firewall cannot protect against internal attacks, for example, virus in one computer in the network
+The setting of firewall may block some legitimate programs
 
 
 ### Software firewalls
@@ -110,21 +115,12 @@ Malware is malicious code that is designed to gain unauthorised access to, make 
 | **Application Gateways** | These are application-specific servers through which all application data (inbound and outbound) must pass. They look beyond |
 
 
-### Limitations to firewalls
-
-- They cannot protect against attacks from a source if a user has explicitly allowed it to bypass the firewall. 
-	- For example, some applications may ask the user to allow adding an exception in the firewall software so that the application can send or receive data without being blocked by the firewall. 
-	- However, that prevents firewalls from stopping any malicious traffic into the application.
-
-- They also cannot protect against internal attacks since the malicious traffic may not need to pass through a firewall.
-
 
 # Denial of Service (DoS)
 
-- A distributed denial of service (DDoS) attack is a type of DoS that uses multiplier devices on disparate networks to launch the coordinated attack from many simultaneous sources.
-- These can sometimes be difficult to differentiate from traffic spikes when they first begin.
-- The attacker introduces unauthorized software called a zombie or drone that directs the devices to launch the attack. 
-	- A botnet is a collection of Internet-connected programs communicating with other similar programs communicating with other similar programs in order to perform tasks that can be used to send spam email or participate in DDoS attacks. 
+- A Distributed Denial-of-Service (DoS) attack is carried out by one or a group cybercriminals that controls a network of Internet-connected machines known as botnet.
+- The attacker then sends remote instructions to each bot in the botnet to send voluminous bogus requests to the server that stored the medical records to overwhelm the resource and capacity of the server.
+- When the server direct its resources to handle the bogus requests and gets overwhelmed, it results in depriving the genuine users of the medical system from accessing the information stored in the system.
 
 
 
@@ -135,6 +131,7 @@ Malware is malicious code that is designed to gain unauthorised access to, make 
 
 >[!note]
 > We will collectively refer to IDS systems and IPS systems as IDS systems.
+
 
 ### IDS
 
@@ -294,6 +291,8 @@ flowchart LR
     A[Digital Signature] -->|Sender's Public Key| B[Hashed Message]
     C[Message] -->|Hashing| D[Hashed Message]
 ```
+### Limitation 
+A digital is a method of ensuring that an encrypted message is from a trusted source as they have a certificate from a Certification Authority that confirms that the individual is who they claim to be in an online communication.However, it is unable to verify the authenticity of message content and whether the message has been tampered with.
 
 
 
@@ -314,6 +313,25 @@ flowchart LR
 >-  token values, such as from a physical device, a mobile phone or a software application
 
 - Some applications use two-factor authentication (2FA), which uses two different ways of authentication for better security
+
+### Biometrics authentication
+
+Biometric Authentication Preferred Because:  
+1. Unique physiological traits
+2. Cannot be lost/stolen like tokens
+3. Harder to replicate than token codes
+   OR
+   Security Tokens Preferred Because:
+4. Not affected by physical changes
+5. Easier to revoke/reissue
+6. No biometric data storage risks
+   (Accept either position with valid reasoning)
+
+
+### How hash protects passwords from leaking 
+
+Since a hash is irreversible, it is impossible to recover the original password from the hashed form. This ensures that even if the server’s database is compromised, it is not possible to recover the list of passwords.
+When a user logs in, the password entered by the user is hashed and this is compared to the hashed password stored under the user’s name in the database. If they do not match, then the user has logged in with an incorrect password and will be prompted to retry.
 
 
 
