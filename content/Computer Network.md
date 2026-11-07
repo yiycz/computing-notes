@@ -468,7 +468,9 @@ OUI (Organisationally Unique Identifier)> : Device Identifier
 | **Address Format**    | Six groups of two hexadecimal digits separated by colons or dashes | Four denary numbers between 0 and 255 separated by dots  | Eight groups of four hexadecimal digits separated by colons. Can be shortened by omitting leading zeros as well as a section of consecutive zeroes |
 | **Permanent**         | Yes                                                                | No                                                       | No                                                                                                                                                 |
 
-
+### The difference between public and private IP 
+- Public IP addresses are globally unique addresses assigned by an ISP that are used to identify devices on the public internet. They are directly routable and accessible from anywhere online.
+- Private IP addresses are from reserved ranges (e.g., 192.168.x.x) used to identify devices within a local network. They are not routable on the public internet and cannot be used for direct communication online.
 
 # Packets
 
