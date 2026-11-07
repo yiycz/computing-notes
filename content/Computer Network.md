@@ -726,4 +726,4 @@ An app has a pair of processes that send messages to each other over a network. 
 | Hybrid Architecture        | • In some apps, servers track IP addresses but user-user messages are P2P.                    |
 |                            | • This has the scalability and cost effectiveness of P2P while remaining secure and reliable. |
 
-Original wording preserved and organised into sections and a comparison table.
+
