@@ -46,20 +46,18 @@ Ethical issues involve examining the moral dilemmas and ethical considerations a
 
 Legal issues are issues where a law has been passed by a government. While you are not expected to learn the details of all the Acts listed, you may be asked to consider the issues in the legal context.
 
-### Personal Data Protection Act
-
-### Copyright Act
-
-- Copyright Act strengthens creators' and performers' rights by granting default ownership of certain commissioned works to creators and performers, unless stated otherwise in the contract. 
-- Additionally, it mandates clear identification of creators or performers when using or distributing their works in public, including on online platforms. 
-- The Act also introduces exceptions to copyright owners' rights, allowing lawful use of copyrighted works for computational data analysis and educational purposes without seeking explicit permission, as long as proper attribution is provided. 
-- These changes aim to balance the interests of creators and the public, fostering innovation, education, and recognition in the digital age.
-
-### Computer Misuse Act
-
-- The Computer Misuse Act aims to protect computer material against unauthorized access or modification and prevent abuse of the national digital identity service.
-- It defines various terms related to computer usage, such as "computer," "damage," "data," and "program," and outlines what constitutes unauthorized access or modification of computer material. 
-- The Act prohibits unauthorized interception of computer functions and provides penalties for such offenses. Additionally, it establishes provisions for securing access to computer prog
+## Copyright Act
+- Strengthens creators’ rights and introduces new exceptions for computational data analysis and educational use of online materials.
+- Mandates clear identification of creators and performers in public use of their works.
+- 
+## Computer Misuse Act
+- It prohibits unauthorized access to computer programs or data, with penalties for damages.
+- Unauthorized access includes altering, copying, or using data without consent.
+- The act encompasses removable storage media and modifications to computer contents.
+- 
+## Cybersecurity Act
+- Aims to strengthen protection of Critical Information Infrastructure (CII) and empower authorities to prevent and respond to cybersecurity threats.
+- It establishes frameworks for CII designation, threat investigation, information sharing, and licensing for cybersecurity service providers, ensuring national cybersecurity resilience.
 
 
 
