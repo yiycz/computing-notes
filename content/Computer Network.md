@@ -509,6 +509,7 @@ Payload
 (Data)
 ```
 
+
 ### Packet Switching v.s. Circuit Switching
 
 Packet Switching
@@ -520,7 +521,7 @@ Circuit switching
 - A path is set up between the sender and receiver.
 - All data follows the same path, in order.
 - The path cannot be used by any other data.
-- 
+  
 
 | Feature           | Packet Switching                                   | Circuit Switching                                      |
 | ----------------- | -------------------------------------------------- | ------------------------------------------------------ |
@@ -547,6 +548,7 @@ Circuit switching
 >Routing tables contain the information necessary to forward a package along the shortest/best route to allow it to reach its destination. As soon as the packet reaches a router, the packet header is examined and compared with the routing table. The table supplies the router with instructions to send the packet to the next available router
 
 
+
 # Network Protocols
 
 ## DNS (Domain Name System)
@@ -566,39 +568,17 @@ A DNS server maintains databases containing IP addresses and their corresponding
 - Top-Level Domain (TLD) Name Servers - Know which authoritative server manages domains under their TLD. There is a TLD server for .com, .org, .net, .edu, etc.
 - Authoritative Name Server - Stores the actual DNS records for a domain.
     
+## DNS Request Process
 
->[!How does the Domain Name Server work?]
->
->**Step 1:** A user types ‘[example.com](http://example.com/)’ into a web browser and the query travels into the Internet and is received by a DNS recursive resolver.
->
->**Step 2:** Browser checks its own DNS cache. If the IP address of ‘[example.com](http://example.com/)’ is already cached and its TTL (Time To Live) hasn’t expired, the browser immediately uses the cached IP. No DNS packets are sent. Otherwise, continue.
->
->**Step 3:** Operating System checks its DNS cache. The browser asks the operating system to resolve [example.com](http://example.com/), if the IP address is present, then it returns the IP address immediately. Otherwise, continue.
->
->**Step 4:** Check Hosts File – The hosts file is a small text file on your computer that acts as a manual DNS table.
->
->**Step 5:** The operating system sends a recursive DNS query to its configured DNS resolver.
->
->**Step 6:** The recursive resolver checks its cache. If the IP address is present, return the IP address. Otherwise, continue.
->
->**Step 7:** The resolver then sends an iterative DNS query to the DNS root nameserver.
->
->**Step 8:** The root server then responds to the resolver with the address of a Top Level Domain (TLD) DNS server (such as .com or .net), which stores the information for its domains. When searching for [example.com](http://example.com/), our request is pointed toward the .com TLD.
->
->**Step 9:** The resolver then makes a request to the .com TLD to find the authoritative server for example.com.
->
->**Step 10:** The resolver then makes a request to the authoritative server. Finally, the authoritative server returns the IP address of [example.com](http://example.com/).
->
->**Step 11:** The resolver caches the result.
->
->**Step 12:** The resolver replies to the client.
->
->**Step 13:** Browser opens a TCP connection through the TCP three-way handshake.
->
->**Step 14:** TLS handshake
->
->**Step 15:** HTTP request
+1. The computer checks its **local DNS cache** for a previously looked-up domain name. If not found, a DNS request is made to the **Recursive DNS Server**.
 
+2. The **Recursive DNS Server** (usually provided by the ISP) checks its local cache of recently looked-up domain names. If not found, the request is sent to the internet's **root DNS servers**.
+
+3. The **root DNS servers** redirect the request to the correct **Top-Level Domain (TLD) server** based on the domain name.
+
+4. The **TLD server** refers the request to the **authoritative DNS server**, which is responsible for storing the DNS records for a particular domain name.
+
+5. The **DNS record** is then sent back to the Recursive DNS Server, where a local copy will be cached for future requests and then relayed back to the original client that made the request. Each DNS record has a **TTL (Time To Live)** value that determines how long it is cached.
 
 ### Types of DNS queries
 
@@ -607,6 +587,7 @@ A DNS server maintains databases containing IP addresses and their corresponding
 | **Recursive Query** | In a recursive query, a DNS client requires that a DNS server (typically a DNS recursive resolver) will respond to the client with either the requested resource record or an error message if the resolver can’t find the record. |
 | **Iterative Query** | In this situation the DNS client will allow a DNS server to return the best answer it can.<br><br>If the queried DNS server does not have a match for the query name, it will return a referral to a DNS server authoritative for a lower level of the domain namespace.<br><br>The DNS client will then make a query to the referral address. This process continues with additional DNS servers down the query chain until either an error or timeout occurs. |
 | **Non-recursive Query** | Typically this will occur when a DNS resolver client queries a DNS server for a record that it has access to either because it’s authoritative for the record or the record exists inside of its cache.<br><br>Typically, a DNS server will cache DNS records to prevent additional bandwidth consumption and load on upstream servers. |
+
 
 
 # TCP (Transmission Control Protocol)
