@@ -703,3 +703,27 @@ Note: This model is outdated, the model currently in use is actually the TCP/IP 
 | IMAP                         | Application        | Internet Message Access Protocol. Used to synchronise a client email account with an account on a mail server. The server returns new emails (if there are any) and deletes any emails that were deleted locally on the client application. This allows a user to use multiple devices to access their email account. |
 | IP                           | Network (Internet) | Internet Protocol. Creates a new packet (imagine putting the packet from the transport layer into a new envelope). Adds the source and destination IP addresses to allow the packet to be delivered. These are the packets that are routed across the internet.                                                       |
 | Ethernet and Wi-Fi protocols | Link (Data Link)   | Encapsulates the data from the previous layer into frames (another kind of packet) with a source and destination MAC address, and manages multiple transmissions on the media.                                                                                                                                        |
+# Client-Server Processes
+
+## 1. Basics of Client-Server Processes
+
+An app has a pair of processes that send messages to each other over a network. One is a client and one is a server.
+
+- In a webapp, a browser is the client process and the web server is the server process.
+- In a P2P file sharing system, downloading is a client process and uploading is a server process.
+- For simplicity, we call the FIRST communication a client, and the RESPONSE, a server.
+
+## 2. Types of Network Architecture
+
+| Architecture               | Description                                                                                   |
+| -------------------------- | --------------------------------------------------------------------------------------------- |
+| Client-Server Architecture | • There is an always-on host (server) which services requests from other hosts (clients).     |
+|                            | • The server has a fixed, well known IP address.                                              |
+|                            | • The server is usually hosted on a data center to handle a large number of requests.         |
+|                            | • The service providers must pay recurring interconnection and bandwidth costs.               |
+| P2P Architecture           | • Minimal or no reliance on data centers.                                                     |
+|                            | • Uses processing power of both host computers.                                               |
+| Hybrid Architecture        | • In some apps, servers track IP addresses but user-user messages are P2P.                    |
+|                            | • This has the scalability and cost effectiveness of P2P while remaining secure and reliable. |
+
+Original wording preserved and organised into sections and a comparison table.
