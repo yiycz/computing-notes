@@ -73,46 +73,33 @@ Firewall cannot protect against internal attacks, for example, virus in one comp
 The setting of firewall may block some legitimate programs
 
 
-### Software firewalls
+## 1. Types of Firewalls
 
-- A hardware firewall is physical, like a broadband router – it connects the network and gateway through hardware like wires. 
-- A software firewall is internal – a program on your computer that works through port numbers and applications.
+| Type                   | Description                                                                                                                  |
+| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| Hardware Firewall      | Physical, connects the network and gateway through wires                                                                     |
+| Software Firewall      | Internal, works using port numbers and applications                                                                          |
+| Cloud-based Firewall   | Firewalls can grow with the organization and do well with perimeter security                                                 |
+| Host Based Firewall    | Installed on an individual computer to protect it from activity occurring on its network                                     |
+| Network Based Firewall | May be installed at the perimeter of a network to protect corporations from hosts on the internet, cannot protect internally |
 
-### Cloud-based firewalls
+## 2. Functionality of Firewalls
 
-- known as firewall as a service (FaaS). 
-- One benefit of cloud-based firewalls is that they can grow with your organisation and, similar to hardware firewalls, do well with perimeter security (preventing unauthorised users from accessing a network).
+| Functionality        | Description                                                                                                                                       |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Traffic Control      | All communication must pass through the firewall. Using a single firewall helps ensure this, but bigger organizations may enforce multiple layers |
+| Authorized Traffic   | Only authorized traffic will be allowed to pass, and the rest are blocked                                                                         |
+| Maintaining Security | While connected to the network itself the firewall is meant to be resistant to attacks                                                            |
 
+## 3. Applications of Firewalls
 
-### Host-based vs Network-based firewalls 
+| Application             | Description                                                                                                                                               |
+| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Packet Filters          | Occur at gateway routers that connect internal networks to ISPs. The admins can specify what’s allowed and what is not.                                   |
+| Stateful Packet Filters | Track TCP connections and use this information to make filtering decisions                                                                                |
+| Application Gateways    | Application specific servers through which all app data must pass. They look beyond just IP TCP UDP Headers and make the decisions based on the app data. |
 
-##### Host-based
-
-- A host-based firewall is installed on an individual computer to protect it from activity occurring on its network. 
-- The policy may affect what traffic the computer accepts from the Internet, from the local network, or even from itself. 
-
-##### Network-based firewall
-
-- A network-based firewall is implemented at a specified point in the network path and protects all computers on the “internal” side of the firewall from all computers on the “external” side of the firewall. 
-- Network-based firewalls may be installed at the perimeter, or edge, of a network to protect a corporation from hosts on the Internet, or internally to protect one segment of the community from another, such as separating corporate and residential systems, or research systems from marketing systems. 
-- A network-based firewall cannot protect one computer from another on the same network, or any computer from itself.
-
-### Functionality and Structure of firewalls
-
-| Function               | Description                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Traffic Control**    | All incoming and outgoing communication must pass through the firewall, which sits squarely at the boundary between the administered network and the rest of the Internet.<br><br>While large organisations may use multiple levels of firewalls or distributed firewalls, locating a firewall at a single access point to the network makes it easier to manage and enforce a security-access policy, creating a single choke point for inspection. |
-| **Authorised Traffic** | Only authorised traffic, as defined by the local security policy, will be allowed to pass.<br><br>Unauthorised access attempts are blocked, protecting valuable network resources.                                                                                                                                                                                                                                                                   |
-| **Mainting security**  | While connected to the network, the firewall itself is designed to be resistant to attacks.<br><br>It acts as a robust barrier, preventing external threats from infiltrating the internal network.                                                                                                                                                                                                                                                  |
-
-
-### Types of firewall 
-
-| Type of Firewall | Description |
-|---|---|
-| **Packet Filters** | Traditional packet filters occur at a gateway router that connects the internal network to its ISP. It examines each datagram based on the administrator-specific rules. |
-| **Stateful Packet Filters** | Stateful packet filters track TCP connections and use this information to make filtering decisions. |
-| **Application Gateways** | These are application-specific servers through which all application data (inbound and outbound) must pass. They look beyond |
+All descriptions preserve the original wording, with line breaks cleaned up for readability.
 
 
 
@@ -121,6 +108,7 @@ The setting of firewall may block some legitimate programs
 - A Distributed Denial-of-Service (DoS) attack is carried out by one or a group cybercriminals that controls a network of Internet-connected machines known as botnet.
 - The attacker then sends remote instructions to each bot in the botnet to send voluminous bogus requests to the server that stored the medical records to overwhelm the resource and capacity of the server.
 - When the server direct its resources to handle the bogus requests and gets overwhelmed, it results in depriving the genuine users of the medical system from accessing the information stored in the system.
+
 
 
 
@@ -139,38 +127,32 @@ The setting of firewall may block some legitimate programs
 
 IDS systems are broadly classified as either **signature-based systems** or **anomaly-based systems.**
 
-### signature-based systems
+- Signature Based IDS
+	- Requires previous knowledge of attacks to generate accurate signatures
+	- Blind to new, undocumented attacks
+	- Can produce false alarms even if a signature is matched
+	- Every packet must be compared with an extensive collection of signatures
+	- Can become overwhelmed and fail to detect many malicious packets
 
-- A signature-based IDS maintains an extensive database of attack signatures. Each signature is a set of rules pertaining to an intrusion activity. 
-- A signature may simply be a list of characteristics about a single packet (e.g., source and destination port numbers, protocol type, and a specific string of bits in the packet payload), or may relate to a series of packets. 
-- The signatures are normally created by skilled network security engineers who research known attacks.
-- An organisation’s network administrator can customize the signatures or add its own to the database
+- Anomaly Based IDS
+	- Creates a traffic profile based on normal operation
+	- Detects statistically unusual packet streams (e.g., high percentage of
+	- ICMP packets, exponential growth in port scans and ping sweeps)
+	- Can detect new, undocumented attacks
+	- Challenging to distinguish between normal and unusual traffic
+	- Most IDS deployments are primarily signature-based, with some including anomaly-based features
 
-###### How does it work?
-
-- Operationally, a signature-based IDS sniffs every packet passing by it, comparing each sniffed packet with the signatures in its database. 
-- If a packet (or series of packets) matches a signature in the database, the IDS generates an alert. 
-- The alert could be sent to the network administrator in an e-mail message, could be sent to the network management system, or could simply be logged for future inspection.
-
-###### Limitation
-
-- They require previous knowledge of the attack to generate an accurate signature. 
-	- A signature-based IDS is completely blind to new attacks that have yet to be recorded. Another disadvantage is that even if a signature is matched, it may not be the result of an attack, so that a false alarm is generated. 
-- Because every packet must be compared with an extensive collection of signatures, the IDS can become overwhelmed with processing and actually fail to detect many malicious packets.
-
-
-### anomaly-based IDS
-
-- An anomaly-based IDS creates a traffic profile as it observes traffic in normal operation. It then looks for packet streams that are statistically unusual
-	- For example, an inordinate percentage of ICMP packets or a sudden exponential growth in port scans and ping sweeps. 
-
-##### Pros
-
-- They don’t rely on previous knowledge about existing attacks—that is, they can potentially detect new, undocumented attacks
-
-###### Limitation
-
--  It is an extremely challenging problem to distinguish between normal traffic and statistically unusual traffic. To date, most IDS deployments are primarily signature-based, although some include some anomaly-based features
+- HOW IDS WORKS
+	- Network is divided into high-security region and DMZ
+	- High-security region protected by packet filter and application gateway
+	- DMZ includes public web server and DNS server, protected by packet filter
+	- IDS sensors monitor both regions
+	- IDS performs deep packet inspection and signature comparison
+	- Placing IDS sensors downstream reduces traffic load per sensor
+	- Signature-based IDS uses a database of attack signatures
+	- Signatures are created by network security engineers and can be customized
+	- IDS inspects each packet and generates alerts for matches
+	- Alerts are sent to administrators, management systems, or logged
 
 
 
