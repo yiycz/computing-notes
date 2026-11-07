@@ -609,12 +609,11 @@ A DNS server maintains databases containing IP addresses and their corresponding
 
 # TCP (Transmission Control Protocol)
 
-- Uses three-way handshake to establish a reliable connection
-	- SYN (Synchronise): The client sends a packet with the SYN flag set to the server to establish a connection
-	- SYN-ACK (Synchronise and Acknowledge): The server replies with another packet with both SYN and ACK flags on.
-	- ACK (Acknowledge): The client replies with another packet with the ACK flag on to acknowledge that the server is listening
-	- More reliable than UDP (User Datagram Protocol) but slower in general.
-	- Used in HTTP, HTTPS, FTP, SMTP, etc.
+- The three-way handshake takes place before the data transfer to ensure that the connection is reliable.
+	- (1) The user first sends a synchronization packet to the server to check that the server is ready to receive.
+ 	- (2) The server sends an acknowledgement back to the user and sends its own synchronization packet to the user.
+  	- (3) The user acknowledges the server’s synchronization packet.
+- After this, the actual data packets are transmitted.
     
 
 # UDP (User Datagram Protocol)
