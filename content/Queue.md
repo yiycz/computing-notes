@@ -37,48 +37,6 @@ tags:
 Freed spaces at the front cannot be reused once RP reaches the end.
 
 
-# Circular Queue
-
-```python
-class c_queue:
-    def __init__(self):
-        self.size = 6
-        self.array = [None for _ in range(self.size)]
-        self.fp = -1
-        self.rp = -1
-
-
-    def isFull(self):
-        return (self.rp + 1) % self.size == self.fp
-
-
-    def isEmpty(self):
-        return self.fp == -1
-
-    def enqueue(self, item):
-        if self.isFull():
-            return "FULL"
-        else:
-            if self.fp == -1:
-                self.fp = 0
-            self.rp = (self.rp + 1) % self.size
-            self.array[self.rp] = item
-
-    def dequeue(self):
-        if self.isEmpty():
-            return "Empty"
-        else:
-            value = self.array[self.fp]
-            if self.fp == self.rp:
-                self.fp = -1
-                self.rp = -1
-            else:
-                self.fp = (self.fp + 1) % self.size
-            return value 
-
-    def display(self):
-        print(self.array)
-```
 
 ### Definition
 
