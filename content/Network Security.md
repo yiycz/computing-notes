@@ -29,56 +29,27 @@ Original wording preserved, with key concepts highlighted.
 
 A social engineering attack is a type of attack that uses deception and trickery to convince unsuspecting users to provide sensitive data or to violate security guidelines.
 
-### Types of Social Engineering Attacks
+## Types of Malware and Cybersecurity Threats
 
-| Type | Description |
-|---|---|
-| **Spoofing** | This is a human- or software-based attack in which the goal is to pretend to be someone else for the purpose of concealing their identity.<br><br>Spoofing can occur through:<br><br>- Using IP addresses (IP spoofing)<br>- A network adapter’s hardware media access control (MAC) addresses (MAC Spoofing)<br>- Email. Various email message headers are changed to conceal the originator’s identity. |
-| **Impersonation** | This is a human-based attack in which an attacker pretends to be someone he’s not.<br><br>A common scenario is when the attacker calls an employee and pretends to be calling from the help desk. The attacker tells the employee he is reprogramming the order-entry database, and he needs the employee’s user name and password to make sure it gets entered into the new system. |
-| **Phishing** | Email-based social engineering attack<br><br>In a phishing attack, the attacker sends an email message that seems to come from a respected bank or other financial institution. The message claims that the recipient needs to provide an account number, Social Security number, or other private information to the sender in order to “verify an account”. |
-| **Pharming** | A cyber-attack that redirects users to fraudulent websites or manipulates their computer systems to collect sensitive information. Victims are tricked into thinking that these fraudulent websites are legitimate. |
-| **Vishing / Voice Phishing** | This is a human-based attack for which the goal is to extract personal, financial, or confidential information from the victim by using services such as the telephone system and IP-based voice messaging services such as VoIP as the communication medium.<br><br>The term “vishing” is the shortened form of “voice phishing”. |
-| **Spear Phishing** | This form of phishing targets specific individuals, employees or mid-level staff across an organisation to steal general credentials or access. |
-| **Whaling** | This is a form of spear phishing that targets individuals who are known to be upper-level executives or other high-profile employees.<br><br>Whaling attacks are well-researched attempts to access sensitive information and often resemble a legal subpoena, customer complaint, or executive issue. The content is meant to be tailored for upper management, and usually involves an alleged company-wide concern. Like phishing messages, spear phishing / whaling attacks try to convince the target to access malicious content such as hyperlink, file, or attachment. |
-| **Spam** | Spam is an email-based threat in which the user’s inbox is flooded with email messages that act as vehicles carrying advertising material for products or promotions for get-rich-quick schemes and can sometimes deliver viruses or malware. |
-| **Spim** | Spim is an IM-based attack similar to spam that is propagated through instant messaging instead of through email.<br><br>Spim → **Sp**am over **i**nstant **m**essaging. |
-| **Hoax** | A false message or warning about a non-existent computer virus, security threat or cyber incident. They trick people into panic, wasting time, and forwarding the fake warning to others.<br><br>Two things may happen:<br><br>1. Hoax is disseminated, clogging up communication systems, and possibly triggering a Denial of Service (DoS) condition.<br>2. Users react by following instructions in the hoax that direct them to defend or secure their devices in an improper or unapproved manner. |
+| Name             | Description                                                                                                               |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| Ransomware       | Blocks access to a computer system until a ransom is paid                                                                 |
+| Scareware        | Frightens victims into providing financial information or downloading viruses                                             |
+| Spyware          | Secretly collects personal information about users and sends it to attacker                                               |
+| Adware           | Pushes unwanted advertisements at users                                                                                   |
+| Fileless Malware | Operates in computer’s memory, hiding in a trusted application or tool                                                    |
+| Cookies          | Small piece of data on websites that stores users’ personal information                                                   |
+| Pharming         | Intercepts requests going to a website and redirects it to a fake website                                                 |
+| Phishing         | Using fake emails and websites that appear to be from reputable companies                                                 |
+| Spamming         | Mass distribution of unwanted messages to emails gained from mailing lists                                                |
+| Trojan Horse     | Pretends to be a harmless file or useful application until run                                                            |
+| Virus            | Attaches itself to a harmless program and modifies it, and spreads to other programs when the infected program is run     |
+| Worm             | Runs automatically and tries to spread copies of itself across a network, consuming bandwidth and harming the host server |
 
-
-
-### Malware Attacks
-
-Malware is malicious code that is designed to gain unauthorised access to, make unauthorised use of, or damage computing devices and networks.
-
-| Type | Description |
-|---|---|
-| **Virus** | A sample code that spreads from one computer to another by attaching itself to other files. The code in a virus executes when the file it is attached to is opened.<br><br>Frequently, viruses are intended to enable further attacks, send data back to the attacker, or even corrupt or destroy data. |
-| **Worm** | A piece of code that spreads from one device to another on its own, not by attaching itself to another file. Like a virus, a worm can enable further attacks, transmit data, or corrupt and erase files. |
-| **Trojan horse** | An insidious type of malware that is itself a software attack and can pave the way for a number of other types of attacks. There is a social engineering component to a Trojan horse attack because the user has to be fooled into executing it. |
-| **Logic Bomb** | A piece of code that sits dormant on a target device until it is triggered by a specific event, such as a specific date. Once the code is triggered, the bomb “detonates”, and performs whatever actions it was programmed to do. Often, this includes erasing and corrupting data on the target device. |
-| **Spyware** | Surreptitiously installed malicious software that is intended to track and report on the usage of a target device, or collect other data the author wishes to obtain.<br><br>Data collected can include web browsing history, personal information, banking and other financial information, and usernames and passwords |
-| **Adware** | Software that automatically displays or downloads advertisements when it is used. While not all adware is malicious, many adware programs have been associated with spyware and other types of malicious software. Also, it can reduce user productivity by slowing down devices and simply by creating annoyances. |
-| **Rootkit** | Code that is intended to take full or partial control of a device at the lowest levels.<br><br>Rootkits often attempt to hide themselves from monitoring and detection, and modify low-level system files when integrating themselves into a device. Rootkits can be used for non-malicious purposes such as virtualisation; however, most rootkit infections install backdoors, spyware, or other malicious code once they have control of the target device. |
-| **Botnet** | A set of devices that have been infected by a control program called a bot that enables attackers to exploit them and mount attacks. Typically, black hats use botnets for Distributed Denial of Service, or DDoS attacks, sending spam email, and mining for personal information or passwords. |
-
-
-
-### Types of Viruses
-
-| Type                       | Description                                                                                                                                                                                                                                                                                                                                                                                          |
-| -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Boot Sector**            | Infects any disk-based media. Writes itself into the boot sector of the disk. When a system attempts to boot from the disk, the virus is moved onto the system. Once on the system, the virus attempts to move itself to every disk placed in the system.                                                                                                                                            |
-| **Macro**                  | A macro is a group of application-specific instructions that execute within a specific application, A macro virus uses other programmes’ macro engines to propagate. True macro viruses do not actually infect files or data, but attach themselves to the file’s template, document or macro code. Microsoft Office products have been popular targets for macro viruses.                           |
-| **Mailer and mass mailer** | A mailer virus sends itself to other users through the email system. It simply rides along with any email that is sent.<br><br>A mass mailer virus searches the email system for mailing lists and sends itself to all users on the list.<br><br>Often, the virus does not have a payload; its purpose is to disrupt the email system by swapping it with mail messages in the form of a DOS attack. |
-| **Polymorphic**            | The type of virus changes as it moves around, acting differently on different systems. It can sometimes even change the virus code, making it harder to detect                                                                                                                                                                                                                                       |
-| **Script**                 | A small program that runs code by using the Windows scripting host on Windows operating systems.<br><br>It is written as a script in Visual Basic or Javascript and executes when the script runs. Scripts are often distributed by email and requires use to open them                                                                                                                              |
-| **Stealth**                | A stealth virus moves and attempts to conceal itself until it can propagate. After that, it drops its payload.                                                                                                                                                                                                                                                                                       |
 
 ### The difference between a Trojan horse and a worm
 Trojan: Masquerades as legitimate software and tricks users to execute it, does not replicate itself
 Worm: Self-replicating, spreads autonomously through networks
-
-
 
 
 # Firewalls
