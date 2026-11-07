@@ -531,14 +531,22 @@ Circuit switching
 | **Efficiency**    | More efficient for bursty data traffic             | Less efficient for bursty data traffic                 |
 | **Cost**          | Generally considered more cost-effective           | Can be more expensive, especially for unused bandwidth |
 | **Applications**  | Ideal for data transfer (web browsing, email)      | Ideal for real-time communication                      |
+
 ### Packet loss
 
 - At times, some routers may receive packets faster than they are able to route them on. 
 - These packets are buffered in memory and this introduces delays (referred to as a 'high latency').
+- IP packets contain ToS (Type of Service) fields in their headers, which allow packets to be classified according to priority levels. Routers can choose whether or not to use this information to prioritise packets.
 
 >[!Why is Packet Loss bad]
 >For most traffic this is not an issue; it just means that the web page takes longer to load or a file download takes more time than expected. However, for other network traffic these delays may have more of an impact, particularly if you are talking over a voice call or playing an online game. If the buffering is severe, the router may run out of memory and packets are simply discarded.
 
+### Lost Packets
+- If a destination is **unreachable**, packets are sometimes sent to a default device (default gateway).
+
+- A packet could theoretically get caught in a **routing loop**, being sent again and again, causing the data to infinitely cycle through devices.
+
+- Packets come equipped with a **TTL (Time To Live)** counter, which decreases by 1 each time the packet passes through a router. When the TTL reaches 0, the packet is **discarded**, preventing infinite routing loops.
 
 ### Routing tables
 
@@ -614,171 +622,7 @@ HTTP uses port $80$ while HTTPS uses port $443$ with TCP.
 
 The main difference between HTTP and HTTPS is that HTTPS uses TLS (Transpoint Layer  Security) encryption.
 
->[!Explanation of how it works:]
->
->**Step 1:** You type a URL into the browser and press enter:
->
->```
->https://www.google.com/search?q=cats
->```
->
->**The browser breaks this into:**
->
->- Protocol: HTTPS  
->- Domain: [www.google.com](http://www.google.com/)
-  >  - Path: /search
->-Query: q=cats
-  >  
->
->**Step 2:** The browser queries a DNS server to request for the IP address of the domain.
->
->**Here DNS replies with:**
->
->```
-142.250.183.36
->```
->
->(The IP address for [www.google.com](http://www.google.com/))
->
->**Step 3:** The browser now needs to connect to the server.
->
->- HTTP uses TCP on port 80, performing a TCP three-way handshake.
->
->- HTTPS also uses TCP but on port 443, but after the TCP handshake, the browser also performs a TLS handshake to verify the server’s identity, exchange encryption keys, and create a secure session.
->
->**Step 4:** Browser sends an HTTP request
->
->- Now the browser sends a HTTPS request to the server:
->
->```
->GET /search?q=cats HTTP/1.1
->Host: [www.google.com](http://www.google.com)
->User-Agent: Chrome
->Accept: text/html
->Connection: keep-alive
->```
->
-**Breakdown of HTTP request:**
->```
->Request Line (Line 1):
->Method: GET
->Resource: /search?q=cats
->Protocol version: HTTP/1.1
->Headers
->Which website you’re requesting: Host: [www.google.com](http://www.google.com/)
->Which browser you’re using: User-Agent: Chrome
->Types of content you accept: Accept: text/html
->Body
->GET requests usually have no body. However, POST requests often do. 
->Example of POST request:
->
->POST /login HTTP/1.1
->
->username=Alice
->password=123456
->
->```
->
-**Step 5:** Request travels across the Internet
->
->- The request is broken into packets. Routers forward packets based on their destination IP address until they reach the server.
->
->**Step 6:** Server receives the request & processes it
->
->**Example:**
->
->```
->GET /search?q=cats
->```
->
->- Then the server decides what happens.
->
-**Possible outcomes:**
->- Return a webpage
->- Run backend code
->- Query databases
->- Return an image
-> - Return JSON
-  >  
->**Step 7:** Server sends an HTTP response
->
->**Example:**
->
->```
->HTTP/1.1 200 OK
->
->Content-Type: text/html
->Content-Length: 2031
->
-><html>
->…
-></html>
->```
->
->**An HTTP response contains:**
->
->- Status line  
->```
->HTTP/1.1 200 OK
->```
->- Protocol: HTTP/1.1
->- Status Code: 200
->- Meaning: OK
->- Response Headers
->```
->Content-Type: text/html
->Content-Length: 2031
->```
->
->- Content-Type: text/html → A HTML file is returned  
->- Content-Length: 2031 → How many bytes follow  
->- Response Body
- > 
->##### HTML Example
->
->```
-><html>
->…
-></html>
->```
->
->##### JSON Example
->
->```
->{
->    “name”:”Alice”
->}
->```
->
->**Step 9:** Browser processes the response
->
-**Suppose the body is HTML:**
->
->```html
-><html>
-><head>
->	<link href="style.css">
->	<script src="app.js"></script>
-></head>
-><body>
->	<img src="cat.png">
-></body>
-></html>
->```
->
->The browser parses the HTML.
->
->Then it notices CSS, JavaScript, Images, Fonts, etc.
->
->**So it sends:**
->
->```
->GET /style.css
->GET /app.js
->GET /cat.png
->```
->
->**Step 10:** Browser renders the page (Done)
+
 
 # FTP (File Transfer Protocol)
 
@@ -850,3 +694,12 @@ Before the OSI model, different companies created their own networking protocols
 
 The OSI model provides a common framework so that different networking technologies can work together.
 Note: This model is outdated, the model currently in use is actually the TCP/IP model.
+
+
+| Protocol                     | Layer              | Full Name and Purpose                                                                                                                                                                                                                                                                                                 |
+| ---------------------------- | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| SMTP                         | Application        | Simple Mail Transfer Protocol. Used to send an email to an email server. The server returns a code indicating whether or not the email could be delivered.                                                                                                                                                            |
+| POP                          | Application        | Post Office Protocol. Used to request any new emails for a specific email account. The server returns the emails (if there are any).                                                                                                                                                                                  |
+| IMAP                         | Application        | Internet Message Access Protocol. Used to synchronise a client email account with an account on a mail server. The server returns new emails (if there are any) and deletes any emails that were deleted locally on the client application. This allows a user to use multiple devices to access their email account. |
+| IP                           | Network (Internet) | Internet Protocol. Creates a new packet (imagine putting the packet from the transport layer into a new envelope). Adds the source and destination IP addresses to allow the packet to be delivered. These are the packets that are routed across the internet.                                                       |
+| Ethernet and Wi-Fi protocols | Link (Data Link)   | Encapsulates the data from the previous layer into frames (another kind of packet) with a source and destination MAC address, and manages multiple transmissions on the media.                                                                                                                                        |
