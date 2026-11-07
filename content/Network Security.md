@@ -3,6 +3,24 @@ tags:
   - network
   - security
 ---
+
+## What is Network Security?
+
+Network Security → The shield that protects the CIA of information and resources in a network.
+
+## CIA Triad
+
+| Principle       | Description                                                                                                                                                    |
+| --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Confidentiality | Ensuring only authorized users can access sensitive information within a network using encryption and access controls.                                         |
+| Integrity       | Ensuring data within a network is accurate and has not been tampered with using intrusion detection systems.                                                   |
+| Availability    | Ensures that authorized users can access the information and resources they need whenever they require them using firewalls and network redundancy strategies. |
+
+Original wording preserved, with key concepts highlighted.
+
+
+
+
 # Malmares
 
 ## Social Engineering Attacks
