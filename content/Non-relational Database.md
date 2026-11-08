@@ -67,14 +67,6 @@ Sticking with the financial example, imagine you have a bank balance of $200 and
 Durability is another important element of ACID because it ensures that no matter what happens, once a transaction is complete, the **changes in that transaction are written into the database**. This makes sure that **data changes are persisted**, even in the event of a power failure or system crash.
 
 
-# Advantages of NoSQL
-
-| Feature                | Description                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Flexibility**        | Having a flexible data model also means NoSQL databases can address large volumes of rapidly changing data, making them great for agile development, quick iterations, and frequent code pushes.                                                                                                                                                                                                                                                   |
-| **Cost-effectiveness** | NoSQL databases are typically designed to scale out horizontally by using distributed clusters of hardware, as opposed to scaling up by adding expensive and robust servers.                                                                                                                                                                                                                                                                       |
-| **Fast queries**       | Queries in NoSQL databases can be faster than SQL databases. Data in SQL databases is typically normalized, so queries for a single object or entity require you to join data from multiple tables. As the tables grow in size, the joins can become expensive. However, data in NoSQL databases is typically stored in a way that is optimized for queries. Queries typically do not require joins, so the queries are simpler and are very fast. |
-| **Replication**        | NoSQL replication functionality copies and stores data across multiple servers. This replication provides data reliability, ensuring access during downtime and protecting against data loss if servers go offline.                                                                                                                                                                                                                                |
 
 # Difference between NoSQL and SQL
 
@@ -86,6 +78,31 @@ Durability is another important element of ACID because it ensures that no matte
 | **Big Data Support** | The vertical scaling makes it difficult for relational databases to store very big data                                       | The horizontal scaling and dynamic data schema make NoSQL suitable for big data.                                                                                                     |
 | **Properties**       | Use the ACID (Atomicity, Consistency, Isolation, Durability) property.                                                        | Settles for eventual consistency                                                                                                                                                     |
 
+
+
+
+# Advantages of using NoSQL databases over relational databases
+- **Scalability**: NoSQL databases support **horizontal scaling** by adding more servers to **distribute workloads**, making them suitable for **large-scale data and high-traffic applications**. In contrast, relational databases typically rely on **vertical scaling**.
+
+- **Flexible schema**: NoSQL databases support **dynamic schemas**, allowing data structures to be modified without extensive **database migrations**. This is useful when **data requirements change frequently**.
+
+- **Handling unstructured data**: NoSQL databases can efficiently **store and manage unstructured and semi-structured data**, such as **JSON documents**, which are more difficult to handle in relational databases.
+
+- **High availability and fault tolerance**: NoSQL databases use **distributed architectures** with **data replication and redundancy**, ensuring **high availability** and reducing the risk of **data loss during hardware failures**.
+
+- **Cost-effectiveness**: NoSQL databases can run on **clusters of inexpensive commodity hardware**, reducing the **cost of scaling** compared to relational databases that may require more powerful servers.
+
+- **Automated data sharding**: NoSQL databases can automatically **split and distribute data across multiple servers**, simplifying **data management** and improving **scalability**.
+
+# Advantages of using relational databases over NoSQL databases
+- **Complex relationships**: Relational databases can efficiently manage **complex relationships between data entities** using **foreign keys and joins**, whereas NoSQL databases are generally less suited for complex joins.
+
+- **Data integrity and consistency**: Relational databases support **ACID transactions**, ensuring **reliable transaction processing and data consistency**. In contrast, some NoSQL databases may not guarantee full ACID compliance, potentially leading to **data inconsistencies**.
+
+- **Query power and flexibility**: Relational databases use **SQL** to support **complex queries**, including **joins, aggregations and subqueries**, allowing users to retrieve and analyse data flexibly without redesigning the schema.
+
+- **Structure and predictability**: Relational databases enforce a **predefined schema** to maintain **data integrity and consistency**. **Normalisation** also reduces **data redundancy** and prevents inconsistencies arising from duplicated data.
+- 
 # Application of NoSQL databases
 
 ### Social Media: 
