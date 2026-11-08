@@ -102,15 +102,14 @@ tags:
 
 # Advantage of using dynamic ds over static ds
 
-- Flexible size
-	- Can grow or shrink during program execution. No need to know the size beforehand.
+- **No fixed size limitation**: Dynamic data structures can **grow as needed** without a **predetermined maximum size**, unlike static arrays. Dynamic linked lists can accommodate as many elements as needed, limited only by **available system memory**.
 
-- Better memory utilisation
-	- Memory is allocated only when needed, reducing wasted space.
+- **No wasted space**: Dynamic data structures **allocate memory only for elements stored at runtime**. In contrast, static arrays **reserve a fixed amount of memory** even when some elements are unused, resulting in **wasted memory space**.
 
 # Disadvantages of using dynamic ds over static ds
 
-- More memory overhead
-	- Slower access
+- **Faster access**: Static arrays allow **direct access to elements using their indices**, making data retrieval faster than in dynamic linked lists, which require **sequential traversal** to access a specific element.
 
-- Many dynamic structures (e.g., linked lists) do not support direct indexing, so elements may need to be traversed one by one.
+- **Lower memory overhead**: Static arrays do not require **additional memory to store pointers** between elements. In contrast, dynamic linked lists require **extra memory for pointers** in each node.
+
+- **Simpler memory management**: Static arrays allocate a **fixed amount of memory** at the start, eliminating the need for **dynamic memory allocation and deallocation** during runtime.
