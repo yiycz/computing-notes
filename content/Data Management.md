@@ -143,7 +143,7 @@ Version control is defined as a system that tracks the progress of code across t
 
 # Personal Data Protection Act (PDPA)
 ### Definition:
-
+Personal data refers to data about an individual who can be identified from that data, or from that data and other information to which the organisation has or is likely to have access.
 - The Personal Data Protection Act (PDPA) is a data protection law comprising various rules that govern the collection, use, disclosure and care of personal data. 
 - It recognises both the rights of individuals to protect their personal data, including rights of access and correction, as well as the needs of organisations to collect, use or disclose personal data for legitimate and reasonable purposes.
 
