@@ -25,6 +25,8 @@ Original wording preserved, with key concepts highlighted.
 
 ### Definition
 
+Malware → Software that is specifically designed to disrupt, damage or gain unauthorized access to a computer system
+
 A social engineering attack is a type of attack that uses **deception and trickery** to **convince unsuspecting users** to **provide sensitive data** or to **violate security guidelines**.
 
 ## Types of Malware and Cybersecurity Threats
@@ -208,7 +210,7 @@ flowchart LR
 # Digital signature
 
 - It is a **cryptographic technique** to indicate the **owner or creator of a resource** or to signify **one’s agreement with a document’s content** in a digital world.
-- Therefore, it must be possible to prove that a document signed by an individual was indeed signed by that individual (the **signature must be verifiable**) and that only that individual could have signed the document (the **signature cannot be forged**).
+- Therefore, it is to authenticates the sender, indicates the owner or creator of a resource or a document’s content
 
 ##### Asymmetric encryption allows for the creation of digital signatures
 
