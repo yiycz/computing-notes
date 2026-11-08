@@ -66,12 +66,17 @@ Freed spaces at the front cannot be reused once RP reaches the end.
 
 ### Insertion (Bubble Up)
 
-- Insert the new element at the last available position in the heap to maintain the complete binary tree property.
-- Compare the new element with its parent node.
-- If the heap property is violated, swap the new element with its parent.
-- Max Heap: Swap while the new element is greater than its parent.
-- Min Heap: Swap while the new element is smaller than its parent.
-- Repeat the comparison and swapping until the heap property is restored or the root is reached.
+
+1. **Create a new item** containing the data and its priority.
+2. If the priority queue is **empty**, **insert the new item at the front**.
+3. Otherwise, **traverse the priority queue from the front** and **compare priorities**:
+   - If the new item has a **higher priority**, **insert it before the current item**.
+   - If the new item has an **equal priority**, **continue traversing** to preserve FIFO order among items with the same priority.
+   - If the new item has a **lower priority**, **move to the next item**.
+4. **Repeat step 3** until the **correct position is found** or the **end of the queue is reached**.
+5. **Insert the new item at that position**, maintaining the **priority order**.
+
+
 
 ### Deletion (Bubble Down)
 
