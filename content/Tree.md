@@ -39,26 +39,24 @@ tags:
 - Traverse the `right` subtree.
 - Visit the `root`.
 
-### Binary Search Tree (BST) Creation
+### BST Insertion
+1. **Create a new node** containing the value to be inserted.
+2. If the BST is **empty**, **set the new node as the root**.
+3. Otherwise, **start from the root node** and **compare** the new value with the current node:
+   - If the new value is **less than** the current node's value, **move to the left child**.
+   - If the new value is **greater than** the current node's value, **move to the right child**.
+   - If the values are **equal**, handle the duplicate according to the BST's rules.
+4. **Repeat step 3** until an **empty child position** is found.
+5. **Insert the new node** at that position, maintaining the **BST property**.
 
-- Accept the `data`.
-- If the `data` is invalid, stop.
-- Start from the `root` pointer.
-- If the tree is empty, insert the data as the root node.
-- Otherwise:
-	- If `data < current node`, move to the left subtree.
-	- Else, move to the `right `subtree.
-	- Repeat until an empty position is found and insert the node.
+### BST Search
+1. **Start from the root node**.
+2. **Compare** the target value with the current node's value:
+   - If the target **matches** the current node's value, **return the node** (search successful).
+   - If the target is **less than** the current node's value, **move to the left child**.
+   - If the target is **greater than** the current node's value, **move to the right child**.
+3. **Repeat step 2** until the target is **found** or a **null node** is reached (target not found in BST).
 
-### Binary Search Tree (BST) Search
-
-- Accept the data to search.
-- Start from the root.
-- While the current node is not NULL:
-	- If `data == current node`, print "Found" and stop.
-	- If `data < current node`, move to the left subtree.
-- Else, move to the right subtree.
-- If `NULL` is reached, print "Not Found".
 
 
 
