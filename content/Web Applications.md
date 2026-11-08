@@ -25,68 +25,27 @@ tags:
 
 #### Benefits:
 
-##### Optimum access to device hardware and features.
+**Better performance**: Native apps **run directly on** the device’s OS and can be optimised for that specific platform, resulting in faster and smoother user experience.
 
-- Can be designed to have settings that allow an optimal level of access to device hardware and features.
-- Use full range of device capabilities such as GPS
-- Highly specialised and feature-rich applications
-    
+**Access to device features**: Native apps can **directly access** the device’s hardware features, such as GPS, biometric sensors, push notifications, camera, providing **enhanced functionality** for banking services.
 
-##### Potential for high performance and high responsiveness.
+**Enhanced user experience**: Native apps can leverage **platform-specific UI components, design patterns and navigation gestures** to provide a **seamless and familiar interface**, resulting in greater **user engagement and satisfaction**.
 
-- Optimised for specific platform
-- Utilising low-level APIs and hardware acceleration.
-- Can deliver smoother animations, faster load times, and a more fluid user experience.
-    
+**Offline capabilities**: Native apps can store **data locally** on the device, allowing users to **access** certain features and content **without an Internet connection**.
 
-##### Enhanced user experience.
-
-- Can be designed to provide a rich and immersive user experience,
-- By leveraging platform-specific UI components, design patterns, and navigation gestures.
-- Resulting in a seamless and familiar interface for users.
-- This level of customization increases user engagement and satisfaction.
-    
-
-##### Offline capabilities
-
-- Can function offline,
-- Allowing users to access certain features and content without an Internet connection.
-- Store data locally, native apps can continue to operate and provide functionality in offline scenarios.
     
 
 #### Shortcomings:
 
-##### App store approval:
+- **Longer development time**: Native apps require **separate code for each platform**, using **platform-specific programming languages and development tools**.
 
-- Need to go through the app store approval process
-- Adhering to guidelines and policies specific to each platform.
-- Can introduce additional time and potential challenges
+- **Higher maintenance costs**: **Updates, bug fixes and maintenance** must be performed **separately for each platform**, increasing **costs**.
 
+- **Limited discoverability**: Native apps are mainly **distributed through app stores**, which impose **distribution rules** and limit **visibility outside these stores**.
 
-##### Longer development time and costs
+- **Compatibility challenges**: Native apps must be **optimised and tested** across different **OS versions, device models and screen sizes**, increasing **development and testing efforts**.
 
-###### Time:
-
-- Require separate code for each platform.
-- Platform-specific programming languages and development platforms must be used.
-    
-
-###### Costs:
-
-- Maintenance efforts, updates and bug fixes must be performed separately for each platform.
-    
-
-##### Limited distribution and discoverability outside the app store.
-
-- App store distribution may limit app discovery and require adherence to specific distribution rules.
-- Challenging for users to find apps outside of the app store, limiting the visibility of the app.
-    
-
-##### Fragmentation and compatibility challengers.
-
-- The mobile computing landscape is fragmented, with multiple OS versions, device models, and screen sizes.
-- Native apps must be optimised and tested across a wide range of devices, OS versions, and resolutions, which can increase development and testing efforts.
-    
+- **App store approval**: Native apps must undergo an **approval process** and adhere to **platform-specific guidelines and policies**, increasing **development time** and **potential challenges**.
 
 ### Web apps
 
@@ -114,68 +73,25 @@ tags:
 
 #### Benefits:
 
-##### Cross-Platform Compatibility:
+- **Cross-platform compatibility**: Web apps can run on **different devices and operating systems** through web browsers, ensuring a **consistent user experience** and **broader reach**.
 
-- Platform-agnostic, can be run on any devices like desktops, laptops, tablets, and smartphones.
-- Users can access the same web app across different platforms, ensuring a consistent experience and broad reach.
-    
+- **No installation required**: Web apps can be accessed directly through a **URL in a web browser**, eliminating **downloads and installation** and allowing **faster onboarding**.
 
-##### No requirements for installation:
+- **Easier updates and maintenance**: Developers can **deploy updates centrally on the server**, making changes available to **all users automatically** without requiring **manual updates**.
 
-- Eliminate the need for installation or downloads.
-- Access them directly by entering the app’s URL in a web browser.
-- Reduce barriers and frictions, faster onboarding process.
-    
+- **Cost-effective development**: Web apps use a **single codebase across multiple platforms**, reducing **development time, costs and resources**.
 
-##### Update and app maintenance.
-
-- Allow for centralised updates and maintenance.
-- Developers can deploy changes on the server, making them available to all uses.
-- Client web software updates may happen each time the web page is visited.
-- Updates can be applied seamlessly without requiring users to manually update the app, ensuring everyone has access to the latest version
-    
-
-##### Cost-effective development
-
-- Cost-effective as web technologies are widely accessible,
-- Developers can use a single codebase to target multiple platforms.
-- Reduce development time and resources needed for platform-specific development.
-    
-
-##### Greater discoverability
-
-- Discoverable via search engines.
-- Optimising the app’s website and content for search engines, web apps can benefit from organic discoverability.
-- Potentially attracting a broader user base.
-    
+- **Greater discoverability**: Web apps can be **found through search engines**, increasing **visibility** and potentially attracting a **broader user base**.
 
 #### Shortcomings:
 
-##### Internet Connectivity Dependency
+- **Internet connectivity dependency**: Web apps generally require an **Internet connection** to function, limiting **usability when offline**, although progressive web apps can support **certain offline features**.
 
-- Require an Internet connection to function.
-- Limited or no connectivity can hinder the app’s usability.
-- Progressive web apps aim to mitigate this limitation by enabling certain features and content for work offline.
-    
+- **Limited device feature access**: Web apps have **restricted access to device hardware and features**, potentially limiting **functionality** that relies on specific device capabilities.
 
-##### Limited device feature access
+- **Performance constraints**: Web apps rely on **web browsers**, resulting in **variations in rendering speeds and performance**, although improved **JavaScript engines** can mitigate these limitations.
 
-- Web apps have limited access to device features.
-- Although modern web APIs provide access to certain hardware capabilities,
-- The range and depth of access may be limited.
-- Impact certain user cases that rely greatly on specific device features.
-    
-
-##### Performance constraints.
-
-- Rely on web browsers → variations in rendering speeds and performance optimisations.
-- However, this limitation is mitigated by the improved JS engines.
-    
-
-##### Security considerations
-
-- Web apps are susceptible to web-based vulnerabilities like XSS and CSRF.
-- Proper security measures, such as input validation, output encoding must be implemented to protect against these threats.
+- **Security considerations**: Web apps are vulnerable to **web-based attacks** such as **XSS and CSRF**, requiring security measures like **input validation and output encoding**.
     
 
 ### Difference between web and native applications
