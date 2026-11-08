@@ -103,16 +103,21 @@ All descriptions preserve the original wording, with line breaks cleaned up for 
 
 # Intrusion Detection System and Intrusion Prevention System
 
-- IPS is a device that filters out suspicious traffic.
-- IDS is a device that generates alerts when it observes potentially malicious traffic. 
+### IPS 
+An Intrusion Prevention System (IPS) is a security system that monitors network traffic for suspicious or malicious activity and automatically takes action to prevent or stop detected attacks. It may take actions such as blocking the malicious traffic. 
 
->[!note]
-> We will collectively refer to IDS systems and IPS systems as IDS systems.
+- **Monitors network activity** continuously in real-time and compares activity against **known attack signatures / patterns** to identify attacks or intrusions.
+- **Automatically blocks or prevents detected threats** by dropping malicious packets, blocking suspicious IP addresses or terminating malicious connections.
+- **Generates alerts and keeps logs** of suspicious activities and actions taken, providing an **audit trail** for further analysis and investigation.
 
 
 ### IDS
 
-- An IDS can be used to detect a wide range of attacks, including network mapping (emanating, for example, from nmap), port scans, TCP stack scans, DoS bandwidth-flooding attacks, worms, and viruses, OS vulnerability attacks, and application vulnerability attacks.
+An Intrusion Detection System (IDS) is a security system that monitors network traffic or computer systems for suspicious or malicious activity and alerts an administrator when a potential intrusion is detected.
+
+- **Monitors** network activity continuously in real-time and compares activity against known attack signatures / patterns to identify attacks or intrusions.
+- Generates **alerts to the security** admin when suspicious activity or threat is detected.
+- Keeps **a log of activities**, **creating a detailed audit trail** for **further analysis and investigation**. 
 
 IDS systems are broadly classified as either **signature-based systems** or **anomaly-based systems.**
 
