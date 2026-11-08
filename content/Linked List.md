@@ -33,25 +33,26 @@ tags:
 
 ### Ordered Insertion
 
-- Traverse the linked list to find the correct insertion position.
-	- Compare the new data with existing nodes.
-	- Stop when you find the first node whose value is greater than the new data.
-	- Keep track of both the current node and the previous node.
-- Check whether there is a free node available.
-	- If the free pointer is `NULL`, the free list is empty and insertion cannot proceed (memory overflow).
-	- Otherwise, continue.
-- Remove the first node from the free list.
-	- Let the node pointed to by free become the new node.
-	- Update the free pointer to point to the next available free node.
-- Store the new data in the allocated node.
-	- Copy the value to be inserted into the node's data field.
-- Insert the node into the linked list.
-	- If inserting at the beginning, make the new node point to the current head, then update the head pointer.
-	- Otherwise:
-		- Set the new node's next pointer to the current node.
-- Update the previous node's next pointer to point to the new node.
-	- Update the free pointer.
-- The free pointer should already point to the next available free node after allocation.
+1. **Create a new node** containing the value to be inserted.
+2. If the linked list is **empty**, **set the new node as the head**.
+3. Otherwise, **compare** the new value with the head node:
+   - If the new value is **less than** the head node's value, **insert the new node before the head** and **update the head pointer**.
+   - Otherwise, **start traversing from the head**.
+4. **Traverse the linked list** and compare the new value with the next node's value:
+   - If the new value is **greater than or equal to** the next node's value, **move to the next node**.
+   - Otherwise, **stop traversing**.
+5. **Repeat step 4** until the **correct position is found** or the **end of the list is reached**.
+6. **Update the pointers**:
+   - Set the **new node's next pointer** to the current node's next node.
+   - Set the **current node's next pointer** to the new node.
+
+### Insertion at the back
+
+1. **Create a new node** containing the value to be inserted and **set its next pointer to null**.
+2. If the linked list is **empty**, **set the new node as the head**.
+3. Otherwise, **start traversing from the head node**.
+4. **Move to the next node** repeatedly until the **last node** is reached (its next pointer is null).
+5. **Set the last node's next pointer to the new node**, inserting it at the end of the linked list.
 
 ### Deletion
 
