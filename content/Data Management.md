@@ -72,13 +72,13 @@ This purpose is to preserve valuable information for legal, regulatory, historic
 
 ## Archive vs backup
 
-|Backup|Archive|
-|---|---|
-|Enables rapid recovery of live, changing data|Stores unchanging data no longer in use but must still be retained.|
-|One of multiple copies of data|Usually the only remaining copy of data|
-|Access to data must be quick to show rapid restoration of data|Speech of access to the data is usually not crucial|
-|Short term retention of data only for the period when the data is in use.|Long term retention of data for the required period or indefinitely|
-|Duplicate copies are periodically overwritten|Data should not be altered or deleted.|
+|                       | Backup                                                                                | Archive                                                                          |
+| --------------------- | ------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| Data Storage Method   | The original data remains in place, while a backup copy is stored in another location | Archived data is moved from its original location to an archive storage location |
+| Data State            | Backed-up data is constantly changing                                                 | Once you create an archive, you do not modify it                                 |
+| Data Retention Policy | You periodically delete or overwrite data backups that are too old to be useful       | Data archives are designed for long-term storage                                 |
+| Storage Type          | Hot cloud storage or easily accessible local storage locations                        | Cold cloud storage or tape archives                                              |
+| Data Scope            | All of your data, with the exception of unimportant information like temporary files  | Specific files that you must retain for compliance purposes                      |
 
 ## Version Control
 
