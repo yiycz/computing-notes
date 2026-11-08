@@ -92,11 +92,14 @@ def insertion_sort_recursive(arr, n): # n is length
 ### Method
 
 
-Insertion sort is an **in-place sorting algorithm** that builds a **sorted portion of the array** by repeatedly **inserting each element into its correct position**.
+1. Start from the **second element** of the list.
+2. Store the **current element as the key**.
+3. **Compare** the key with the **elements before it**.
+4. If an element is greater than the key, shift it **one position** to the right.
+5. Repeat Step 4 until an element **smaller than or equal** to the key is found, or the beginning of the list is reached.
+6. **Insert** the key into the **correct position**.
+7. Repeat Steps 2 to 6 for each remaining element until the entire list is sorted.
 
-It starts by **considering the first element as sorted**. The next element is selected and **compared with elements in the sorted portion**, moving from right to left.
-
-**Elements greater than the selected element are shifted one position to the right** to make space for its insertion. This process is **repeated until all elements have been inserted into their correct positions**, resulting in a fully sorted array.
 
 
 ### Time complexity 
