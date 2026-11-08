@@ -220,11 +220,15 @@ def mergesort(arr):
 ### Method
 
 
-Merge sort is a **divide-and-conquer algorithm** that recursively **splits an array into halves**, sorts each half, and **merges the sorted halves** into a single sorted array.
 
-It starts by **dividing the input array into halves repeatedly**, until each subarray contains **only one element**. Each subarray with one element is considered as sorted.
+Merge sort is a **divide-and-conquer algorithm** that recursively **splits an array into halves** and **merges the sorted subarrays** to produce a single sorted array.
 
-**Sorted sub-arrays are then merged**, such that the merged results **remain sorted throughout the process**.
+1. **Divide**: The array is **repeatedly divided into halves** until each subarray contains **only one element**, which is considered sorted.
+
+2. **Merge**: The **sorted subarrays are merged** by comparing their elements and arranging them in **sorted order**.
+
+3. **Repeat**: The merging process continues until **all subarrays are combined into a single sorted array**.
+
 
 
 
