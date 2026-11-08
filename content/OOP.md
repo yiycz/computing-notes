@@ -6,16 +6,17 @@ tags:
 # Procedure v.s. OOP
 
 ### Procedure: Writing programs made of functions that perform specific tasks 
-
-- Procedures typically operate on data items that are separate from the procedures 
-- Data items commonly passed from one procedure to another 
-- Focus: to create procedures that operate on the program’s data
+- **Simpler implementation**: Uses loops and straightforward control flow without requiring classes and objects.
+- **Less code overhead**: Avoids additional class definitions, constructors and methods, reducing boilerplate code.
+- **Easier debugging**: Straightforward execution flow makes errors easier to trace and identify.
+- **Lower resource overhead**: May require less memory and processing time by avoiding unnecessary object creation.
 
 ### Object-Oriented Programming: focused on creating objects
 
-Object: entity that contains data and procedures
-- Data is known as data attributes and procedures are known as methods
-- Methods perform operations on the data attributes
+- **Encapsulation**: By making attributes such as Top and StackArray private, the class prevents direct external access to the internal data. User interacts with the stack only through public methods (e.g. push, pop). This prevents accidental errors which could corrupt the integrity of the stack.
+
+- **Reusability**: Once the stack class is created, it can be easily reused without rewriting the code. Multiple stacks can be instantiated from the same class, each maintaining its own independent data.
+
 
 
 # OOP-General Terminologies
@@ -73,40 +74,23 @@ classDiagram
 
 # 4 Pillars of OOP
 
-### Encapsulation:
+### Encapsulation
 
-- Bundling data (attributes) and methods (functions) that operate on that data into a single unit (class), while restricting direct access to some components (using access modifiers like private, protected, public) to enforce data hiding. 
-- Restricts direct access to internal data (e.g., using private attributes).
-- Separates interface (what the class exposes) from implementation (internal details).
-- Provides controlled access via public methods (getters/setters).
-- The goal of data hiding is where programmers can only use the given public interface (methods) to access the private attributes.
-- This reduces accidental errors as programmers cannot change the attribute directly which may lead to an inconsistent state.
+- **Definition**: Bundling **data (attributes) and methods (functions)** into a **single unit (class)**, while **restricting direct access** to internal data.
+- **Purpose**: Provides **controlled access via public methods (getters/setters)**, reducing **accidental errors** and preventing **inconsistent states**.
 
-###### Data hiding features
-- Accessor and Mutator Methods
-- Hiding Attributes
+### Abstraction
 
+- **Definition**: **Hiding complex implementation details** and exposing only the **essential features**, focusing on **what an object does rather than how it does it**.
+- **Purpose**: Promotes **modularity** and reduces **dependency on implementation details**.
 
+### Inheritance
 
-### Abstraction: 
+- **Definition**: Mechanism for **creating new classes (child) from existing ones (parent)**, allowing child classes to **reuse and extend** parent attributes and methods.
+- **Purpose**: Reduces **code duplication** and promotes **reusability, specialization and extendability**.
 
-- Hiding complex implementation details and exposing only the essential features. It focuses on what an object does rather than how it does it.
-- Abstraction is built on top of data hiding (restricted details) which is possible only because of encapsulation (class structure)
-- Promotes modularity and reduces dependency on implementation details.
+### Polymorphism
 
-
-
-### Inheritance:
-
-- Mechanism for creating new classes (child) from existing ones (parent)
-- Child classes reuse and extend upon parent attributes and methods.
-- Reduces code duplication, promotes reusability, specialization and extendability.
-
-
-### Polymorphism 
-
-- Polymorphism is the ability of objects of different types to behave in different ways / different implementations when the same message is applied to them. 
-- Achieved through method overriding or interfaces/abstract classes.
-- Polymorphism is the idea of allowing the same code to be used with different types, resulting in generalization and abstract implementations.
-- Reduces complexity by allowing one interface, multiple behaviors.
+- **Definition**: The ability of **objects of different types** to **behave in different ways** when the **same message is applied to them**.
+- **Purpose**: Allows the **same code to be used with different types**, reducing **complexity** through **one interface, multiple behaviors**.
 
