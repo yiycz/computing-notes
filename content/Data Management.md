@@ -86,24 +86,11 @@ Version control is defined as a system that tracks the progress of code across t
 
 ### Significance
 
-##### Easy Modification of the codebase
+- **Easy modification of the codebase**: Version control allows developers to **maintain source code, documentation and configuration files**, storing different versions **safely and systematically**. This makes it easier to **manage modifications, updates and new features** throughout software development.
 
-- Software development includes the continuous process of modifying programs and the version control system makes this task easier. 
-- Version control software is used by software developers to maintain documentation and configuration files as well as source code.
-- It helps developers to store different versions of software safely and in an organised manner. 
+- **Track changes**: Version control maintains a **history of changes** made to documents, including **who made changes and when** they were done. This allows the team to easily **revert to previous versions** if needed.
 
-#####  Reverting Errors
-
-- Version control can be excellent help for emergency hot-fixes, routine maintenance, upgrades and new features with potentially overlapping development timeframes. 
-- When you need to troubleshoot an issue, you can easily access and compare the last working life with the faulty file, and decrease the time spent identifying the cause of an issue. 
-- You can restore older versions of a life effectively through the use of version control systems. You can simply undo every commit you have done in just a few clicks. 
-
-##### Collaboration
-
-- Programmers and developers can easily collaborate on a project through the version control system. Everyone can access the database simultaneously to view previous versions. It will be easier for them to work simultaneously as a team regardless of their location.
-- Version control allows developers to store the history of changes and who made them, enabling them to revert or look back to previous versions of documents and understand how contributions by different contributors have changed the project over time. 
-- When working with multiple collaborators, understanding what commits are being incorporated into the repository and who commits were pushed are crucial to avoid breaking one another’s source code. 
-- Collaborative environments developed around version control systems provide central repositories, issue tracking and threaded discussions which helps facilitate a team-based approach to the software development lifecycle.
+- **Enables collaboration**: Version control ensures that **multiple team members can work on the same documentation simultaneously** without **overwriting each other’s contributions**. It provides a structured way to **manage revisions and resolve conflicts** among contributors.
 
 
 
@@ -111,7 +98,8 @@ Version control is defined as a system that tracks the progress of code across t
 
 
 - File naming convention is essentially a framework for naming files in a way that describes what they contain and how they relate to other files.
-	- This helps to minimise the chances of files being misplaced or lost unintentionally due to poor organisation of files. Such a convention also enables users to locate files quickly
+
+Naming conventions are needed to **ensure consistency and clarity** in how files are named. They make it **easier to identify specific documents (and their versions) quickly**, and to understand the content / purpose of the file without opening it. An example of a file with good naming convention would be “UserGuide_v1.3_2025-11-10.md”. 
 
 >[!File naming best practices:]
 >- Files should be named consistently 
