@@ -274,27 +274,20 @@ Not recommended for large unsorted arrays as it requires equal amount of additio
 
 Note: Bubble sort's O(n) best case assumes early termination optimisation. Merge sort and quick sort figures refer to standard array implementations.
 
+
+# Sorting Algorithms Comparison
+
 ## 1. Bubble Sort vs Merge Sort
 
-- **Less memory required**: Bubble sort is an **in-place sorting algorithm** (sorts within the original array), while merge sort requires the **creation of temporary sub-arrays** in the process and there is **recursive call stack overhead**, which can be an issue for **large arrays or memory-constrained systems**.
+- **Less memory required**: Bubble sort is an **in-place sorting algorithm** (sorts within the original array), while merge sort requires the **creation of temporary sub-arrays** and has **recursive call stack overhead**, which can be an issue for **large arrays or memory-constrained systems**.
 
-- **Possible early termination**: For bubble sort, if **no swaps were made during a pass**, the algorithm **terminates early**, making it efficient for **nearly-sorted data**. In contrast, merge sort always performs the **full divide-and-conquer process** regardless of the initial order, making it less efficient for nearly-sorted cases.
-
-- **Faster for large datasets**: Merge sort has a **time complexity of O(n log n)** in all cases, while bubble sort has an **average and worst-case time complexity of O(n²)**. Hence, merge sort is generally more efficient for **large datasets**.
-
-- **More predictable performance**: Merge sort consistently performs in **O(n log n) time**, regardless of the initial arrangement of elements. In contrast, bubble sort's performance depends on the **initial order of elements**.
+- **Possible early termination**: For bubble sort, if **no swaps were made during a pass**, the algorithm **terminates early**, making it efficient for **nearly-sorted data**. In contrast, merge sort always performs the **full divide-and-conquer process** regardless of the initial order.
 
 ## 2. Bubble Sort vs Quick Sort
 
 - **Faster for large datasets**: Quick sort has an **average time complexity of O(n log n)**, while bubble sort has an **average time complexity of O(n²)**. Hence, quick sort is generally more efficient when sorting **large datasets**.
 
-- **Less memory required**: Bubble sort requires only **O(1) auxiliary space** as it sorts elements in-place without recursion. In contrast, quick sort requires **O(log n) stack space on average** for recursive calls.
-
 - **Stable sorting**: Bubble sort is a **stable sorting algorithm**, preserving the **relative order of elements with equal values**. In contrast, standard quick sort is **unstable**, as partitioning may change their relative order.
-
-- **Possible early termination**: Optimised bubble sort can **terminate early if no swaps are made during a pass**, achieving **O(n) time** for an already sorted array. In contrast, standard quick sort continues **partitioning the array recursively**, typically requiring **O(n log n) time** with balanced partitions, or **O(n²)** with highly unbalanced partitions.
-
-- **Worst-case performance**: Both bubble sort and quick sort have a **worst-case time complexity of O(n²)**. However, quick sort only reaches this worst case when **highly unbalanced partitions** are repeatedly produced, whereas bubble sort performs O(n²) comparisons on average.
 
 ## 3. Bubble Sort vs Insertion Sort
 
@@ -302,47 +295,22 @@ Note: Bubble sort's O(n) best case assumes early termination optimisation. Merge
 
 - **Fewer data movements**: Insertion sort typically **shifts elements** to make space for the element being inserted, reducing unnecessary data movements. In contrast, bubble sort repeatedly **swaps adjacent elements** that are in the wrong order.
 
-- **Efficient for incremental sorting**: Insertion sort can **insert new elements into an already sorted portion** without sorting the entire array again. In contrast, bubble sort generally requires **repeated passes through the array** to restore the correct order.
-
-- **Similar memory requirements**: Both bubble sort and insertion sort are **in-place sorting algorithms** requiring only **O(1) auxiliary space**, making them suitable for **memory-constrained systems**.
-
-- **Stable sorting**: Both bubble sort and insertion sort are **stable sorting algorithms**, preserving the **relative order of elements with equal values**.
-
 ## 4. Merge Sort vs Quick Sort
 
 - **More predictable performance**: Merge sort guarantees a **time complexity of O(n log n)** in all cases. In contrast, quick sort has an **average time complexity of O(n log n)** but may degrade to **O(n²)** when repeatedly choosing poor pivots.
 
 - **Less memory required**: Quick sort typically sorts elements **in-place**, requiring only **O(log n) stack space on average** for recursive calls. In contrast, merge sort requires **O(n) auxiliary space** for temporary arrays, making quick sort more memory-efficient for array sorting.
 
-- **Stable sorting**: Merge sort is a **stable sorting algorithm**, preserving the **relative order of elements with equal values**. In contrast, standard quick sort is **unstable**, as partitioning may change their relative order.
-
-- **Better cache performance**: Quick sort generally exhibits **good cache locality** as it partitions and sorts elements within the original array. In contrast, standard merge sort requires **temporary arrays and additional copying**, which can introduce memory overhead.
-
-- **Different divide-and-conquer approaches**: Merge sort **divides the array into halves**, recursively sorts them and **merges the sorted sub-arrays**. In contrast, quick sort **partitions the array around a pivot** before recursively sorting the partitions.
-
 ## 5. Merge Sort vs Insertion Sort
 
 - **Faster for large datasets**: Merge sort has a **time complexity of O(n log n)** in all cases, while insertion sort has an **average and worst-case time complexity of O(n²)**. Hence, merge sort is generally more efficient for **large datasets**.
 
-- **Less memory required**: Insertion sort is an **in-place sorting algorithm** requiring only **O(1) auxiliary space**. In contrast, merge sort requires **O(n) auxiliary space** for temporary arrays, making insertion sort more suitable for **memory-constrained systems**.
-
 - **Faster for nearly-sorted data**: Insertion sort can achieve **O(n) time** when the array is already sorted and performs efficiently when **few elements are out of order**. In contrast, merge sort requires **O(n log n) time** regardless of the initial arrangement of elements.
-
-- **Better for small datasets**: Insertion sort has **low algorithmic overhead** as it does not require recursion or temporary arrays. In contrast, merge sort involves **recursive splitting and merging**, making insertion sort often faster for **small datasets**.
-
-- **Stable sorting**: Both merge sort and insertion sort are **stable sorting algorithms**, preserving the **relative order of elements with equal values**.
 
 ## 6. Quick Sort vs Insertion Sort
 
 - **Faster for large datasets**: Quick sort has an **average time complexity of O(n log n)**, while insertion sort has an **average time complexity of O(n²)**. Hence, quick sort is generally more efficient for **large datasets**.
 
-- **Less memory required**: Insertion sort is an **in-place sorting algorithm** requiring only **O(1) auxiliary space**. In contrast, quick sort requires **O(log n) stack space on average** for recursive calls.
-
 - **Faster for nearly-sorted data**: Insertion sort is efficient for **nearly-sorted arrays**, achieving **O(n) time** for already sorted data. In contrast, quick sort continues **partitioning the array recursively**, typically requiring **O(n log n) time** with balanced partitions.
 
-- **Stable sorting**: Insertion sort is a **stable sorting algorithm**, preserving the **relative order of elements with equal values**. In contrast, standard quick sort is **unstable**, as partitioning may change their relative order.
-
-- **Better for small datasets**: Insertion sort has **low algorithmic overhead** and does not require **recursive calls or pivot selection**, making it efficient for **small datasets**. In contrast, quick sort involves **partitioning and recursive calls**, which can introduce additional overhead.
-
-- **Worst-case performance**: Both insertion sort and quick sort have a **worst-case time complexity of O(n²)**. However, insertion sort performs efficiently on **already sorted data**, while quick sort's performance depends on **pivot selection and partition balance**.
 
