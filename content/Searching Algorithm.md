@@ -57,6 +57,15 @@ def binary_search_recursive(value, arr, low, high):
             return binary_search_recursive(value, arr, mid+1, high)
 ```
 
+### Method
+
+- Set two pointers: left as the first index (0) and right as the last index of the array.
+- Calculate the middle index = (left + right) DIV 2
+- Compare middle element with the target:
+	- If the middle element matches the target value, search is successful and return the middle index
+	- If the target is less than the middle element, update right = middle index – 1
+	- If the target is greater than the middle element, update left = middle index + 1
+- Repeat from step 2 until target is found or left > right (target not found in array).
 
 ### Time complexity
 
