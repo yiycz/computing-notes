@@ -28,17 +28,5 @@ tags:
 
 # Disadvantage of Unicode over ASCII code
 
-- Supports many more characters
-- Reduces encoding problems
-
-| Character Encoding | Description |
-| ------------------ | ----------- |
-
-\| ASCII | • Only 128 distinct characters as each character is 7 bits long\
-• First 32 characters are non-printing characters used to control devices\
-• Sometimes represented in HEX as it only requires 2 digits |\
-\| Unicode | • Not standard number of bits (8–32), as many more characters can be represented\
-• Used primarily for characters of other languages\
-• More frequently used characters have fewer bits |
-
-Formatted from the image with the original wording retained as closely as possible. Note: the source's statement that PWAs cannot use APIs is not generally accurate; modern PWAs can access supported web APIs.
+- Provides a **consistent encoding standard** across **different platforms** and **applications**, ensuring that the **characters would be properly displayed.**
+- Unicode can **represent characters from all modern languages** in the world, not just Latin alphabets like that for ASCII.
