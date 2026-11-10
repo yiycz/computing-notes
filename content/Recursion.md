@@ -23,9 +23,9 @@ tags:
 
 
 # Explain Recursion Using Stack
->[!answer]
->- Each time a recursive function is called, a new stack frame, containing function's local variables, parameters, and the return address (the point to return to after the function finishes execution), is created. 
->- The newly created stack frame is pushed onto the calls stack. This means that the execution context of the current function call is saved at the top of the stack. The stack grows with each recursive call.
->- The execution of the current function is suspended. The new function call is executed with its own stack frame at the top of the stack. 
->- When a base case is reached or the function completes its task, the function returns a value. The current stack frame is then popped from the stack , and the execution resumes from the return address saved in the stack frame of the previous function call. The process continues until all recursive calls are resolved and the stack is empty again.
+
+- Each function call **creates a stack frame/activation record** on the call stack.
+- The frame stores items such as **parameters, local variables and the return address.**
+- A recursive call **pushes a new frame**; earlier calls remain **suspended.**
+- When **a base case reached**, frames are popped in **LIFO order** and return **values/control** pass back through the **earlier calls**.
 
