@@ -130,7 +130,9 @@ A **Network Interface Card (NIC)** is a **hardware component** that enables a de
 - Operates primarily at the **Physical Layer (Layer 1)** and **Data Link Layer (Layer 2)** of the OSI Model
 - Converts data between the **computer’s internal format** and **signals suitable for transmission** over the network
 
+# Ethernet
 
+Ethernet is network standard that allows data to split into packets or frames which allow them to be transmitted wirelessly and physically. 
 
 # Types of Network Devices
 
