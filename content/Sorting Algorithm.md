@@ -164,6 +164,9 @@ def quicksort_nip(arr):
 ```
 
 ### Method
+Choosing the first or last item in a **largely sorted data set** is likely to produce **very unbalanced partitions**.
+
+A random pivot reduces the chance of **repeatedly hitting this worst case**, making **balanced partitions** and expected O(n log n) performance more likely.
 
 Quick sort is a **divide-and-conquer algorithm**.
 
