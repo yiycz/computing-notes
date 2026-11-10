@@ -76,7 +76,7 @@ Durability is another important element of ACID because it ensures that no matte
 
 
 # Advantages of using relational databases over NoSQL databases
-- **Complex relationships**: Relational databases can efficiently manage **complex relationships between data entities** using **foreign keys and joins**, whereas NoSQL databases are generally less suited for complex joins.
+- **Complex relationships**: Relational databases can efficiently **manage complex relationships between data entities** using **foreign keys and joins**, whereas NoSQL databases are generally less suited for complex joins.
 
 - **Data integrity and consistency**: Relational databases support **ACID transactions**, ensuring **reliable transaction processing and data consistency**. In contrast, some NoSQL databases may not guarantee full ACID compliance, potentially leading to **data inconsistencies**.
 
