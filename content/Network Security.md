@@ -54,7 +54,7 @@ Worm: **Self-replicating**, **spreads autonomously through networks**
 
 # Firewalls
 
-Firewall **monitors and controls all incoming and outgoing network traffic** based on a **set of security rules** to **prevent unauthorized access** from entering a private network.
+Firewall **monitors all incoming and outgoing network traffic** based on a **set of security rules** to **prevent unauthorized access** from entering a private network.
 
 ### Limitations:
 
