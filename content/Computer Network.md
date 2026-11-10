@@ -150,7 +150,7 @@ A networking device that connects **multiple devices** within a Local Area Netwo
 
 The switch works at the **data link layer** (2nd layer of the OSI Model or TCP/IP Model). As it only **examines the ethernet frames**. It **doesn’t rewrite any MAC addresses and IP addresses** written in ethernet frames provided to it.
 
-HOW DOES A SWICTH WORK?
+### HOW DOES A SWICTH WORK?
 
 - **Examine:** The switch examines the packet’s header to **extract the destination MAC address**.
 - **Lookup:** The switch looks up its **MAC address table** to determine **which port is associated with the destination MAC address**.
@@ -158,17 +158,17 @@ HOW DOES A SWICTH WORK?
 
 ## Router
 
-- A router is a networking device that routes data packets **between computer networks**. It **stores information about network addresses** and **directs data to the correct destination**, choosing the most efficient route for data transmission. It can also **act as a gateway connecting to a larger network**.
+- A router is a networking device that routes data packets **between computer networks**. 
 
 - The router operates at the **network layer** (3rd layer of the OSI Model or TCP/IP Model). This is because a router **removes the MAC addresses** of the ethernet frames received and **examines the IP address of the packet**, before **adding on new MAC addresses** and **forwarding the new ethernet frame**.
 
 - **Routing tables** contain the information necessary to forward a package along the **shortest/best route** to allow it to reach its destination. As soon as the packet reaches a router, the **packet header is examined** and compared with the routing table. The table supplies the router with instructions to send the packet to the **next available router**
 
-- How will it work?
-  - **Removes the Frame Header**
-  - **Reads the destination IP address**
-  - **Looks up the routing table** to **determine the next hop**
-  - **Creates a new Ethernet Frame Header** for the outgoing network
+### How A ROUTER WORKS
+- It **Receives the packet** and reads its **destination IP address**.
+- Uses its **routing table/routing information** to choose an **appropriate next hop or route**.
+- **Forwards the packet** onto the next network towards the manufacturer's server.
+- **Different packets may take different routes**.
 
 ### Hub v.s. Switch v.s. Router
 
