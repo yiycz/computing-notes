@@ -292,13 +292,13 @@ A packet is a **unit of data** at the **Network Layer** (`Layer 3`) of the OSI M
 
 ### Packet Switching v.s. Circuit Switching
 
-Packet Switching
+#### Packet Switching
 
 - A message from one computer to another is **broken up into individual (numbered) packets** and each packet is **sent separately**.
 - The **route for each packet is not determined in advance**. Routers **examine the destination IP address** of each packet and use their **routing tables** to **determine the next hop** towards the destination. Packets thus **travel by different routes**.
 - The destination computer receives the packets and **use sequence numbers allow the receiver to reassemble packets in the original order.**
 
-Circuit switching
+#### Circuit switching
 
 - A **path is set up between the sender and receiver**.
 - **All data follows the same path**, in order.
