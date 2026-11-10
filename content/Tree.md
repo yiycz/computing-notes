@@ -40,22 +40,21 @@ tags:
 - Visit the `root`.
 
 ### BST Insertion
-1. **Create a new node** containing the value to be inserted.
-2. If the BST is **empty**, **set the new node as the root**.
-3. Otherwise, **start from the root node** and **compare** the new value with the current node:
-   - If the new value is **less than** the current node's value, **move to the left child**.
-   - If the new value is **greater than** the current node's value, **move to the right child**.
-   - If the values are **equal**, handle the duplicate according to the BST's rules.
-4. **Repeat step 3** until an **empty child position** is found.
-5. **Insert the new node** at that position, maintaining the **BST property**.
+1. **Create**: Create a **new node** containing the value to be inserted. If the BST is **empty**, set the new node as the **root**.
+2. **Compare**: Starting from the **root**, compare the new value with the current node's value:
+   - If **smaller**, move to the **left child**.
+   - If **greater**, move to the **right child**.
+   - If **equal**, handle the duplicate according to the BST's rules.
+3. **Repeat**: Continue comparing and traversing until an **empty child position** is found.
+4. **Insert**: Insert the **new node** at that position, maintaining the **BST property**.
 
 ### BST Search
-1. **Start from the root node**.
-2. **Compare** the target value with the current node's value:
-   - If the target **matches** the current node's value, **return the node** (search successful).
-   - If the target is **less than** the current node's value, **move to the left child**.
-   - If the target is **greater than** the current node's value, **move to the right child**.
-3. **Repeat step 2** until the target is **found** or a **null node** is reached (target not found in BST).
+1. **Start**: Begin at the **root node**.
+2. **Compare**: Compare the target value with the current node's value:
+   - If **equal**, the target is **found**.
+   - If **smaller**, move to the **left child**.
+   - If **greater**, move to the **right child**.
+3. **Repeat**: Continue comparing and traversing until the **target is found** or a **null node is reached**, indicating that the target is not in the BST.
 
 
 
