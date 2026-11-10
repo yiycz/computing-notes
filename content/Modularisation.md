@@ -5,7 +5,8 @@ tags:
 ---
 # Modular Programming 
 
-A module can be defined as a section of an algorithm that can be reused and that is dedicated to performing a single function. 
+A module can be defined as a **section of an algorithm** that can be **reused** and that is **dedicated to performing a single function**. 
+Decomposition is the process of **breaking down a complex problem** into **smaller, more manageable** subproblems that can be **solved independently.**
 
 - Each module performs a distinct function and has a clearly defined interface for communication with other modules.
 - Modules are usually implemented as functions, classes, or separate files
