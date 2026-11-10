@@ -215,9 +215,26 @@ flowchart LR
     C[Message] -->|Hashing| D[Hashed Message]
 ```
 
-### Limitation
+### digital certificate
 
-A digital is a method of ensuring that an encrypted message is from a **trusted source** as they have a **certificate from a Certification Authority** that confirms that the **individual is who they claim to be** in an online communication.However, it is **unable to verify the authenticity of message content** and whether the **message has been tampered with**.
+Digital Certificates are issued by a Certificate Authority (CA) to **certify the binding** between the **public key** and the **sender’s identity**.
+
+1. The sender provides their **public key** to a **Certificate Authority (CA)** and applies for a digital certificate.
+
+2. The CA **verifies the sender's identity** and issues a **digital certificate** containing the sender's public key and identity information. The CA **digitally signs the certificate using its private key**.
+
+3. The sender creates a **hash of the message** using a hashing algorithm and **encrypts the hash using their private key** to generate a digital signature.
+
+4. The sender sends the **message, digital signature and digital certificate** to the receiver.
+
+5. The receiver uses the **CA's public key to verify the digital certificate**, ensuring that it is authentic and has not been tampered with.
+
+6. The receiver retrieves the **sender's public key** from the verified digital certificate and uses it to **verify the digital signature and recover the original hash value**.
+
+7. The receiver independently **generates a hash of the received message** using the same hashing algorithm.
+
+8. The receiver **compares both hash values**. If they match, it verifies the **message's integrity and the sender's authenticity**.
+
 
 # Authentication
 
