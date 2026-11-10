@@ -3,6 +3,21 @@ tags:
   - sorting
   - practical
 ---
+
+# Comparison between sorts
+
+## Overview
+
+| Algorithm | Best Time | Average Time | Worst Time | Auxiliary Space | Stable |
+|---|---|---|---|---|---|
+| Bubble Sort | O(n) | O(n²) | O(n²) | O(1) | Yes |
+| Merge Sort | O(n log n) | O(n log n) | O(n log n) | O(n) | Yes |
+| Quick Sort | O(n log n) | O(n log n) | O(n²) | O(log n) average | No |
+| Insertion Sort | O(n) | O(n²) | O(n²) | O(1) | Yes |
+
+Note: Bubble sort's O(n) best case assumes early termination optimisation. Merge sort and quick sort figures refer to standard array implementations.
+
+
 # Bubble Sort
 
 ### Iterative
@@ -34,17 +49,10 @@ def bubble_sort_recursive(arr, upperbound):
 
 ### Method
 
-- In each pass of the bubble sort:
-	- The item in the first position is compared with the item in the second position. If they are out of order, they are exchanged; if they are in order, they are left alone.
-	- The item now in the second position is compared with the item in the third position. If they are out of order, they are exchanged; if they are in order, they are left alone.
-	- The item now in the third position is compared with the item in the forth position ..
-	- The steps in the pass continue until each item has been checked. 
+- For a list of n elements, the bubble sort algorithm takes n – 1 passes.
+- For each pass, we compare adjacent elements and swap if they are in the wrong order.
+- (Optional) We may stop the algorithm if there is no swap in one pass.
 
-### Time Complexity 
-
-Worst-Case: $O(N^2)$
-Avg-Case: $O(N^2)$
-Best Case: $O(N)$
 
 
 
@@ -92,20 +100,14 @@ def insertion_sort_recursive(arr, n): # n is length
 ### Method
 
 
-1. Start from the **second element** of the list.
-2. Store the **current element as the key**.
-3. **Compare** the key with the **elements before it**.
-4. If an element is greater than the key, shift it **one position** to the right.
-5. Repeat Step 4 until an element **smaller than or equal** to the key is found, or the beginning of the list is reached.
-6. **Insert** the key into the **correct position**.
-7. Repeat Steps 2 to 6 for each remaining element until the entire list is sorted.
+Insertion sort is a **comparison-based sorting algorithm** that builds a sorted list **one element at a time**.
+1. **Select**: Starting from the **second element**, store the current element as the **key**.
+2. **Compare and Shift**: **Compare the key with the elements before it**, shifting elements greater than the key **one position to the right** until an element smaller than or equal to the key is found, or the beginning of the list is reached.
+3. **Insert**: **Insert the key into its correct position** in the sorted portion of the list.
+4. **Repeat**: The process is **repeated for each remaining element** until the entire list is sorted.
 
 
 
-### Time complexity 
-
-Best for small size arrays
-Time complexity of $O(n^2)$
 
 
 
@@ -163,20 +165,16 @@ def quicksort_nip(arr):
 
 ### Method
 
+Quick sort is a **divide-and-conquer algorithm**.
 
-Quick sort is a **divide-and-conquer algorithm** that recursively partitions an array around a **pivot element**, sorts the resulting subarrays, and produces a single sorted array.
+1. **Select Pivot**: A **pivot element is selected** from the array.
 
-It starts by **selecting a pivot element** and **partitioning the array**, such that elements smaller than the pivot are placed on its left and elements greater than the pivot are placed on its right.
+2. **Partition**: The array is **partitioned around the pivot**, such that elements smaller than the pivot are placed on its left and elements greater than the pivot are placed on its right.
 
-The process is **repeated recursively** on the resulting subarrays until each subarray contains **zero or one element**, which is considered sorted. The entire array is then sorted **without requiring a separate merging process**.
+3. **Repeat**: The process is **repeated recursively** on the resulting subarrays until each subarray contains **zero or one element**, which is considered sorted. The entire array is then sorted **without requiring a separate merging process**.
 
 
-### Time complexity
 
-- Best case: $O(Nlog_2N)$
-- Average case: $O(Nlog2N)$
-- Worse case: $O(N^2)$
-- If the list is completely or almost ordered, it can take a running time of order $N^2$.
 
 
 
@@ -221,24 +219,13 @@ def mergesort(arr):
 
 
 
-Merge sort is a **divide-and-conquer algorithm** that recursively **splits an array into halves** and **merges the sorted subarrays** to produce a single sorted array.
+Merge sort is a **divide-and-conquer algorithm**. 
 
 1. **Divide**: The array is **repeatedly divided into halves** until each subarray contains **only one element**, which is considered sorted.
 
 2. **Merge**: The **sorted subarrays are merged** by comparing their elements and arranging them in **sorted order**.
 
 3. **Repeat**: The merging process continues until **all subarrays are combined into a single sorted array**.
-
-
-
-
-### Time Complexity
-
-Worst Case Time: $O(Nlog_2N)$
-Best Case Time: $O(Nlog_2N)$
-Average Time: $O(Nlog_2N)$
-
-Not recommended for large unsorted arrays as it requires equal amount of additional space as the unsorted array. 
 
 
 
@@ -265,21 +252,7 @@ Not recommended for large unsorted arrays as it requires equal amount of additio
 
 
 
-# Comparison between sorts
 
-
-# Sorting Algorithms Comparison
-
-## Overview
-
-| Algorithm | Best Time | Average Time | Worst Time | Auxiliary Space | Stable |
-|---|---|---|---|---|---|
-| Bubble Sort | O(n) | O(n²) | O(n²) | O(1) | Yes |
-| Merge Sort | O(n log n) | O(n log n) | O(n log n) | O(n) | Yes |
-| Quick Sort | O(n log n) | O(n log n) | O(n²) | O(log n) average | No |
-| Insertion Sort | O(n) | O(n²) | O(n²) | O(1) | Yes |
-
-Note: Bubble sort's O(n) best case assumes early termination optimisation. Merge sort and quick sort figures refer to standard array implementations.
 
 
 # Sorting Algorithms Comparison
