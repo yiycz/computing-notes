@@ -12,23 +12,6 @@ tags:
 |Document|Row/Record|
 |Field|Field/Column|
 
-|**Operator**|**Description**|
-|---|---|
-|`$eq`|Equal to|
-|`$ne`|Not equal to|
-|`$gt`|Greater than|
-|`$gte`|Greater than or equal to|
-|`$lt`|Less than|
-|`$lte`|Less than or equal to|
-|`$in`|Matches any value specified in an array|
-|`$nin`|Matches if the value is not equal to any of a given list of values.|
-|`$or`|Logical or|
-|`$and`|Logical and|
-|`$not`|Logical not|
-|`$exists`|Matches documents which has the named field|
-|`$set`|Sets the a specified field to a given value|
-|`$unset`|Removes a specified field from specified documents|
-
 ## CRUD
 
 - C → Create
@@ -88,21 +71,16 @@ Durability is another important element of ACID because it ensures that no matte
 
 - **Handling unstructured data**: NoSQL databases can efficiently **store and manage unstructured and semi-structured data**, such as **JSON documents**, which are more difficult to handle in relational databases.
 
-- **High availability and fault tolerance**: NoSQL databases use **distributed architectures** with **data replication and redundancy**, ensuring **high availability** and reducing the risk of **data loss during hardware failures**.
-
 - **Cost-effectiveness**: NoSQL databases can run on **clusters of inexpensive commodity hardware**, reducing the **cost of scaling** compared to relational databases that may require more powerful servers.
 
-- **Automated data sharding**: NoSQL databases can automatically **split and distribute data across multiple servers**, simplifying **data management** and improving **scalability**.
+
 
 # Advantages of using relational databases over NoSQL databases
 - **Complex relationships**: Relational databases can efficiently manage **complex relationships between data entities** using **foreign keys and joins**, whereas NoSQL databases are generally less suited for complex joins.
 
 - **Data integrity and consistency**: Relational databases support **ACID transactions**, ensuring **reliable transaction processing and data consistency**. In contrast, some NoSQL databases may not guarantee full ACID compliance, potentially leading to **data inconsistencies**.
 
-- **Query power and flexibility**: Relational databases use **SQL** to support **complex queries**, including **joins, aggregations and subqueries**, allowing users to retrieve and analyse data flexibly without redesigning the schema.
-
-- **Structure and predictability**: Relational databases enforce a **predefined schema** to maintain **data integrity and consistency**. **Normalisation** also reduces **data redundancy** and prevents inconsistencies arising from duplicated data.
-- 
+  
 # Application of NoSQL databases
 
 ### Social Media: 
