@@ -49,7 +49,6 @@ A social engineering attack is a type of attack that uses **deception and tricke
 ### The difference between a Trojan horse and a worm
 
 Trojan: **Masquerades as legitimate software** and **tricks users to execute it**, **does not replicate itself**
-
 Worm: **Self-replicating**, **spreads autonomously through networks**
 
 # Firewalls
@@ -59,22 +58,8 @@ Firewall **monitors all incoming and outgoing network traffic** based on a **set
 ### Limitations:
 
 Hackers can **bypass firewall** by inserting **malicious attacks inside legitimate programs**, for example, emails
-
 Firewall **cannot protect against internal attacks**, for example, virus in one computer in the network
-
 The setting of firewall may **block some legitimate programs**
-
-## 1. Types of Firewalls
-
-| Type | Description |
-|---|---|
-| Hardware Firewall | **Physical**, **connects the network and gateway through wires** |
-| Software Firewall | **Internal**, works using **port numbers and applications** |
-| Cloud-based Firewall | Firewalls can **grow with the organization** and do well with **perimeter security** |
-| Host Based Firewall | **Installed on an individual computer** to **protect it from activity occurring on its network** |
-| Network Based Firewall | May be installed at the **perimeter of a network** to **protect corporations from hosts on the internet**, **cannot protect internally** |
-
-## 2. Functionality of Firewalls
 
 | Functionality | Description |
 |---|---|
@@ -82,21 +67,12 @@ The setting of firewall may **block some legitimate programs**
 | Authorized Traffic | **Only authorized traffic will be allowed to pass**, and the **rest are blocked** |
 | Maintaining Security | While connected to the network itself the firewall is meant to be **resistant to attacks** |
 
-## 3. Applications of Firewalls
-
-| Application | Description |
-|---|---|
-| Packet Filters | Occur at **gateway routers** that **connect internal networks to ISPs**. The admins can **specify what’s allowed and what is not**. |
-| Stateful Packet Filters | **Track TCP connections** and use this information to make **filtering decisions** |
-| Application Gateways | **Application specific servers** through which **all app data must pass**. They **look beyond just IP TCP UDP Headers** and make the **decisions based on the app data**. |
-
-All descriptions preserve the original wording, with line breaks cleaned up for readability.
 
 # Denial of Service (DoS)
 
-- A Distributed Denial-of-Service (DoS) attack is carried out by one or a group cybercriminals that **controls a network of Internet-connected machines** known as **botnet**.
-- The attacker then **sends remote instructions** to each bot in the botnet to send **voluminous bogus requests** to the server that stored the medical records to **overwhelm the resource and capacity of the server**.
-- When the server direct its resources to handle the bogus requests and **gets overwhelmed**, it results in **depriving the genuine users** of the medical system from **accessing the information stored in the system**.
+- **botnet** is a network of **malware infected computers** that are **remotely controlled** to **carry out** coordinated attacks. 
+- DOS attacks the network traffic by sending **massive request** to **exhaust server resources and bandwidth**, and hence **disables the server** from responding to legitimate requests.
+
 
 # Intrusion Detection System and Intrusion Prevention System
 
@@ -210,34 +186,16 @@ flowchart LR
 # Digital signature
 
 - It is a **cryptographic technique** to indicate the **owner or creator of a resource** or to signify **one’s agreement with a document’s content** in a digital world.
-- Therefore, it is to authenticates the sender, indicates the owner or creator of a resource or a document’s content
 
-##### Asymmetric encryption allows for the creation of digital signatures
-
-- Asymmetric encryption allows for the **creation of digital signatures**, which can be used to **verify the authenticity of data**.
-- Using asymmetric encryption, the decryption-encryption works if the **keys are used the other way round**.
-- An individual can **encrypt a message with a private key** and send this to a recipient who has the **corresponding public key**, who can then use the **public key to decrypt the received ciphertext**.
-- This approach would **not be used if the content of a message was confidential** because **anyone might be in possession of the public key**.
-- However, it could be used to **verify who the sender was**. **Only the sender has the private key** and the **public key only works with that one specific private key**
-
-###### Limitation
-
-- one concern with signing data by encryption is that **encryption and decryption are computationally expensive**
-
-##### Public cryptographic one-way hash function
-
-- Public cryptographic one-way hash function which creates a **fixed-length hash** that is **uniquely defined for the particular message**, called a **‘digest’**.
-    - A one-way function is called a Hash Function → **relatively easy to compute the output from the input**, but **significantly harder in the reverse**.
-
-- At the receiver end, the **same public one-way hash function** is used to create a **digest from the received message**. The encrypted version of the original digest is **decrypted using the public key**. If the **two digests are identical**, the receiver can be confident that the message is **authentic** and has been **transmitted unaltered**.
-
->[!Procedure of a Digital Signature]
-> - Message is **hashed** and encrypted with **sender's private key**.
-> - This forms the **digital signature**.
-> - **Original message** is sent with the **digital signature**.
-> - Receiver would **decrypt the digital signature** with **sender's public key** to obtain the **hashed message**
-> - The **original message is hashed** and **compared with the hash message** in step 3.
-> - If the **two are identical**, the receiver can be certain the message **did come from the sender**, and hence the message is **authenticated**.
+- the message was created by the known sender / the message is not altered in transit
+  
+##### How it works
+- Message is **hashed** and encrypted with **sender's private key**.
+- This forms the **digital signature**.
+- **Original message** is sent with the **digital signature**.
+- Receiver would **decrypt the digital signature** with **sender's public key** to obtain the **hashed message**
+- The **original message is hashed** and **compared with the hash message** in step 3.
+- If the **two are identical**, the receiver can be certain the message **did come from the sender**, and hence the message is **authenticated**.
 
 ###### Sender:
 
