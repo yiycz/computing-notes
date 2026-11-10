@@ -7,8 +7,7 @@ tags:
 
 ### Definition 
 
-Data validation is a process of **ensuring** that the input data supplied to a system **satisfies a set
-of rules such that it is **sensible, complete, and within acceptable boundaries.** 
+Data validation is a process of **ensuring** that the input data supplied to a system **satisfies a set of rules** such that it is **sensible, complete, and within acceptable boundaries.** 
 
 Its purpose is to **avoid data errors**. It does not guarantee that data is accurate.
 
@@ -36,13 +35,12 @@ An error where changes to multiple bits or bytes cancel each other out, resultin
 
 ### Definition
 
-Verification is the process of **getting the user to confirm** that the data entered was what was
-**intended to be entered.** 
+Verification is the process of **getting the user to confirm** that the data entered was what was **intended to be entered.** 
 
 Essentially, it is a way of preventing errors when data is copied from one medium to another. It does not check if the data makes sense or is within acceptable boundaries. It only checks that the data entered is identical to the original source.
 
 - Double entry is one method of verification.
-  - The process of entering data twice, with the second entry being compared with the first is to ensure that it is accurate. It is common in batch processing for a second data entry operator to key in a batch of data to verify it. Another example is when setting a password, a user would be asked to key in the password a second time to ensure that the passwords match up.
+  - The process of **entering data twice, with the second entry being compared with the first is to ensure that it is accurate**. It is common in batch processing for a second data entry operator to key in a batch of data to verify it. Another example is when setting a password, a user would be asked to key in the password a second time to ensure that the passwords match up.
 
 - Proofreading data is another method that **involves someone checking the data entered against** the original source to ensure that the data match.
 
