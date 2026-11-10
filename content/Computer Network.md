@@ -90,6 +90,9 @@ A metropolitan area network (MAN) is a network of computing devices covering a *
 | **Connection** | Can be isolated from the internet or connected with security measures | Connects devices across the globe |
 | **Purpose** | **Internal communication**, collaboration, **secure resource sharing** | **Global communication**, **information sharing**, **access to online services** |
 
+
+A protocol is **a set of rules and conventions** that **governs how data is transmitted and exchanged** between devices over a network.
+
 # Network Hardware
 
 ### Nodes
