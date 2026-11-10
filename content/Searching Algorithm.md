@@ -78,76 +78,6 @@ Worst Case: $O(logN)$
 
 # HashTable Search
 
-### Chaining
-
-```python
-class HashTable:
-    def __init__(self):
-        self.size = 10
-        self.array = [[] for _ in range(self.size)]
-    
-    def hash(self,item):
-        return item % self.size
-
-    def insert(self,item):
-        self.array[self.hash(item)].append(item)
-                       
-    def search(self,item):
-        return ele in self.array[self.hash(item)]
-
-    def display(self):
-        for arr in self.array:
-            print(arr)
-```
-
-### Linear Probbing 
-
-```python
-class HashTable:
-    def __init__(self):
-        self.size = 10
-        self.array = [None for _ in range(self.size)]
-    
-    def hash(self,item):
-        return item % self.size
-
-    def insert(self,item):
-        if self.array[self.hash(item)] == None:
-            self.array[self.hash(item)] = item
-        else:
-            curr = self.hash(item)
-            count = 1
-            while self.array[curr] != None:
-                if count == self.size:
-                    print("FULL")
-                    return
-                curr += 1
-                count += 1
-                if curr >= self.size:
-                    curr = 0
-            self.array[curr] = item
-            
-                
-                
-    def search(self,item):
-        if self.array[self.hash(item)] == item:
-            return True
-        else:
-            curr = self.hash(item)
-            count = 1
-            while self.array[curr] != item:
-                if count == self.size:
-                    return False
-                curr += 1
-                count += 1
-                if curr >= self.size:
-                    curr = 0
-            return True
-
-    def display(self):
-        print(self.array)
-```
-
 ### Time complexity 
 
 Worst case: $O(n)$
@@ -158,6 +88,9 @@ Worst case: $O(n)$
 - A hash function converts a key into an array index for fast storage and retrieval.
 
 ### Collision Handling
+
+Collision is when the **location** indicated by the hash value is **already occupied** by another record.
+
 
 #### Linear Probing
 - Check the next available slot until an empty slot is found.
