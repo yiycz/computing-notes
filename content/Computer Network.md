@@ -345,13 +345,9 @@ It **translates human-readable website names** (like [google.com](http://google.
 ## DNS Request Process
 
 1. The computer checks its **local DNS cache** for a previously looked-up domain name. If not found, a DNS request is made to the **Recursive DNS Server**.
-
 2. The **Recursive DNS Server** (usually provided by the ISP) checks its local cache of recently looked-up domain names. If not found, the request is sent to the internet's **root DNS servers**.
-
 3. The **root DNS servers** redirect the request to the correct **Top-Level Domain (TLD) server** based on the domain name.
-
 4. The **TLD server** refers the request to the **authoritative DNS server**, which is responsible for storing the DNS records for a particular domain name.
-
 5. The **DNS record** is then sent back to the **Recursive DNS Server**, where a local copy will be **cached for future requests** and then relayed back to the original client that made the request. Each **DNS record** has a **TTL (Time To Live)** value that determines **how long it is cached**.
 
 ## Shorter version
@@ -363,7 +359,6 @@ It **translates human-readable website names** (like [google.com](http://google.
 
 
 # TCP (Transmission Control Protocol)
-
 - The **three-way handshake** takes place **before the data transfer** to ensure that the **connection is reliable**.
   - (1) The user first sends a **synchronization packet** to the server to check that the server is ready to receive.
   - (2) The server sends an **acknowledgement back** to the user and sends its own **synchronization packet** to the user.
@@ -371,7 +366,6 @@ It **translates human-readable website names** (like [google.com](http://google.
 - After this, the **actual data packets are transmitted**.
 
 # UDP (User Datagram Protocol)
-
 - **Connectionless**, **efficient but unreliable transmission** of packets
 - If any **packets are lost**, they are lost forever
 - Typically used for **video streaming** which uses **VoIP (Voice over IP)** where **efficiency is required**
@@ -379,8 +373,6 @@ It **translates human-readable website names** (like [google.com](http://google.
 # HTTP v.s. HTTPS
 
 HTTP (HyperText Transfer Protocol) is **an application-layer protocol used for communication between a client (such as a web browser) and a web server**. The client sends an **HTTP request** (e.g. GET or POST), and the server returns an **HTTP response** containing a **status code**, **headers**, and the **requested resource** (such as an HTML page, image, or JSON data).
-
-HTTP uses port $80$ while HTTPS uses port $443$ with TCP.
 
 The main difference between HTTP and HTTPS is that HTTPS uses **TLS (Transpoint Layer Security) encryption**.
 
@@ -417,73 +409,28 @@ flowchart TB
 | **Transport Layer** | Manages **reliable data transfer between applications**. | TCP (Transmission Control Protocol), UDP (User Datagram Protocol) | Not directly associated with specific hardware, but relies on the functionality of the Network Access Layer |
 | **Application Layer** | Provides **services directly to applications** like web browsing, email, and file transfer. | HTTP (Hypertext Transfer Protocol), HTTPS (Secure Hypertext Transfer Protocol), FTP (File Transfer Protocol), SMTP (Simple Mail Transfer Protocol), DNS (Domain Name System) | Web browsers, Email clients, FTP clients, Operating Systems (for application support) |
 
-# OSI Model (Outdated)
-
-```mermaid
-flowchart TB
-    A[7. Application Layer<br/>HTTP, HTTPS, FTP, SMTP, DNS]
-    B[6. Presentation Layer<br/>Encryption, Compression, Translation]
-    C[5. Session Layer<br/>Establishes and Manages Sessions]
-    D[4. Transport Layer<br/>TCP, UDP]
-    E[3. Network Layer<br/>IP, ICMP]
-    F[2. Data Link Layer<br/>Ethernet, Wi-Fi, MAC]
-    G[1. Physical Layer<br/>Cables, Signals, NICs]
-
-    A --> B
-    B --> C
-    C --> D
-    D --> E
-    E --> F
-    F --> G
-```
-
-The OSI (Open Systems Interconnection) model is a **7-layer conceptual framework** that **standardises how data is transmitted** between devices over a network by dividing network communication into **separate layers**, where each layer performs **specific functions** and provides **services to the layer above it**.
-
-## Why was the OSI model created?
-
-Before the OSI model, different companies created their own **networking protocols** that were often **incompatible**.
-
-**For example:**
-
-- **A company’s systems might communicate differently** from another company’s systems.
-- **Devices from different manufacturers could not easily communicate**.
-
-The OSI model provides a **common framework** so that **different networking technologies can work together**.
-
-Note: This **model is outdated**, the **model currently in use** is actually the TCP/IP model.
 
 | Protocol | Layer | Full Name and Purpose |
 |---|---|---|
 | SMTP | Application | Simple Mail Transfer Protocol. Used to **send an email to an email server**. The server returns a code indicating whether or not the email could be delivered. |
-| POP | Application | Post Office Protocol. Used to **request any new emails** for a specific email account. The server returns the emails (if there are any). |
 | IMAP | Application | Internet Message Access Protocol. Used to **synchronise a client email account** with an account on a mail server. The server returns new emails (if there are any) and deletes any emails that were deleted locally on the client application. This allows a user to **use multiple devices to access their email account**. |
 | IP | Network (Internet) | Internet Protocol. Creates a new packet (imagine putting the packet from the transport layer into a new envelope). Adds the **source and destination IP addresses** to allow the packet to be delivered. These are the packets that are **routed across the internet**. |
 | Ethernet and Wi-Fi protocols | Link (Data Link) | **Encapsulates the data** from the previous layer into frames (another kind of packet) with a **source and destination MAC address**, and **manages multiple transmissions** on the media. |
 
 # Client-Server Processes
 
-## 1. Basics of Client-Server Processes
 
-An app has a **pair of processes** that **send messages to each other over a network**. One is a client and one is a server.
-
-- In a webapp, a browser is the **client process** and the **web server** is the **server process**.
-- In a **P2P file sharing system**, downloading is a **client process** and uploading is a **server process**.
-- For simplicity, we call the **FIRST communication** a client, and the **RESPONSE**, a server.
-
-## 2. Types of Network Architecture
-
-| Architecture | Description |
-|---|---|
-| Client-Server Architecture | • There is an **always-on host** (server) which **services requests** from other hosts (clients). |
-| | • The server has a **fixed, well known IP address**. |
-| | • The server is usually hosted on a **data center** to handle a **large number of requests**. |
-| | • The service providers must pay **recurring interconnection and bandwidth costs**. |
-| P2P Architecture | • **Minimal or no reliance on data centers**. |
-| | • Uses **processing power of both host computers**. |
-| Hybrid Architecture | • In some apps, servers track IP addresses but **user-user messages are P2P**. |
-| | • This has the **scalability and cost effectiveness** of P2P while remaining **secure and reliable**. |
-
-
+### Client-Server Architecture 
+  - There is an **always-on host** (server) which **services requests** from other hosts (clients). 
+  - The server has a **fixed, well known IP address**. 
+  - The server is usually hosted on a **data center** to handle a **large number of requests**. 
+  - The service providers must pay **recurring interconnection and bandwidth costs**. 
+### P2P Architecture 
+  - **Minimal or no reliance on data centers**. 
+  - Uses **processing power of both host computers**. 
+### Hybrid Architecture 
+  - In some apps, servers track IP addresses but **user-user messages are P2P**. 
+  - This has the **scalability and cost effectiveness** of P2P while remaining **secure and reliable**. 
 ### Benefits of client-server architecture
 - **Easier data management** as files are stored in one **central location**, making **organizing and maintaining** is easier.
 - Better **data consistency**, the same shared copy of data is accessed by the user, reducing duplicate and outdated versions.
