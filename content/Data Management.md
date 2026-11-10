@@ -31,13 +31,15 @@ Data integrity refers to the **accuracy and validity of data**.
 
 ## Backup
 
-Backing up means **making a copy of the data** and **storing it on a different storage device**. create a **recoverable copy** of the data if the original data is **corrupted**. 
+Backing up means **making a copy of the data** and **storing it on a different storage device**. 
+
+It is to create a **recoverable copy** of the data if the original data is **corrupted**. 
 
 ## Archive
 
 Data archival refers to the process of **identifying, organising and storing data** in a **secure and accountable manner**.
 
-This purpose is to **preserve valuable information** for **legal, regulatory, historical or business purposes** while ensuring **efficient use of storage resources**.
+It is for compliance and legal purpose 
 
 |Key considerations|Elaboration|
 |---|---|
