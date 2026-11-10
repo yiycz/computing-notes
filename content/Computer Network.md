@@ -111,8 +111,6 @@ Can either be **endpoints or redistribution points**.
 
 Wi-Fi is a **wireless networking technology** based on the **IEEE 802.11 family of standards** that allows devices to connect to a Local Area Network (LAN) using **radio waves instead of physical cables**.
 
->[!Note]
->Contrary to popular belief or Mr Fong’s notes, **Wi-Fi does not stand for ‘Wireless Fidelity’**. The term ‘Wireless Fidelity’ was coined by a marketing firm hired by the Wireless Ethernet Compatibility Alliance (WECA, now the Wi-Fi Alliance) in 1999 because they were looking for a user-friendly name to refer to IEEE 802.11.
 
 ### WLAN (Wireless Local Area Network)
 
@@ -132,49 +130,7 @@ A **Network Interface Card (NIC)** is a **hardware component** that enables a de
 - Operates primarily at the **Physical Layer (Layer 1)** and **Data Link Layer (Layer 2)** of the OSI Model
 - Converts data between the **computer’s internal format** and **signals suitable for transmission** over the network
 
->[!Why is NIC needed?]
->
->A computer **cannot communicate over a network on its own**. The **NIC acts as thecommunication interface**, allowing it to:
->- **Send data to other devices**
->- **Receive incoming data**
->- **Identify itself on the local network** using its MAC address
 
-##### Types of NICs
-
-###### 1. Wired NIC (Ethernet NIC)
-
-Uses an **Ethernet cable (RJ45 connector)**
-
-```
-Computer – Ethernet NIC – Ethernet Cable – Switch
-```
-
-**Advantages:**
-
-- **Faster and more stable**
-- **Lower latency**
-- **Less susceptible to interference**
-
-###### 2. Wireless NIC (Wireless LAN Adapter)
-
-Uses Wi-Fi (IEEE 802.11) to **communicate via radio waves**.
-
-**Advantages:**
-
-- **No cables needed**
-- **Mobile**
-- **Easy to install**
-
-##### Other functions of NIC
-
-Many just think of a **NIC as an Ethernet socket**.
-
-However, a NIC contains a **specialised network controller** that handles many networking tasks in hardware, such as:
-
-- **Framing Ethernet packets**
-- **Calculating error-checking values (CRC)**
-- **Managing transmission and reception**
-- **Buffering incoming and outgoing data**
 
 # Types of Network Devices
 
@@ -201,70 +157,11 @@ HOW DOES A SWICTH WORK?
 
 - The router operates at the **network layer** (3rd layer of the OSI Model or TCP/IP Model). This is because a router **removes the MAC addresses** of the ethernet frames received and **examines the IP address of the packet**, before **adding on new MAC addresses** and **forwarding the new ethernet frame**.
 
->[!Example of how a router processes ethernet frames:]
->
->Suppose your PC wants to access a website:
->
->**Step 1.** Your PC creates an **IP packet**:
->
->```
->Packet Header
->------------------------------
->Source IP: 192.168.1.10
->Destination IP: 142.250.167.167
->```
->
->**Step 2:** Since the destination isn’t on the same network, the PC sends it to the **default gateway** (i.e. the router).
->
->To do so, the PC wraps the **IP packet** in an **Ethernet frame**:
->
->```
->Frame Header
->------------------------------
->Source MAC: PC’s MAC
->Destination MAC: Router’s MAC
->
->Packet Header
->------------------------------
->Source IP: 192.168.1.10
->Destination IP: 142.250.167.167
->```
->
->**Step 3:** The switch **forwards this frame unchanged** to the router.
->
->**Step 4:** The **ethernet frame** reaches the router.
->
->**The router:**
->
->- **Removes the Frame Header**
->- **Reads the destination IP address**
->- **Looks up the routing table** to **determine the next hop**
->- **Creates a new Ethernet Frame Header** for the outgoing network
->
->### Routing Table (Example):
->
->|Destination Network|**Subnet Mask**|Next Hop|Interface|
->|---|---|---|---|
->|`192.168.1.0`|/24|Directly Connected|LAN|
->|`10.0.0.0`|/8|203.0.113.2|WAN1|
->|`172.16.0.0`|/16|203.0.113.3|WAN2|
->|`0.0.0.0`|/0|ISP Router|Internet|
->
->### Resulting Frame:
->
->```
->Frame Header
->------------------------------
->Source MAC: PC’s MAC
->Destination MAC: Next Hop’s MAC
->
->Packet Header
->------------------------------
->Source IP: 192.168.1.10
->Destination IP: 142.250.167.167
->```
->
->- Note: If there are multiple valid destination networks in the routing table, the router chooses the **most specific route**, known as the **longest prefix match** (the **subnet mask** is the largest).
+- How will it work?
+  - **Removes the Frame Header**
+  - **Reads the destination IP address**
+  - **Looks up the routing table** to **determine the next hop**
+  - **Creates a new Ethernet Frame Header** for the outgoing network
 
 ### Hub v.s. Switch v.s. Router
 
@@ -295,31 +192,6 @@ An IP (Internet Protocol) address is a **logical numerical address** assigned to
 - Has a size of $32$ bits → allows $4,294,967,296$ addresses
 - Format: $185.107.80.231$ → $4$ bytes, each byte separated by dots, and each byte can **range from** $0$ to $255$.
 
-##### Subnet Mask
-
-A **subnet mask** is a $32$ bit number used in **IPv4 networking** that helps divide an IP address into two components: the **network portion (netID)** and the **host portion (hostID)**.
-
->[!Worked Example of Subnet Masking:]
->
->IP Address: `192.168.1.10`
->
->**Subnet Mask** = `255.255.255.0`
->
->**In binary,**
->
->IP Address: `11000000.10101000.00000001.00001010`
->
->**Subnet Mask**: `11111111.11111111.11111111.00000000`
->
->The mask tells us that the first $24$ bits are reserved for the network (`192.168.1`) and the last $4$ bits are available for hosts. The IP `192.168.1.10` is therefore host number $10$ on the `192.168.1.0` network.
-
-##### CIDR Notation
-
-The Classless Inter-Domain Routing (CIDR) notation is a **compact method of writing an IP address and its associated subnet mask**.
-
-**Example:**
-
-`192.168.1.10/24` → the first $24$ bits tell us the netID, the remaining $8 $bits tell us the hostID.
 
 ### IPv6 address
 
@@ -367,52 +239,11 @@ The DHCP (Dynamic Host Configuration Protocol) is the protocol that **automatica
 
 A MAC (Media Access Control) address is a unique $48$-bit hexadecimal identifier assigned to a **Network Interface Card (NIC)**, allowing devices to be **identified and communicate on a Local Area Network (LAN)**.
 
-##### Characteristics of MAC Addresses:
-
-- $48$ bits ($6$ bytes) long
-- Written as $12$ **hexadecimal digits**
-- Used for **communication within a LAN** (Local Area Network)
-- Assigned to a **network interface, not the entire device**
-- Operates at the **Data Link Layer** (Layer $2$) of the OSI Model
-
 **Example:**
 
 ```
 00:1A:2B:3C:4D:5E
 ```
-
-- **Each pair of hexadecimal digits** represents 1 byte (8 bits)
-- Pairs are **separated by colons**
-
-##### Structure of a MAC address
-
-A **MAC address consists of two parts**:
-
-```
-`00:1A:2B`:`3C:4D:5E`
-OUI (Organisationally Unique Identifier)> : Device Identifier
-```
-
-###### 1. Organizationally Unique Identifier (OUI)
-
-- First $24$ bits (first $3$ bytes)
-- **Identifies the manufacturer**
-- **Assigned by IEEE**
-
-##### 2. Device Identifier
-
-- Last $24$ bits
-- **Assigned by the manufacturer**
-- Makes each **network interface unique** within that manufacturer’s range
-
-#### Common misconceptions about MAC addresses
-
-- A **MAC address identifies a computer**
-- **No. Instead, it identifies** a **network interface card (NIC)**. Devices may have **more than one network interface**. For example, a computer with both Wi-Fi and Ethernet has two MAC addresses.
-- **MAC addresses are used across the Internet**
-- No. It is only used for **communication on the local network**. Routers use **IP addresses to forward packets between different networks**.
-- **MAC addresses never change**
-- No. They are usually fixed by the manufacturer but can often be **temporarily changed (spoofed) by software**.
 
 ### IP v.s. MAC addresses
 
@@ -468,14 +299,6 @@ A packet is a **unit of data** at the **Network Layer** (`Layer 3`) of the OSI M
 +-----------------------------------------------------------+
 ```
 
-### Structure of an IP Packet
-
-```
-IP Header
-Payload
-(Data)
-```
-
 ### Packet Switching v.s. Circuit Switching
 
 Packet Switching
@@ -517,9 +340,15 @@ Circuit switching
 ### Routing tables
 
 - A router routes IP Packets across networks: a router device connects different links. It examines **IP packet headers**, looking at the **destination address** and **consulting a routing table of known networks**.
+  
+-  **Routing tables** contain the information necessary to forward a package along the **shortest/best route** to allow it to reach its destination. As soon as the packet reaches a router, the **packet header is examined** and compared with the routing table. The table supplies the router with instructions to send the packet to the **next available router**
 
->[!Why do we need **routing tables**?]
->**Routing tables** contain the information necessary to forward a package along the **shortest/best route** to allow it to reach its destination. As soon as the packet reaches a router, the **packet header is examined** and compared with the routing table. The table supplies the router with instructions to send the packet to the **next available router**
+### Pros and cons 
+Packet switching is **more efficient** in using the **bandwidth**. Network resources are shared among multiple connections **instead of being reserved for a single connection**.
+
+Packet switching is **more reliable and resilient**. If a network connection is congested or faulty, the pack can be routed through **alternative paths.**
+
+Packet switching suffers from **congestion, delay and packet loss and variable performance**. In contrast, circuit switching has **guaranteed bandwidth.** 
 
 # Network Protocols
 
@@ -529,16 +358,6 @@ Circuit switching
 
 It **translates human-readable website names** (like [google.com](http://google.com/)) into **machine-friendly IP addresses** (like 192.168.1.1) so browsers can **load internet resources**. DNS uses **port 53**.
 
-### What is a DNS Server?
-
-A DNS server maintains databases containing **IP addresses and their corresponding domain names**.
-
-### Types of DNS servers involved in loading a webpage:
-
-- **DNS recursive resolver** - The recursive resolver can be thought of as a librarian who is asked to go find a particular book somewhere in the library. The DNS recursor is a server designed to **receive queries from client machines** through applications such as web browsers. Typically the recursor is then responsible for **making additional requests** in order to satisfy the client’s DNS query.
-- **Root nameserver** - Tell resolvers where to find the **correct Top-Level Domain (TLD) server**. Note: The root server does not know the IP address of every website.
-- **Top-Level Domain (TLD) Name Servers** - Know which **authoritative server** manages domains under their TLD. There is a TLD server for .com, .org, .net, .edu, etc.
-- **Authoritative Name Server** - Stores the **actual DNS records** for a domain.
 
 ## DNS Request Process
 
@@ -559,14 +378,6 @@ A DNS server maintains databases containing **IP addresses and their correspondi
 - If not found in cache, the browser sends a request to **Domain Name System (DNS) server with the domain name (newbank.com)**.
 - The DNS server **looks up** the domain name and **returns** the corresponding IP address of the server hosting the bank’s website. 
 
-
-### Types of DNS queries
-
-| DNS Query Type | Description |
-|---|---|
-| **Recursive Query** | In a **recursive query**, a DNS client requires that a DNS server (typically a **DNS recursive resolver**) will respond to the client with either the **requested resource record** or an **error message** if the resolver can’t find the record. |
-| **Iterative Query** | In this situation the DNS client will allow a DNS server to return the **best answer it can**.<br><br>If the queried DNS server does not have a match for the query name, it will **return a referral** to a DNS server authoritative for a lower level of the domain namespace.<br><br>The DNS client will then make a **query to the referral address**. This process continues with additional DNS servers down the query chain until either an **error or timeout** occurs. |
-| **Non-recursive Query** | Typically this will occur when a DNS resolver client queries a DNS server for a record that it has access to either because it’s authoritative for the record or the record exists **inside of its cache**.<br><br>Typically, a DNS server will cache DNS records to **prevent additional bandwidth consumption** and load on upstream servers. |
 
 # TCP (Transmission Control Protocol)
 
@@ -688,3 +499,13 @@ An app has a **pair of processes** that **send messages to each other over a net
 | | • Uses **processing power of both host computers**. |
 | Hybrid Architecture | • In some apps, servers track IP addresses but **user-user messages are P2P**. |
 | | • This has the **scalability and cost effectiveness** of P2P while remaining **secure and reliable**. |
+
+
+### Benefits of client-server architecture
+- **Easier data management** as files are stored in one **central location**, making **organizing and maintaining** is easier.
+- Better **data consistency**, the same shared copy of data is accessed by the user, reducing duplicate and outdated versions.
+- Access permission can be **managed centrally**, providing **better security** for shared data.
+
+### Disadvantages of client-server architecture
+- **Purchasing and maintaining a dedicated server** and server operating system is more expensive than a peer-to-peer network.
+-  P2P **low latency**: direct communication reduces delays between devices
