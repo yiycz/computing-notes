@@ -141,7 +141,7 @@ A **Network Interface Card (NIC)** is a **hardware component** that enables a de
 
 ### Switch
 
-A switch is a networking device that **connects multiple devices** (e.g. computers, printers, servers, access points, etc.) in a LAN (Local Area Network). Its purpose is to **receive data from one device** and **send it to the intended destination**.
+A networking device that connects **multiple devices** within a Local Area Network (LAN) and **forwards data frame**s only to the intended destination device, based on the **destination MAC address**, using a **MAC address table.**
 
 The switch works at the **data link layer** (2nd layer of the OSI Model or TCP/IP Model). As it only **examines the ethernet frames**. It **doesn’t rewrite any MAC addresses and IP addresses** written in ethernet frames provided to it.
 
@@ -153,9 +153,11 @@ HOW DOES A SWICTH WORK?
 
 ## Router
 
-- A router is a device in a network that **holds information about the addresses of computers in the network or other networks**. It **directs data to the correct computer**, **routes data through the network efficiently**, and can **act as a gateway connecting to a larger network.**
+- A router is a networking device that routes data packets **between computer networks**. It **stores information about network addresses** and **directs data to the correct destination**, choosing the most efficient route for data transmission. It can also **act as a gateway connecting to a larger network**.
 
 - The router operates at the **network layer** (3rd layer of the OSI Model or TCP/IP Model). This is because a router **removes the MAC addresses** of the ethernet frames received and **examines the IP address of the packet**, before **adding on new MAC addresses** and **forwarding the new ethernet frame**.
+
+- **Routing tables** contain the information necessary to forward a package along the **shortest/best route** to allow it to reach its destination. As soon as the packet reaches a router, the **packet header is examined** and compared with the routing table. The table supplies the router with instructions to send the packet to the **next available router**
 
 - How will it work?
   - **Removes the Frame Header**
@@ -187,23 +189,6 @@ A **Wireless Access Point** (WAP) is a networking device that allows **wireless 
 
 An IP (Internet Protocol) address is a **logical numerical address** assigned to a device on a network, used to **identify the device** and enable **data to be routed between different networks**.
 
-### IPv4 Addresses
-
-- Has a size of $32$ bits → allows $4,294,967,296$ addresses
-- Format: $185.107.80.231$ → $4$ bytes, each byte separated by dots, and each byte can **range from** $0$ to $255$.
-
-
-### IPv6 address
-
-Internet Protocol Version 6
-
-- $128$ bits long
-- Written as **eight groups of four hexadecimal digits**, **separated by colons**
-- Supports approximately $3.4 * 1038$ unique addresses
-
-**Example of IPv6 address:**
-
-`2001:0db8:85a3:0000:0000:8a2e:0370:7334`
 
 ### DHCP (Dynamic Host Configuration Protocol)
 
@@ -337,11 +322,9 @@ Circuit switching
 - A packet could theoretically get caught in a **routing loop**, being sent again and again, causing the data to infinitely cycle through devices.
 - Packets come equipped with a **TTL (Time To Live)** counter, which **decreases by 1** each time the packet passes through a router. When the TTL **reaches 0**, the packet is **discarded**, **preventing infinite routing loops**.
 
-### Routing tables
 
-- A router routes IP Packets across networks: a router device connects different links. It examines **IP packet headers**, looking at the **destination address** and **consulting a routing table of known networks**.
   
--  **Routing tables** contain the information necessary to forward a package along the **shortest/best route** to allow it to reach its destination. As soon as the packet reaches a router, the **packet header is examined** and compared with the routing table. The table supplies the router with instructions to send the packet to the **next available router**
+
 
 ### Pros and cons 
 Packet switching is **more efficient** in using the **bandwidth**. Network resources are shared among multiple connections **instead of being reserved for a single connection**.
