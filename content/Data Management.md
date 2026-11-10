@@ -20,32 +20,18 @@ flowchart LR
 
 Data integrity refers to the **accuracy and validity of data**.
 
-Can be compromised due to
-
-| Type of Error | Description |
-|---|---|
-| **Errors on input** | Data that is keyed in may be **wrongly transcribed**. A batch of transaction data could **go astray**, or be **keyed in twice** by mistake. |
-| **Errors in operating procedures** | An **update program** could for example be **run twice in error** and quantities on a master file would then be **updated twice**. |
-| **Program errors** | These could lead to **corruption of files**; a new system may have **errors in it** that will not surface for some time, or errors may be introduced during **program maintenance**. |
-| **Viruses** | Files can be **corrupted or deleted** if disk becomes **infected with a virus**. |
-| **Transmission errors** | **Interference or noise** in a communications link may cause bits to be **wrongly received**. |
-
-# Need for data security
 
 |Cause|Elaboration|
 |---|---|
 |Hardware failure|Secondary devices may experience **wear and tear** over time, **reducing reliability** and **increasing the risk of data loss**|
 |Human Actions|Humans may **accidentally delete or overwrite data**. They may also **format or partition the wrong drive** or **handle storage media improperly**, leading to **data loss**|
-|Software corruption|Issues with **software, operating system failures, or bugs** can cause **data corruptions or loss**. → occurs during **updates, installations**|
 |Power Failures|**Sudden power outages or voltage fluctuations** can **interrupt data transfers or damage storage devices**, leading to **data loss**|
-|Theft or loss|If a device containing important data is **stolen or lost**, the data may be **permanently inaccessible**.|
 |Malware and ransomware|Malicious software can **encrypt, delete, or compromise data**, making it **inaccessible unless a ransom is paid**.|
-|Viruses and cyber-attacks|**Viruses, worms, trojans or other cyber-attacks** can **corrupt or delete data, compromise system integrity, cause data loss**.|
-|Software or hardware incompatibility|Using **incompatible software or hardware components** can lead to **data corruption or loss**.To mitigate the risk of data loss, it is important to **regularly backup important data**, **implement robust security measures**, and **use reliable hardware and software**.|
+
 
 ## Backup
 
-Backing up means **making a copy of the data** and **storing it on a different storage device**.
+Backing up means **making a copy of the data** and **storing it on a different storage device**. create a **recoverable copy** of the data if the original data is **corrupted**. 
 
 ## Archive
 
@@ -108,25 +94,11 @@ Naming conventions are needed to **ensure consistency and clarity** in how files
 
 # Governance of personal data
 
-### Personal Data
-
-- Personal data refers to **data about an individual who can be identified from that data**, or from that data and **other information to which the organisation has or is likely to have access**.
-- Personal data can range from **names and contact numbers** to other types of data that form part of an **individual’s record**.
-
-- Personal data may include the following:
-    - **Full name**
-    - **NRIC or passport number**
-    - **Photograph or video image of an individual**
-    - **Mobile telephone number**
-    - **Personal email address**
-    - **Thumbprint**
-    - **Name and residential address**
-
 # Personal Data Protection Act (PDPA)
 
 ### Definition:
 
-Personal data refers to **data about an individual who can be identified from that data**, or from that data and **other information to which the organisation has or is likely to have access**.
+**Personal data** refers to **data about an individual who can be identified from that data**, or from that data and **other information to which the organisation has or is likely to have access**.
 
 - The Personal Data Protection Act (PDPA) is a **data protection law** comprising various rules that **govern the collection, use, disclosure and care of personal data**.
 - It recognises both the **rights of individuals to protect their personal data**, including **rights of access and correction**, as well as the **needs of organisations to collect, use or disclose personal data** for **legitimate and reasonable purposes**.
