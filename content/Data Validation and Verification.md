@@ -7,10 +7,10 @@ tags:
 
 ### Definition 
 
-Data validation is a process of ensuring that the input data supplied to a system satisfies a set
-of rules such that it is sensible, complete, and within acceptable boundaries. 
+Data validation is a process of **ensuring** that the input data supplied to a system **satisfies a set
+of rules such that it is **sensible, complete, and within acceptable boundaries.** 
 
-Its purpose is to avoid data errors. It does not guarantee that data is accurate.
+Its purpose is to **avoid data errors**. It does not guarantee that data is accurate.
 
 ### Errors
 
@@ -24,22 +24,7 @@ Its purpose is to avoid data errors. It does not guarantee that data is accurate
 | Length Check     | Checks the data isn't too short or too long.                                                                                                                            | A telephone number must have a length of 8 numbers.                                                                                                 |
 | Presence Check   | Checks that data has been entered into a field.                                                                                                                         | Ensure that an entry field is not left blank.                                                                                                       |
 | Check Digit      | An extra digit added to the end of a code number, which has been calculated from the digits of the code number. This ensures the code number has been entered properly. | —                                                                                                                                                   |
-
-### Method of Calculating Check Digit
-
-The best-known method of calculating a check digit is the **modulo 11 system**, which traps over **99% of all errors**.
-
-The calculation of a check digit is shown below:
-
-1. Each digit of the code number is assigned a **weight**. The right-hand (least significant) digit is given a weight of 2, the next digit to the left 3, and so on.
-2. Each digit is **multiplied by its weight**, and the products are added together.
-3. The **sum of the products is divided by 11**, and the remainder is obtained.
-4. The **remainder is subtracted from 11**.
-5. The result is **divided again by 11**, and the remainder (result mod 11) is the check digit.
-
-**Exception:** If the remainder is 10, [the original text is incomplete].
-
-Add a worked calculation exampleClarify which remainder each step uses
+An error where changes to multiple bits or bytes cancel each other out, resulting in the same checksum being calculated.
 
 ### Workflow for data validation
 
@@ -51,30 +36,30 @@ Add a worked calculation exampleClarify which remainder each step uses
 
 ### Definition
 
-Verification is the process of getting the user to confirm that the data entered was what was
-intended to be entered. 
+Verification is the process of **getting the user to confirm** that the data entered was what was
+**intended to be entered.** 
 
 Essentially, it is a way of preventing errors when data is copied from one medium to another. It does not check if the data makes sense or is within acceptable boundaries. It only checks that the data entered is identical to the original source.
 
 - Double entry is one method of verification.
   - The process of entering data twice, with the second entry being compared with the first is to ensure that it is accurate. It is common in batch processing for a second data entry operator to key in a batch of data to verify it. Another example is when setting a password, a user would be asked to key in the password a second time to ensure that the passwords match up.
 
-- Proofreading data is another method that involves someone checking the data entered against the original source to ensure that the data match.
+- Proofreading data is another method that **involves someone checking the data entered against** the original source to ensure that the data match.
 
 # Difference between data validation and verification
 
-- Verification only checks the data is copied correctly
-- Validation checks are carries out automatically by the computer
-- Verification does not check if data is reasonable / sensible
+- Verification only checks the data is **copied correctly**
+- Validation checks are **carries out automatically by the computer**
+- Verification does not check if data is **reasonable / sensible**
 
 
 # Program Errors
 
 | Type of Error | Description | Example |
 |---|---|---|
-| **Syntax errors** | An error that occurs when a command does not follow the expected syntax of a language. | `IF` without `THEN` |
-| **Runtime errors** | An error that only occurs when the programme is running and is difficult to foresee before a programme is compiled and run. | Divide by zero |
-| **Logical errors** | An error that causes the programme to output an incorrect answer when the programmer makes a mistake in their logic for some parts of the programme. | `count = count - 1` should be `count = count + 1` |
+| **Syntax errors** | An error that occurs when a command **does not follow the expected syntax of a language.** | `IF` without `THEN` |
+| **Runtime errors** | An error that only occurs when the programme is running and is **difficult to foresee** before a programme is compiled and run. | Divide by zero |
+| **Logical errors** | An error that causes the programme to **output** an **incorrect answer** when the programmer makes **a mistake in their logic for some parts** of the programme. | `count = count - 1` should be `count = count + 1` |
 
 
 # Test Data
