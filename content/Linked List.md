@@ -33,18 +33,16 @@ tags:
 
 ### Ordered Insertion
 
-1. **Create a new node** containing the value to be inserted.
-2. If the linked list is **empty**, **set the new node as the head**.
-3. Otherwise, **compare** the new value with the head node:
-   - If the new value is **less than** the head node's value, **insert the new node before the head** and **update the head pointer**.
-   - Otherwise, **start traversing from the head**.
-4. **Traverse the linked list** and compare the new value with the next node's value:
-   - If the new value is **greater than or equal to** the next node's value, **move to the next node**.
-   - Otherwise, **stop traversing**.
-5. **Repeat step 4** until the **correct position is found** or the **end of the list is reached**.
-6. **Update the pointers**:
-   - Set the **new node's next pointer** to the current node's next node.
-   - Set the **current node's next pointer** to the new node.
+### Ordered Insertion (Linked List)
+
+1. **Create** a new node containing the value to be inserted.
+2. **Check the head**:
+   - If the list is **empty**, set the new node as the **head**.
+   - If the new value is **less than** the head's value, **insert before the head** and **update the head pointer**.
+3. **Traverse** from the head, moving to the **next node** while its value is **less than or equal to** the new value, until the **correct position** or **end of the list** is reached.
+4. **Update the pointers**:
+   - Set the **new node's next pointer** to the **current node's next node**.
+   - Set the **current node's next pointer** to the **new node**.
 
 ### Insertion at the back
 
